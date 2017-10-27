@@ -3,6 +3,8 @@
 
 localhost
 127.0.0.1
+local
+localdomain
 
 # triggering suspicious (sub)domain names (note: this is not whitelist-ing all related (e.g. URL) trails)
 
@@ -641,6 +643,9 @@ forestapp.cc
 frog.wix.com
 8.8.4.4
 8.8.8.8
+opendsp.com
+tru.am
+put.re
 
 # Sh.ty ad network introducing noise with long subdomain names
 

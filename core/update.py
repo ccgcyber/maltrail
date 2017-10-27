@@ -15,7 +15,6 @@ import subprocess
 import sys
 import time
 import urllib2
-import urlparse
 
 sys.dont_write_bytecode = True
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))  # to enable calling from current directory too
@@ -36,7 +35,6 @@ from core.settings import HIGH_PRIORITY_REFERENCES
 from core.settings import IPCAT_CSV_FILE
 from core.settings import IPCAT_SQLITE_FILE
 from core.settings import IPCAT_URL
-from core.settings import PROXIES
 from core.settings import ROOT_DIR
 from core.settings import TRAILS_FILE
 from core.settings import USERS_DIR
@@ -156,7 +154,7 @@ def update_trails(server=None, force=False, offline=False):
             print(" [o] '(remote custom)'%s" % (" " * 20))
             content = retrieve_content(config.CUSTOM_TRAILS_URL)
             if not content:
-                exit("[!] unable to retrieve data (or empty response) from '%s'" % config.CUSTOM_TRAILS_URL)
+                print "[x] unable to retrieve data (or empty response) from '%s'" % config.CUSTOM_TRAILS_URL
             else:
                 url = config.CUSTOM_TRAILS_URL
                 url = ("http://%s" % url) if not "//" in url else url

@@ -53,6 +53,7 @@ from core.settings import CONSONANTS
 from core.settings import DAILY_SECS
 from core.settings import DLT_OFFSETS
 from core.settings import DNS_EXHAUSTION_THRESHOLD
+from core.settings import HTTP_TIME_FORMAT
 from core.settings import IGNORE_DNS_QUERY_SUFFIXES
 from core.settings import IPPROTO_LUT
 from core.settings import LOCALHOST_IP
@@ -76,6 +77,7 @@ from core.settings import SUSPICIOUS_HTTP_REQUEST_REGEXES
 from core.settings import SUSPICIOUS_HTTP_REQUEST_FORCE_ENCODE_CHARS
 from core.settings import SUSPICIOUS_UA_REGEX
 from core.settings import trails
+from core.settings import TRAILS_FILE
 from core.settings import VALID_DNS_CHARS
 from core.settings import VERSION
 from core.settings import WEB_SHELLS
@@ -102,6 +104,7 @@ _last_logged_syn = None
 _last_udp = None
 _last_logged_udp = None
 _last_dns_exhaustion = None
+_quit = threading.Event()
 _subdomains = {}
 _subdomains_sec = None
 _dns_exhausted_domains = set()
@@ -671,17 +674,19 @@ def init():
 
     def update_timer():
         retries = 0
-        while retries < CHECK_CONNECTION_MAX_RETRIES and not check_connection():
-            sys.stdout.write("[!] can't update because of lack of Internet connection (waiting..." if not retries else '.')
-            sys.stdout.flush()
-            time.sleep(10)
-            retries += 1
+        if not config.no_updates:
+            while retries < CHECK_CONNECTION_MAX_RETRIES and not check_connection():
+                sys.stdout.write("[!] can't update because of lack of Internet connection (waiting..." if not retries else '.')
+                sys.stdout.flush()
+                time.sleep(10)
+                retries += 1
 
-        if retries:
-            print(")")
+            if retries:
+                print(")")
 
-        if retries == CHECK_CONNECTION_MAX_RETRIES:
-            print("[x] going to continue without online update")
+        if config.no_updates or retries == CHECK_CONNECTION_MAX_RETRIES:
+            if retries == CHECK_CONNECTION_MAX_RETRIES:
+                print("[x] going to continue without online update")
             _ = update_trails(offline=True)
         else:
             _ = update_trails(server=config.UPDATE_SERVER)
@@ -701,6 +706,14 @@ def init():
     get_error_log_handle()
 
     check_memory()
+
+    msg = "[i] using '%s' for trail storage" % TRAILS_FILE
+    if os.path.isfile(TRAILS_FILE):
+        mtime = time.gmtime(os.path.getmtime(TRAILS_FILE))
+        msg += " (last modification: '%s')" % time.strftime(HTTP_TIME_FORMAT, mtime)
+
+    print(msg)
+
     update_timer()
 
     if check_sudo() is False:
@@ -784,7 +797,10 @@ def init():
     if config.CAPTURE_FILTER:
         print("[i] setting capture filter '%s'" % config.CAPTURE_FILTER)
         for _cap in _caps:
-            _cap.setfilter(config.CAPTURE_FILTER)
+            try:
+                _cap.setfilter(config.CAPTURE_FILTER)
+            except:
+                pass
 
     if _multiprocessing:
         _init_multiprocessing()
@@ -899,6 +915,9 @@ def monitor():
                     if header is not None:
                         success = True
                         packet_handler(datalink, header, packet)
+                    elif config.pcap_file:
+                        _quit.set()
+                        break
                 except (pcapy.PcapError, socket.timeout):
                     pass
 
@@ -913,7 +932,7 @@ def monitor():
         for _cap in _caps:
             threading.Thread(target=_, args=(_cap,)).start()
 
-        while _caps:
+        while _caps and not _quit.is_set():
             time.sleep(1)
 
         print("[i] all capturing interfaces closed")
@@ -944,6 +963,7 @@ def main():
     parser.add_option("-i", dest="pcap_file", help="open pcap file for offline analysis")
     parser.add_option("-p", dest="plugins", help="plugin(s) to be used per event")
     parser.add_option("--console", dest="console", action="store_true", help="print events to console (too)")
+    parser.add_option("--no-updates", dest="no_updates", action="store_true", help="disable (online) trail updates")
     parser.add_option("--debug", dest="debug", action="store_true", help=optparse.SUPPRESS_HELP)
     options, _ = parser.parse_args()
 
