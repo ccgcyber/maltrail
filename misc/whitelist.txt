@@ -17,6 +17,7 @@ akamaiedge.net
 akamaihd.net
 akamai.net
 akamaitechnologies.com
+alibaba.com
 amazon.com
 amazonaws.com
 amazonses.com
@@ -114,6 +115,7 @@ rncdn7.com
 rncdn8.com
 rncdn.com
 senderbase.org
+siemens.net
 siteforce.com
 sophosxl.com
 sophosxl.net
@@ -127,6 +129,7 @@ testflightapp.com
 trendmicro.com
 tumblr.com
 twitter.com
+ubuntu.com
 w3schools.com
 v-mate.mobi
 verisign.com
@@ -241,6 +244,7 @@ msecnd.net
 lang-8.com
 popads.net
 c1.popads.net
+githubusercontent.com
 
 # appeared on malwarepatrol.net
 
@@ -651,3 +655,7 @@ put.re
 
 mucocutaneousmyrmecophaga.com
 scorecardresearch.com
+
+# Google crawlers
+
+35.184.0.0/13
