@@ -133,9 +133,14 @@ def _check_domain_member(query, domains):
     return False
 
 def _check_domain_whitelisted(query):
-    return _check_domain_member(query, WHITELIST)
+    return _check_domain_member(re.split(r"(?i)[^A-Z0-9._-]", query or "")[0], WHITELIST)
 
 def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, packet=None):
+    if query:
+        query = query.lower()
+        if ':' in query:
+            query = query.split(':', 1)[0]
+
     if _result_cache.get(query) == False:
         return
 
@@ -512,7 +517,7 @@ def _process_packet(packet, sec, usec, ip_offset):
 
                         parts = query.split('.')
 
-                        if ord(dns_data[2]) == 0x01:  # standard query
+                        if ord(dns_data[2]) & 0xfe == 0x00:  # standard query (both recursive and non-recursive)
                             type_, class_ = struct.unpack("!HH", dns_data[offset + 1:offset + 5])
 
                             if len(parts) > 2:
