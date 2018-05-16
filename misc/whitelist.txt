@@ -11,6 +11,7 @@ localdomain
 1e100.net
 2o7.net
 adcash.com
+adinf.com
 adsk2.co
 akadns.net
 akamaiedge.net
@@ -24,6 +25,7 @@ amazonses.com
 a-msedge.net
 angsrvr.com
 anycastb.com
+anti-virus.by
 baidu.com
 bdnsrt.org
 bitdefender.net
@@ -43,8 +45,14 @@ colocrossing.com
 coppersurfer.tk
 councilforeuropeanstudies.org
 da3e3.net
+dataprotection.com.ua
 demdex.net
 disqus.com
+drweb.cn
+drweb.com
+drweb.fr
+drweb.ru
+drweb.ua
 e5.sk
 edgecastcdn.net
 edgekey.net
@@ -85,6 +93,10 @@ internationalmonetaryfund.org
 ipv6test.com
 ipv6test.net
 kaspersky.com
+kaspersky.de
+kaspersky.fr
+kaspersky.ru
+kaspersky.ua
 laola1.tv
 live.com
 lswcdn.net
@@ -132,6 +144,7 @@ twitter.com
 ubuntu.com
 w3schools.com
 v-mate.mobi
+vba.com.by
 verisign.com
 verisign.net
 weebly.com
@@ -142,6 +155,9 @@ yahoo.com
 yahoodns.net
 yimg.com
 yvimg.kz
+zillya.com
+zillya.ua
+zillyaoem.com
 
 # to ignore in direct .exe downloads
 
@@ -149,12 +165,14 @@ yvimg.kz
 7-zip.org
 acer.com
 acropdf.com
+adinf.com
 adobe.com
 akeo.ie
 apple.com
 avantbrowser.com
 avast.com
 avg.com
+anti-virus.by
 bitdefender.com
 bleepingcomputer.com
 cnet.com
@@ -164,6 +182,8 @@ devbuilds.kaspersky-labs.com
 digitalrivercontent.net
 divx.com
 download.drp.su
+download.geo.drweb.com
+download.zillya.com
 easeus.com
 filehippo.com
 foxitsoftware.com
@@ -188,6 +208,7 @@ majorgeeks.com
 mcafee.com
 microsoft.com
 mozilla.net
+msi.com
 nai.com
 notepad-plus-plus.org
 nvidia.com
@@ -196,6 +217,7 @@ oracle.com
 p4dragon.com
 pandasoftware.com
 pdfwordconverter.net
+portableapps.com
 pysoft.com
 rarlab.com
 rarsoft.com
@@ -214,6 +236,7 @@ symantecliveupdate.com
 teamviewer.com
 toshiba.com
 tucows.com
+vba.com.by
 videolan.org
 windowsupdate.com
 win-rar.com
@@ -648,6 +671,8 @@ forestapp.cc
 frog.wix.com
 8.8.4.4
 8.8.8.8
+1.1.1.1
+9.9.9.9
 opendsp.com
 tru.am
 put.re
