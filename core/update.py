@@ -20,6 +20,8 @@ sys.dont_write_bytecode = True
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))  # to enable calling from current directory too
 
 from core.addr import addr_to_int
+from core.addr import int_to_addr
+from core.addr import make_mask
 from core.common import bogon_ip
 from core.common import cdn_ip
 from core.common import check_whitelisted
@@ -159,33 +161,51 @@ def update_trails(server=None, force=False, offline=False):
         # custom trails from remote location
         if config.CUSTOM_TRAILS_URL:
             print(" [o] '(remote custom)'%s" % (" " * 20))
-            content = retrieve_content(config.CUSTOM_TRAILS_URL)
-            if not content:
-                print "[x] unable to retrieve data (or empty response) from '%s'" % config.CUSTOM_TRAILS_URL
-            else:
-                url = config.CUSTOM_TRAILS_URL
+            for url in re.split(r"[;,]", config.CUSTOM_TRAILS_URL):
+                url = url.strip()
+                if not url:
+                    continue
+
                 url = ("http://%s" % url) if not "//" in url else url
-                __info__ = "blacklisted"
-                __reference__ = "(remote custom)"  # urlparse.urlsplit(url).netloc
-                for line in content.split('\n'):
-                    line = line.strip()
-                    if not line or line.startswith('#'):
-                        continue
-                    line = re.sub(r"\s*#.*", "", line)
-                    if '://' in line:
-                        line = re.search(r"://(.*)", line).group(1)
-                    line = line.rstrip('/')
+                content = retrieve_content(url)
 
-                    if line in trails and any(_ in trails[line][1] for _ in ("custom", "static")):
-                        continue
+                if not content:
+                    print "[x] unable to retrieve data (or empty response) from '%s'" % url
+                else:
+                    __info__ = "blacklisted"
+                    __reference__ = "(remote custom)"  # urlparse.urlsplit(url).netloc
+                    for line in content.split('\n'):
+                        line = line.strip()
+                        if not line or line.startswith('#'):
+                            continue
+                        line = re.sub(r"\s*#.*", "", line)
+                        if '://' in line:
+                            line = re.search(r"://(.*)", line).group(1)
+                        line = line.rstrip('/')
 
-                    if '/' in line:
-                        trails[line] = (__info__, __reference__)
-                        line = line.split('/')[0]
-                    elif re.search(r"\A\d+\.\d+\.\d+\.\d+\Z", line):
-                        trails[line] = (__info__, __reference__)
-                    else:
-                        trails[line.strip('.')] = (__info__, __reference__)
+                        if line in trails and any(_ in trails[line][1] for _ in ("custom", "static")):
+                            continue
+
+                        if '/' in line:
+                            trails[line] = (__info__, __reference__)
+                            line = line.split('/')[0]
+                        elif re.search(r"\A\d+\.\d+\.\d+\.\d+\Z", line):
+                            trails[line] = (__info__, __reference__)
+                        else:
+                            trails[line.strip('.')] = (__info__, __reference__)
+
+                    for match in re.finditer(r"(\d+\.\d+\.\d+\.\d+)/(\d+)", content):
+                        prefix, mask = match.groups()
+                        mask = int(mask)
+                        if mask > 32:
+                            continue
+                        start_int = addr_to_int(prefix) & make_mask(mask)
+                        end_int = start_int | ((1 << 32 - mask) - 1)
+                        if 0 <= end_int - start_int <= 1024:
+                            address = start_int
+                            while start_int <= address <= end_int:
+                                trails[int_to_addr(address)] = (__info__, __reference__)
+                                address += 1
 
         # basic cleanup
         for key in trails.keys():

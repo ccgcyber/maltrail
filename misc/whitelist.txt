@@ -3,6 +3,7 @@
 
 localhost
 127.0.0.1
+::1
 local
 localdomain
 
@@ -59,6 +60,8 @@ edgekey.net
 edgesuite.net
 elasticbeanstalk.com
 eset.com
+eset.ua
+esetnod32.ru
 example.com
 f-secure.com
 fap.to
@@ -113,6 +116,7 @@ officeshoes.ws
 opendns.com
 outlook.com
 pandasecurity.com
+postimg.cc
 proofpoint.com
 pubnub.com
 rackcdn.com
@@ -182,6 +186,8 @@ devbuilds.kaspersky-labs.com
 digitalrivercontent.net
 divx.com
 download.drp.su
+download.eset.com
+download.esetnod32.ru
 download.geo.drweb.com
 download.zillya.com
 easeus.com
@@ -291,6 +297,7 @@ sanasecurity.com
 sim-unlock.net
 sqlzoo.net
 symcb.com
+symcd.com
 victronenergy.com
 
 # found as false positive in otx.alienvault.com
@@ -689,10 +696,6 @@ scorecardresearch.com
 # Google
 
 216.58.192.0/19
-
-# Bogus (though, valid DNS server)
-
-1.1.1.1
 
 # Teamviewer
 
