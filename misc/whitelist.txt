@@ -279,6 +279,10 @@ githubusercontent.com
 
 hdwallpapers.in
 alicdn.com
+pr-link.at
+esc.net.au
+starlan.com
+pastebin.com
 
 # triggering suspicious http request
 
@@ -662,6 +666,7 @@ sophosxl.net
 # Generic
 
 defaultmailserver.com
+dropboxusercontent.com
 security-research.dyndns.org
 dropbox.com
 nirsoft.net
