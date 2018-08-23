@@ -101,6 +101,9 @@ kaspersky.de
 kaspersky.fr
 kaspersky.ru
 kaspersky.ua
+kvt.su
+kvt.tools
+kvt-shop.ru
 laola1.tv
 live.com
 lswcdn.net
@@ -140,6 +143,8 @@ sophosxl.net
 sophoslive.net
 spiegel.de
 spotify.com
+shtok.ru
+shtok.su
 street-directory.com.au
 tawk.to
 testanalytics.net
@@ -685,11 +690,14 @@ forestapp.cc
 frog.wix.com
 8.8.4.4
 8.8.8.8
+1.0.0.1
 1.1.1.1
 9.9.9.9
 opendsp.com
 tru.am
 put.re
+2606:4700:4700::1001
+2606:4700:4700::1111
 
 # Sh.ty ad network introducing noise with long subdomain names
 
