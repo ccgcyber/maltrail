@@ -7,7 +7,7 @@ localhost
 local
 localdomain
 
-# triggering suspicious (sub)domain names (note: this is not whitelist-ing all related (e.g. URL) trails)
+# triggering suspicious (sub)domain names
 
 1e100.net
 2o7.net
@@ -29,6 +29,7 @@ anycastb.com
 anti-virus.by
 baidu.com
 bdnsrt.org
+benkow.cc
 bitdefender.net
 blogspot.com
 bstatic.com
@@ -96,6 +97,7 @@ infernotions.com
 internationalmonetaryfund.org
 ipv6test.com
 ipv6test.net
+iteam.net.ru
 kaspersky.com
 kaspersky.de
 kaspersky.fr
@@ -105,6 +107,7 @@ kvt.su
 kvt.tools
 kvt-shop.ru
 laola1.tv
+linux.org.ru
 live.com
 lswcdn.net
 mail-abuse.com
@@ -146,6 +149,7 @@ spotify.com
 shtok.ru
 shtok.su
 street-directory.com.au
+takprosto.cc
 tawk.to
 testanalytics.net
 testflightapp.com
@@ -169,6 +173,15 @@ yvimg.kz
 zillya.com
 zillya.ua
 zillyaoem.com
+
+# triggering potential DNS exhaustion
+
+barracudabrts.com
+dynamic-ip.hinet.net
+kasserver.com
+sl-reverse.com
+t-com.hr
+tedata.net
 
 # to ignore in direct .exe downloads
 
@@ -274,6 +287,10 @@ s3.amazonaws.com
 
 atw.hu
 
+# appeared on malwaredomainlist.com
+
+hausnet.ru
+
 # appeared on malc0de.com
 
 msecnd.net
@@ -290,6 +307,57 @@ pr-link.at
 esc.net.au
 starlan.com
 pastebin.com
+imgur.com
+alicdn.com
+wordpress.org
+iobit.com
+static.xvideos.com
+hanstrackr.com
+bitly.com
+silvergames.com
+easydriverpro.com
+sc01.alicdn.com
+sc02.alicdn.com
+any-video-converter.com
+adriaticsailor.com
+setitagila.ru
+imganuncios.mitula.net
+napravi-sam.com
+
+# web (JS) miners appearing as "malware" on malwarepatrol.net
+
+coin-hive.com
+jsecoin.com
+cryptoloot.pro
+webassembly.stream
+ppoi.org
+xmrstudio
+webmine.pro
+miner.start
+allfontshere.press
+freecontent.bid
+freecontent.date
+freecontent.faith
+freecontent.party
+freecontent.science
+freecontent.stream
+freecontent.trade
+hostingcloud.accountant
+hostingcloud.bid
+hostingcloud.date
+hostingcloud.download
+hostingcloud.faith
+hostingcloud.loan
+jshosting.bid
+jshosting.date
+jshosting.download
+jshosting.loan
+jshosting.party
+jshosting.racing
+jshosting.review
+jshosting.stream
+jshosting.trade
+jshosting.win
 
 # triggering suspicious http request
 
@@ -311,6 +379,18 @@ symcb.com
 symcd.com
 victronenergy.com
 
+# old compromised sites on cybercrime-tracker.net
+
+gripa.hr
+czk-cakovec.hr
+nk-slaven-belupo.hr
+fongyeh.com.tw
+ee.ncu.edu.tw
+
+# found as false positive on urlvir.com
+
+pdf-archive.com
+
 # found as false positive in otx.alienvault.com
 
 digicert.com
@@ -319,6 +399,8 @@ creativecommons.org
 arstechnica.co.uk
 hpe.com
 doubleclick.net
+sify.com
+publicdomainregistry.com
 
 # DNSBL/RBL/MHR
 
@@ -694,15 +776,25 @@ frog.wix.com
 1.1.1.1
 9.9.9.9
 opendsp.com
+pool.ntp.org
 tru.am
 put.re
 2606:4700:4700::1001
 2606:4700:4700::1111
+msn.com
+azureedge.net
+rubrkik.ga
+microsoftstream.com
 
-# Sh.ty ad network introducing noise with long subdomain names
+# Sh.ty ad / tracker networks introducing noise (e.g. long subdomain names)
 
 mucocutaneousmyrmecophaga.com
 scorecardresearch.com
+dsp.io
+postaffiliatepro.com
+askmediagroup.com
+litix.io
+ubembed.com
 
 # Google crawlers
 
@@ -715,3 +807,12 @@ scorecardresearch.com
 # Teamviewer
 
 37.252.227.51
+
+# SupRemo
+
+supremodesk.com
+nanosystems.it
+
+# Microsoft's network connectivity check domain
+
+msftncsi.com

@@ -27,7 +27,6 @@
  - [False positives](#false-positives)
 - [Requirements](#requirements)
 - [License](#license)
-- [Donations](#donations)
 
 ## Introduction
 
@@ -452,11 +451,11 @@ Nevertheless, administrator(s) should invest some extra time and check (with oth
 
 ## Requirements
 
-To properly run the Maltrail, [Python](http://www.python.org/download/) **2.6.x** or **2.7.x** is required, together with [pcapy](http://corelabs.coresecurity.com/index.php?module=Wiki&action=view&type=tool&name=Pcapy) (e.g. `sudo apt-get install python-pcapy`). There are no other requirements, other than to run the **Sensor** component with the administrative/root privileges.
+To properly run the Maltrail, [Python](http://www.python.org/download/) **2.6.x** or **2.7.x** is required, together with [pcapy](https://www.coresecurity.com/corelabs-research/open-source-tools/pcapy) (e.g. `sudo apt-get install python-pcapy`). There are no other requirements, other than to run the **Sensor** component with the administrative/root privileges.
 
 ## License
 
-This software is provided under under a MIT License. See the accompanying [LICENSE](https://github.com/stamparm/maltrail/blob/master/LICENSE) file for more information.
+This software is provided under a MIT License. See the accompanying [LICENSE](https://github.com/stamparm/maltrail/blob/master/LICENSE) file for more information.
 
 ## Thank you
 

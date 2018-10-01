@@ -141,6 +141,9 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
         if ':' in query:
             query = query.split(':', 1)[0]
 
+    if query.replace('.', "").isdigit():  # IP address
+        return
+
     if _result_cache.get(query) == False:
         return
 
@@ -157,7 +160,7 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
                     _ = ".%s" % domain
                     trail = "(%s)%s" % (query[:-len(_)], _)
 
-                if not ('.' not in domain and re.search(r"(?i)\Ad?ns\d*\.", query)):  # e.g. ns2.nobel.su
+                if not (re.search(r"(?i)\Ad?ns\d*\.", query) and any(_ in trails.get(domain, " ")[0] for _ in ("suspicious", "sinkhole"))):  # e.g. ns2.nobel.su
                     result = True
                     log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[domain][0], trails[domain][1]), packet)
                     break
@@ -253,17 +256,19 @@ def _process_packet(packet, sec, usec, ip_offset):
                 if _ == _last_syn:  # skip bursts
                     return
 
-                if dst_ip in trails:
+                if dst_ip in trails or "%s:%s" % (dst_ip, dst_port) in trails:
                     _ = _last_logged_syn
                     _last_logged_syn = _last_syn
                     if _ != _last_logged_syn:
-                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP, dst_ip, trails[dst_ip][0], trails[dst_ip][1]), packet)
+                        trail = dst_ip if dst_ip in trails else "%s:%s" % (dst_ip, dst_port)
+                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP if ':' not in trail else TRAIL.ADDR, trail, trails[trail][0], trails[trail][1]), packet)
 
-                elif src_ip in trails and dst_ip != localhost_ip:
+                elif (src_ip in trails or "%s:%s" % (src_ip, src_port) in trails) and dst_ip != localhost_ip:
                     _ = _last_logged_syn
                     _last_logged_syn = _last_syn
                     if _ != _last_logged_syn:
-                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP, src_ip, trails[src_ip][0], trails[src_ip][1]), packet)
+                        trail = src_ip if src_ip in trails else "%s:%s" % (src_ip, src_port)
+                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP if ':' not in trail else TRAIL.ADDR, trail, trails[trail][0], trails[trail][1]), packet)
 
                 if config.USE_HEURISTICS:
                     if dst_ip != localhost_ip:
@@ -311,6 +316,7 @@ def _process_packet(packet, sec, usec, ip_offset):
                     post_data = None
                     host = dst_ip
                     first_index = tcp_data.find("\r\nHost:")
+                    path = path.lower()
 
                     if first_index >= 0:
                         first_index = first_index + len("\r\nHost:")
@@ -322,7 +328,7 @@ def _process_packet(packet, sec, usec, ip_offset):
                                 host = host[:-3]
                             if host and host[0].isalpha() and dst_ip in trails:
                                 log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP, "%s (%s)" % (dst_ip, host.split(':')[0]), trails[dst_ip][0], trails[dst_ip][1]), packet)
-                            elif config.CHECK_HOST_DOMAINS and not host.replace('.', "").isdigit():
+                            elif config.CHECK_HOST_DOMAINS:
                                 _check_domain(host, sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, packet)
                     elif config.USE_HEURISTICS and config.CHECK_MISSING_HOST:
                         log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.HTTP, "%s%s" % (host, path), "missing host header (suspicious)", "(heuristic)"), packet)
@@ -392,38 +398,43 @@ def _process_packet(packet, sec, usec, ip_offset):
                             if result:
                                 log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.UA, result, "user agent (suspicious)", "(heuristic)"), packet)
 
-                    checks = [path.rstrip('/')]
-                    if '?' in path:
-                        checks.append(path.split('?')[0].rstrip('/'))
+                    if not _check_domain_whitelisted(host):
+                        checks = [path.rstrip('/')]
+                        if '?' in path:
+                            checks.append(path.split('?')[0].rstrip('/'))
 
-                    _ = os.path.splitext(checks[-1])
-                    if _[1]:
-                        checks.append(_[0])
+                        _ = os.path.splitext(checks[-1])
+                        if _[1]:
+                            checks.append(_[0])
 
-                    if checks[-1].count('/') > 1:
-                        checks.append(checks[-1][:checks[-1].rfind('/')])
-                        checks.append(checks[0][checks[0].rfind('/'):].split('?')[0])
+                        if checks[-1].count('/') > 1:
+                            checks.append(checks[-1][:checks[-1].rfind('/')])
+                            checks.append(checks[0][checks[0].rfind('/'):].split('?')[0])
 
-                    for check in filter(None, checks):
-                        for _ in ("", host):
-                            check = "%s%s" % (_, check)
-                            if check in trails:
-                                parts = url.split(check)
-                                other = ("(%s)" % _ if _ else _ for _ in parts)
-                                trail = check.join(other)
-                                log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.URL, trail, trails[check][0], trails[check][1]))
-                                return
+                        for check in filter(None, checks):
+                            for _ in ("", host):
+                                check = "%s%s" % (_, check)
+                                if check in trails:
+                                    parts = url.split(check)
+                                    other = ("(%s)" % _ if _ else _ for _ in parts)
+                                    trail = check.join(other)
+                                    log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.URL, trail, trails[check][0], trails[check][1]))
+                                    return
 
-                    if config.USE_HEURISTICS:
-                        unquoted_path = urllib.unquote(path)
-                        unquoted_post_data = urllib.unquote(post_data or "")
-                        for char in SUSPICIOUS_HTTP_REQUEST_FORCE_ENCODE_CHARS:
-                            replacement = SUSPICIOUS_HTTP_REQUEST_FORCE_ENCODE_CHARS[char]
-                            path = path.replace(char, replacement)
-                            if post_data:
-                                post_data = post_data.replace(char, replacement)
+                        if "%s/" % host in trails:
+                            trail = "%s/" % host
+                            log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.URL, trail, trails[trail][0], trails[trail][1]))
+                            return
 
-                        if not _check_domain_whitelisted(host):
+                        if config.USE_HEURISTICS:
+                            unquoted_path = urllib.unquote(path)
+                            unquoted_post_data = urllib.unquote(post_data or "")
+                            for char in SUSPICIOUS_HTTP_REQUEST_FORCE_ENCODE_CHARS:
+                                replacement = SUSPICIOUS_HTTP_REQUEST_FORCE_ENCODE_CHARS[char]
+                                path = path.replace(char, replacement)
+                                if post_data:
+                                    post_data = post_data.replace(char, replacement)
+
                             if not any(_ in unquoted_path.lower() for _ in WHITELIST_HTTP_REQUEST_PATHS):
                                 if any(_ in unquoted_path for _ in SUSPICIOUS_HTTP_REQUEST_PRE_CONDITION):
                                     found = _result_cache.get(unquoted_path)
@@ -538,16 +549,17 @@ def _process_packet(packet, sec, usec, ip_offset):
                                     if not subdomains:
                                         subdomains = _subdomains[domain] = set()
 
-                                    if len(subdomains) < DNS_EXHAUSTION_THRESHOLD and not re.search(r"\A\d+\-\d+\-\d+\-\d+\Z", parts[0]):
-                                        subdomains.add('.'.join(parts[:-2]))
-                                    else:
-                                        if (sec - (_last_dns_exhaustion or 0)) > 60:
-                                            trail = "(%s).%s" % ('.'.join(parts[:-2]), '.'.join(parts[-2:]))
-                                            log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.DNS, trail, "potential dns exhaustion (suspicious)", "(heuristic)"), packet)
-                                            _dns_exhausted_domains.add(domain)
-                                            _last_dns_exhaustion = sec
+                                    if not re.search(r"\A\d+\-\d+\-\d+\-\d+\Z", parts[0]):
+                                        if len(subdomains) < DNS_EXHAUSTION_THRESHOLD:
+                                            subdomains.add('.'.join(parts[:-2]))
+                                        else:
+                                            if (sec - (_last_dns_exhaustion or 0)) > 60:
+                                                trail = "(%s).%s" % ('.'.join(parts[:-2]), '.'.join(parts[-2:]))
+                                                log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.DNS, trail, "potential dns exhaustion (suspicious)", "(heuristic)"), packet)
+                                                _dns_exhausted_domains.add(domain)
+                                                _last_dns_exhaustion = sec
 
-                                        return
+                                            return
 
                             # Reference: http://en.wikipedia.org/wiki/List_of_DNS_record_types
                             if type_ not in (12, 28) and class_ == 1:  # Type not in (PTR, AAAA), Class IN
@@ -988,7 +1000,9 @@ def main():
         config.SHOW_DEBUG = True
 
     if options.pcap_file:
-        if not os.path.isfile(options.pcap_file):
+        if options.pcap_file == '-':
+            print("[i] using STDIN")
+        elif not os.path.isfile(options.pcap_file):
             exit("[!] missing pcap file '%s'" % options.pcap_file)
         else:
             print("[i] using pcap file '%s'" % options.pcap_file)

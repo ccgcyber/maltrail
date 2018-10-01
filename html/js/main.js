@@ -1010,7 +1010,7 @@ function copyEllipsisToClipboard(event) {
     var text = target.parent().title;
     var html = target.parent().html();
     var left = html.search(/^<[^>]*ellipsis/) !== -1;
-    var common = html.replace(/<span class="ipcat">[^<]+<\/span>/g, "").replace(/<[^>]+>/g, "");
+    var common = html.replace(/<span class="(ipcat|hidden)">[^<]+<\/span>/g, "").replace(/<[^>]+>/g, "");
     if (!text) {
         var tooltip = $(".ui-tooltip");
         if (tooltip.length > 0) {
@@ -1278,10 +1278,14 @@ function initDetails() {
             {
                 render: function (data, type, row) {
                     var parts = data.split(' ');
-                    var day = parts[0].split('-')[2];
-                    var dayint = parseInt(day);
-                    var suffix = (dayint > 10 && dayint < 20) ? "th" : DAY_SUFFIXES[dayint % 10] || "th";
-                    return "<div title='" + data + "'><span class='time-day'>" + day + "<sup>" + suffix + "</sup></span> " + parts[1].split('.')[0] + "</div>";
+                    if (parts.length > 1) {
+                        var day = parts[0].split('-')[2];
+                        var dayint = parseInt(day);
+                        var suffix = (dayint > 10 && dayint < 20) ? "th" : DAY_SUFFIXES[dayint % 10] || "th";
+                        return "<div title='" + data + "'><span class='time-day'>" + day + "<sup>" + suffix + "</sup></span> " + parts[1].split('.')[0] + "</div>";
+                    }
+                    else
+                        return data;
                 },
                 targets: [ DATATABLES_COLUMNS.FIRST_SEEN, DATATABLES_COLUMNS.LAST_SEEN ]
             },

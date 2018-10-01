@@ -12,7 +12,6 @@ crypto-pool.fr
 dwarfpool.com
 xmrpool.eu
 prohash.net
-mine.bz
 nanopool.org
 ethereumpool.co
 suprnova.cc
@@ -25,10 +24,6 @@ multipool.us
 # Reference: https://mining-help.ru/
 
 mining-help.ru
-
-# Reference: https://99bitcoins.com
-
-99bitcoins.com
 
 # Reference: https://xmrminer.cc/
 
@@ -70,3 +65,28 @@ hellominer.com
 # minecrunch.co
 # minemytraffic.com
 # crypto-loot.com
+
+# Reference: https://www.virustotal.com/#/file/179c5390ba2023402283104fd85d6394033976bc2f21e45d32e7557cafaa7d41/detection
+
+www.sparechange.io
+
+# Reference: https://blog.talosintelligence.com/2018/08/rocke-champion-of-monero-miners.html
+
+8282.space
+3389.space
+
+# Reference: https://github.com/xmrig/xmrig/blob/master/src/net/strategies/DonateStrategy.cpp
+
+fee.xmrig.com
+
+# Reference: https://www.securityhome.eu/malware/malware.php?mal_id=7994909645aa0b75fc035d0.43847858
+
+donate.xmrig.com
+
+# Reference: https://isc.sans.edu/forums/diary/What+is+going+on+with+port+3333/23215
+
+mine.moneropool.com
+pool.cortins.tk
+pool.supportxmr.com
+xmr.crypto-pool.fr
+xmrpool.eu
