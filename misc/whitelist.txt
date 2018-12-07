@@ -598,6 +598,7 @@ l2.apews.org
 list.blogspambl.com
 lookup.dnsbl.iip.lu
 mail-abuse.blacklist.jippg.org
+mail-abuse.com
 misc.dnsbl.sorbs.net
 netbl.spameatingmonkey.net
 netblock.pedantic.org
@@ -813,6 +814,10 @@ es.pn
 wywx.xyz
 kaloo.ga
 msgamestudios.com
+worldssl.net
+vanuatu.com.vu
+sotelma.ml
+robtex.com
 
 # Sh.ty ad / tracker networks introducing noise (e.g. long subdomain names)
 
@@ -845,6 +850,9 @@ lkqd.net
 yoox.com
 adnxs.com
 ads.playground.xyz
+btrll.com
+mmstat.com
+sdad.guru
 
 # Google crawlers
 
