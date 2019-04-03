@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 """
-Copyright (c) 2014-2019 Miroslav Stampar (@stamparm)
+Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
 See the file 'LICENSE' for copying permission
 """
 
@@ -35,6 +35,7 @@ class HTTP_HEADER:
     CONTENT_LENGTH = "Content-Length"
     CONTENT_RANGE = "Content-Range"
     CONTENT_TYPE = "Content-Type"
+    CONTENT_SECURITY_POLICY = "Content-Security-Policy"
     COOKIE = "Cookie"
     EXPIRES = "Expires"
     HOST = "Host"

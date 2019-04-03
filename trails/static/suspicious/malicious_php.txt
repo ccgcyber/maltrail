@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2019 Miroslav Stampar (@stamparm)
+# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
 # See the file 'LICENSE' for copying permission
 
 # Reference: https://www.virustotal.com/#/ip-address/85.17.26.65 (#URL section)
@@ -68,3 +68,69 @@
 # Reference: https://twitter.com/James_inthe_box/status/1053668299165229056
 
 /loader_ma.php
+
+# Reference: https://twitter.com/nullcookies/status/1054496925469343744
+
+/anzhuo.php
+
+# Reference: https://twitter.com/ViriBack/status/1094261293693972480
+
+ibrandworld.com/jsl.php
+
+# Reference: https://twitter.com/IpNigh/status/1107567316148150274
+
+/universalmail-notifications/updates.php
+
+# Reference: https://twitter.com/Racco42/status/1102488453990830080
+
+/masquare.php
+
+# Reference: https://twitter.com/Racco42/status/1098218160111734789
+
+nitdesenders.tianat.cat/tmp/signup.php
+
+# Reference: https://twitter.com/JAMESWT_MHT/status/1103983033307271168
+
+/photo/123.php
+/Sep2018/gsm.php
+
+# Reference: https://twitter.com/benkow_/status/1085483319347867649
+
+ /public/hydra.php
+
+# Reference: https://twitter.com/anyrun_app/status/1060858198599577601
+
+/ghuae/huadh.php
+
+# Reference: https://twitter.com/pollo290987/status/1108755025604591622
+
+/loro_4.php
+
+# Reference: https://www.welivesecurity.com/2018/11/06/supply-chain-attack-cryptocurrency-exchange-gate-io/
+
+statconuter.com/c.php
+
+# Reference: https://twitter.com/James_inthe_box/status/1109832439700971520
+# Reference: https://app.any.run/tasks/f435d89d-30a5-465b-8a8d-b7a042665e0e
+
+/loadbase1.php
+
+# Reference: https://twitter.com/malwrhunterteam/status/1111630255763189761
+
+/D2017HL/u.php
+
+# Reference: https://twitter.com/IpNigh/status/1111919996266049536
+
+/ahzhnobu48jgm1rksb2zl3sc.php
+
+# Reference: https://twitter.com/IpNigh/status/1111904352053198848
+
+/challengevdl.php
+
+# Reference: https://twitter.com/IpNigh/status/1111872373446377472
+
+/overviewshn.php
+
+# Reference: https://twitter.com/executemalware/status/1112337168138149888
+
+/phpmailer/Pmxyz.php

@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2019 Miroslav Stampar (@stamparm)
+# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
 # See the file 'LICENSE' for copying permission
 
 # Suspicious user-agent regular expressions
@@ -525,3 +525,33 @@ JDatabaseDriverMysqli
 # Reference: https://www.hybrid-analysis.com/sample/f65ba1cc50b29dd05ddaa83242f4b7bd0429841bfc4befa9e203cb6621d2389b?environmentId=100
 
 4RR0B4R 4 X0T4 D4 TU4 M4E
+
+# Reference: https://twitter.com/bad_packets/status/1104618320882393088
+# Reference: https://pastebin.com/raw/Zc7h4vkN
+
+zgrab
+
+# Reference: https://twitter.com/bad_packets/status/1104313051166068737
+
+python-requests
+
+# Reference: https://twitter.com/bad_packets/status/1083657979788816384
+
+Hello, World
+Gemini
+
+# Reference: https://twitter.com/bad_packets/status/1083896276641472514
+
+OSIRIS
+
+# Reference: https://twitter.com/bad_packets/status/1078192846048452608
+
+Rift
+
+# Reference: https://twitter.com/bad_packets/status/1111777543869194240
+
+HaxerMen
+
+# Reference: https://twitter.com/ankit_anubhav/status/1069562868918566914
+
+jexboss

@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2019 Miroslav Stampar (@stamparm)
+# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
 # See the file 'LICENSE' for copying permission
 
 localhost
@@ -11,6 +11,7 @@ localdomain
 
 1e100.net
 2o7.net
+acer-euro.com
 adcash.com
 adinf.com
 adsk2.co
@@ -90,6 +91,7 @@ googlegroups.com
 googleusercontent.com
 googlevideo.com
 gstatic.com
+h-cdn.com
 herokuapp.com
 hotmail.com
 ibm.com
@@ -151,6 +153,7 @@ spotify.com
 shtok.ru
 shtok.su
 street-directory.com.au
+sucuri.net
 takprosto.cc
 tawk.to
 testanalytics.net
@@ -164,6 +167,7 @@ v-mate.mobi
 vba.com.by
 verisign.com
 verisign.net
+weborama.fr
 weebly.com
 windows.net
 wordpress.com
@@ -406,6 +410,10 @@ pdf-archive.com
 discordapp.com
 cl.ly
 
+# found as false positive on abuse.ch
+
+citibank.com
+
 # found as false positive in otx.alienvault.com
 
 digicert.com
@@ -430,6 +438,7 @@ barracudacentral.org
 berkeley.edu
 bit.nl
 blocklist.de
+blocklist.messaging.microsoft.com
 blogspambl.com
 burnt-tech.com
 choon.net
@@ -774,7 +783,12 @@ sophosxl.net
 
 # Generic
 
+animiranifilmovi.com
+bing.com
+cardsgames.club
+cratis.cc
 defaultmailserver.com
+dict.cc
 dropboxusercontent.com
 security-research.dyndns.org
 dropbox.com
@@ -819,6 +833,21 @@ vanuatu.com.vu
 sotelma.ml
 robtex.com
 check.googlezip.net
+ingress-guard.tk
+mshome.net
+playx.fun
+
+# NS of afraid.org
+
+evergreen.v6.afraid.org
+
+# NS of no-ip.com
+
+nf1.no-ip.com
+nf2.no-ip.com
+nf3.no-ip.com
+nf4.no-ip.com
+nf5.no-ip.com
 
 # Sh.ty ad / tracker networks introducing noise (e.g. long subdomain names)
 
@@ -854,6 +883,8 @@ ads.playground.xyz
 btrll.com
 mmstat.com
 sdad.guru
+markedup.com
+yottaa.net
 
 # Google crawlers
 

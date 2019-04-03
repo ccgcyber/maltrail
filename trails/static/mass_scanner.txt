@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2019 Miroslav Stampar (@stamparm)
+# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
 # See the file 'LICENSE' for copying permission
 
 #################################################################
@@ -1453,7 +1453,6 @@
 
 129.250.206.86  # telnetscanproject.org
 
-
 128.187.82.224  # imaal.byu.edu
 128.187.82.225
 128.187.82.226
@@ -1486,3 +1485,91 @@
 128.187.82.253
 128.187.82.254
 128.187.82.255
+
+# Reference: https://otx.alienvault.com/pulse/59646c87b126746267e5cf22
+# Reference: https://twitter.com/bad_packets/status/1104618320882393088
+# Reference: https://pastebin.com/raw/Zc7h4vkN
+# Reference: https://www.virustotal.com/#/domain/stretchoid.com
+
+107.170.192.236  # stretchoid.com
+107.170.192.80
+107.170.193.203
+107.170.193.225
+107.170.193.63
+107.170.194.57
+107.170.195.201
+107.170.195.64
+107.170.196.169
+107.170.197.38
+107.170.197.82
+107.170.198.158
+107.170.198.19
+107.170.198.249
+107.170.198.53
+107.170.199.171
+107.170.199.22
+107.170.199.239
+107.170.199.82
+107.170.201.217
+107.170.202.101
+107.170.202.110
+107.170.202.131
+107.170.202.134
+107.170.202.45
+107.170.202.91
+107.170.203.209
+107.170.203.236
+107.170.204.26
+107.170.204.82
+107.170.226.131
+107.170.237.113
+107.170.237.240
+107.170.237.32
+107.170.238.140
+107.170.238.185
+107.170.239.108
+107.170.249.187
+162.243.137.229
+192.241.195.37
+
+# Reference: https://twitter.com/bad_packets/status/1105245951327784960
+
+198.20.103.178 # internet-census.org
+178.79.181.200
+172.104.182.103
+172.104.30.71
+172.104.251.182
+173.230.138.235
+107.6.150.242
+198.143.158.178
+139.162.73.218
+69.164.202.154
+
+# Reference: https://twitter.com/bad_packets/status/1102675361496616960
+# Reference: https://www.virustotal.com/#/domain/internettl.org
+
+104.152.52.21 # internettl.org
+104.152.52.22
+104.152.52.23
+104.152.52.24
+104.152.52.25
+104.152.52.26
+104.152.52.27
+104.152.52.28
+104.152.52.29
+104.152.52.30
+104.152.52.31
+104.152.52.32
+104.152.52.33
+104.152.52.34
+104.152.52.35
+104.152.52.36
+104.152.52.37
+104.152.52.38
+104.152.52.39
+
+# Reference: https://twitter.com/bad_packets/status/1082733800780574720
+# Reference: https://www.virustotal.com/gui/domain/binaryedge.io/details
+# Reference: https://www.virustotal.com/gui/domain/binaryedge.ninja/details
+
+172.104.144.112 # binaryedge.ninja

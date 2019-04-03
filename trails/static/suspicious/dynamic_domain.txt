@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2019 Miroslav Stampar (@stamparm)
+# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
 # See the file 'LICENSE' for copying permission
 
 # Reference: https://www.noip.com/sign-up
@@ -1333,3 +1333,77 @@ theworkpc.com
 
 fagdns.com
 thindns.su
+
+# Reference: https://twitter.com/ScumBots/status/1104653627153698816
+
+codns.com
+
+# Reference: https://twitter.com/ScumBots/status/1104766873009299463
+
+gotdns.ch
+
+# Reference: https://twitter.com/ScumBots/status/1056221998991503361
+
+myq-see.com
+
+# Reference: https://twitter.com/ScumBots/status/1102249032817221632
+
+thddns.net
+
+# Reference: https://twitter.com/ScumBots/status/1105050120855449600
+
+kro.kr
+
+# Reference: https://twitter.com/ScumBots/status/1056727832037150727
+
+portmap.io
+
+# Reference: https://twitter.com/ScumBots/status/1105446350496432128
+
+ze.am
+
+# Reference: https://twitter.com/ScumBots/status/1105461451580420096
+
+p-e.kr
+
+# Reference: https://info.publicintelligence.net/FBI-BlackshadesDomains.xls
+
+chickenkiller.com
+crabdance.com
+ignorelist.com
+
+# Reference: https://www.virustotal.com/#/domain/freshdns.com
+
+freshdns.com
+
+# Reference: https://www.virustotal.com/#/domain/afraid.org
+
+afraid.org
+
+# Reference: https://www.virustotal.com/#/file/bc5662f91493da2bd02781832f8728a3eba350e47ed11cd8f927e3cb88a44452/behavior
+# Reference: https://www.virustotal.com/#/domain/b3ta.org
+
+b3ta.org
+
+# Reference: https://www.virustotal.com/#/domain/ygto.com
+
+ygto.com
+
+# Reference: https://ddns.winco.com.br/account/create_account.php
+
+ddns.com.br
+winconnection.net
+minhaempresa.tv
+minhacasa.tv
+
+# Reference: https://twitter.com/ScumBots/status/1108054788804145153
+
+portmap.host
+
+# Reference: https://twitter.com/JAMESWT_MHT/status/1109090811801673730
+
+warzonedns.com
+
+# Reference: https://twitter.com/ScumBots/status/1109455265085251584
+
+o-r.kr

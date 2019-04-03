@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 """
-Copyright (c) 2014-2019 Miroslav Stampar (@stamparm)
+Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
 See the file 'LICENSE' for copying permission
 """
 
@@ -46,6 +46,7 @@ from core.settings import NAME
 from core.settings import PING_RESPONSE
 from core.settings import SERVER_HEADER
 from core.settings import SESSION_COOKIE_NAME
+from core.settings import SESSION_COOKIE_FLAG_SAMESITE
 from core.settings import SESSION_EXPIRATION_HOURS
 from core.settings import SESSION_ID_LENGTH
 from core.settings import SESSIONS
@@ -157,6 +158,9 @@ def start_httpd(address=None, port=None, join=False, pem=None):
                         self.send_header(HTTP_HEADER.CONNECTION, "close")
                         self.send_header(HTTP_HEADER.CONTENT_TYPE, mimetypes.guess_type(path)[0] or "application/octet-stream")
                         self.send_header(HTTP_HEADER.LAST_MODIFIED, last_modified)
+                        self.send_header(HTTP_HEADER.CONTENT_SECURITY_POLICY, "default-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self'; "+
+                                                                              "script-src 'self' 'unsafe-eval' https://stat.ripe.net; connect-src 'self'; form-action 'self'; "+
+                                                                              "font-src 'self'; frame-src *; worker-src 'self'; block-all-mixed-content;")
                         if extension not in (".htm", ".html"):
                             self.send_header(HTTP_HEADER.EXPIRES, "Sun, 17-Jan-2038 19:14:07 GMT")        # Reference: http://blog.httpwatch.com/2007/12/10/two-simple-rules-for-http-caching/
                             self.send_header(HTTP_HEADER.CACHE_CONTROL, "max-age=3600, must-revalidate")  # Reference: http://stackoverflow.com/a/5084555
@@ -282,9 +286,15 @@ def start_httpd(address=None, port=None, join=False, pem=None):
 
                 self.send_response(httplib.OK)
                 self.send_header(HTTP_HEADER.CONNECTION, "close")
-                self.send_header(HTTP_HEADER.SET_COOKIE, "%s=%s; expires=%s; path=/; HttpOnly" % (SESSION_COOKIE_NAME, session_id, time.strftime(HTTP_TIME_FORMAT, time.gmtime(expiration))))
 
-                if netfilter in ("", "0.0.0.0/0"):
+                cookie = "%s=%s; expires=%s; path=/; HttpOnly" % (SESSION_COOKIE_NAME, session_id, time.strftime(HTTP_TIME_FORMAT, time.gmtime(expiration)))
+                if config.USE_SSL:
+                    cookie += "; Secure"
+                if SESSION_COOKIE_FLAG_SAMESITE:
+                    cookie += "; SameSite=strict"
+                self.send_header(HTTP_HEADER.SET_COOKIE, cookie)
+
+                if netfilter in ("", '*', "::", "0.0.0.0/0"):
                     netfilters = None
                 else:
                     addresses = set()
@@ -598,11 +608,25 @@ def start_httpd(address=None, port=None, join=False, pem=None):
             self.rfile = socket._fileobject(self.request, "rb", self.rbufsize)
             self.wfile = socket._fileobject(self.request, "wb", self.wbufsize)
 
+    # IPv6 support
+    if ':' in (address or ""):
+        address = address.strip("[]")
+
+        BaseHTTPServer.HTTPServer.address_family = socket.AF_INET6
+
+        # Reference: https://github.com/squeaky-pl/zenchmarks/blob/master/vendor/twisted/internet/tcp.py
+        _AI_NUMERICSERV = getattr(socket, "AI_NUMERICSERV", 0)
+        _NUMERIC_ONLY = socket.AI_NUMERICHOST | _AI_NUMERICSERV
+
+        _address = socket.getaddrinfo(address, int(port) if str(port or "").isdigit() else 0, 0, 0, 0, _NUMERIC_ONLY)[0][4]
+    else:
+        _address = (address or '', int(port) if str(port or "").isdigit() else 0)
+
     try:
         if pem:
-            server = SSLThreadingServer((address or '', int(port) if str(port or "").isdigit() else 0), pem, SSLReqHandler)
+            server = SSLThreadingServer(_address, pem, SSLReqHandler)
         else:
-            server = ThreadingServer((address or '', int(port) if str(port or "").isdigit() else 0), ReqHandler)
+            server = ThreadingServer(_address, ReqHandler)
     except Exception as ex:
         if "Address already in use" in str(ex):
             exit("[!] another instance already running")

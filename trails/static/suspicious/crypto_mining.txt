@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2019 Miroslav Stampar (@stamparm)
+# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
 # See the file 'LICENSE' for copying permission
 
 # Reference: https://hackforums.net/printthread.php?tid=5655422
@@ -90,3 +90,16 @@ pool.cortins.tk
 pool.supportxmr.com
 xmr.crypto-pool.fr
 xmrpool.eu
+
+# Reference: https://unit42.paloaltonetworks.com/mac-malware-steals-cryptocurrency-exchanges-cookies/
+
+koto-pool.work
+
+# Reference: https://www.anomali.com/blog/rocke-evolves-its-arsenal-with-a-new-malware-family-written-in-golang
+
+134.209.104.20:51640
+minerxmr.ru
+
+# Reference: https://twitter.com/bad_packets/status/1100625553822867456
+
+119.23.222.239:26590

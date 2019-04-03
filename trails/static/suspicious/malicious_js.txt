@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2019 Miroslav Stampar (@stamparm)
+# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
 # See the file 'LICENSE' for copying permission
 
 # Reference: https://blog.malwarebytes.com/threat-analysis/2018/09/mass-wordpress-compromises-tech-support-scams/
@@ -307,3 +307,48 @@ ukcoffe.com
 # Reference: https://twitter.com/malware_traffic/status/1051999693780262912
 
 /flashplayer_41.22_plugin.js
+
+# Reference: https://twitter.com/securitydoggo/status/938750437913776128
+
+/SexyHot19.js
+
+# Reference: https://twitter.com/securitydoggo/status/919906367254728706
+
+/chronopost-colis-suivi.js
+
+# Reference: https://twitter.com/securitydoggo/status/856526428933943296
+
+/Consulta FGTS.js
+
+# Reference: https://threatpost.com/card-skimming-google-analytics-angular/142264/
+
+google-analytics.cm/analytics.js
+gooqletagmanager.com/gtm.js
+
+# Reference: https://blog.sucuri.net/2018/12/localization-and-customization-of-credit-card-stealing-malware.html
+
+kinfirighbetted.host
+sales4reason.com
+greatwebstat.com
+
+# Reference: https://twitter.com/bad_packets/status/1106430758179110912
+
+blockchainanalyticscdn.com
+5b0c4f7f0587346ad14b9e59704c1d9a.top
+925e40815f619e622ef71abc6923167f.top
+
+# Reference: https://www.group-ib.com/media/js-sniffer/
+
+gmo.li
+
+# Reference: https://twitter.com/VK_Intel/status/1104109897531224065
+
+host.moresecurity.kz/host/info
+
+# Reference: https://docs.google.com/document/d/1oYX3uN6KxIX_StzTH0s0yFNNoHDnV8VgmVqU5WoeErc (2018-06-12 Charming Kitten waterhole)
+
+178.32.48.50:8443/node.js
+
+# Reference: https://blog.attacker.net/a-new-wave-of-the-simpleoneline-malware
+
+simpleoneline.online

@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 """
-Copyright (c) 2014-2019 Miroslav Stampar (@stamparm)
+Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
 See the file 'LICENSE' for copying permission
 """
 
@@ -161,7 +161,7 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
                     _ = ".%s" % domain
                     trail = "(%s)%s" % (query[:-len(_)], _)
 
-                if not (re.search(r"(?i)\Ad?ns\d*\.", query) and any(_ in trails.get(domain, " ")[0] for _ in ("suspicious", "sinkhole"))):  # e.g. ns2.nobel.su
+                if not (re.search(r"(?i)\A(d?ns|nf|mx)\d*\.", query) and any(_ in trails.get(domain, " ")[0] for _ in ("suspicious", "sinkhole"))):  # e.g. ns2.nobel.su
                     if not ((query == trail) and any(_ in trails.get(domain, " ")[0] for _ in ("dynamic", "free web"))):  # e.g. noip.com
                         result = True
                         log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[domain][0], trails[domain][1]), packet)
@@ -714,7 +714,7 @@ def init():
                 print("[x] going to continue without online update")
             _ = update_trails(offline=True)
         else:
-            _ = update_trails(server=config.UPDATE_SERVER)
+            _ = update_trails()
             update_ipcat()
 
         if _:
@@ -813,7 +813,7 @@ def init():
                 else:
                     raise
 
-    if config.LOG_SERVER and not len(config.LOG_SERVER.split(':')) == 2:
+    if config.LOG_SERVER and ':' not in config.LOG_SERVER:
         exit("[!] invalid configuration value for 'LOG_SERVER' ('%s')" % config.LOG_SERVER)
 
     if config.SYSLOG_SERVER and not len(config.SYSLOG_SERVER.split(':')) == 2:

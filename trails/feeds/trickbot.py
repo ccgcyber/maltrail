@@ -1,15 +1,12 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 """
-Copyright (c) 2014-2019 Miroslav Stampar (@stamparm)
+Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
 See the file 'LICENSE' for copying permission
 """
 
 import re
 
-from core.addr import addr_to_int
-from core.addr import int_to_addr
-from core.addr import make_mask
 from core.common import retrieve_content
 
 __url__ = "https://github.com/JR0driguezB/malware_configs"
