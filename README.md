@@ -1,6 +1,6 @@
 ![Maltrail](https://i.imgur.com/3xjInOD.png)
 
-[![Python 2.6|2.7](https://img.shields.io/badge/python-2.6|2.7-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://github.com/stamparm/maltrail#license) [![Malware families](https://img.shields.io/badge/malware_families-697-orange.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Twitter](https://img.shields.io/badge/twitter-@maltrail-blue.svg)](https://twitter.com/maltrail)
+[![Python 2.6|2.7](https://img.shields.io/badge/python-2.6|2.7-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://github.com/stamparm/maltrail#license) [![Malware families](https://img.shields.io/badge/malware_families-728-orange.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Twitter](https://img.shields.io/badge/twitter-@maltrail-blue.svg)](https://twitter.com/maltrail)
 
 ## Content
 
@@ -28,6 +28,7 @@
 - [Requirements](#requirements)
 - [Best practice(s)](#best-practices)
 - [License](#license)
+- [Developers](#developers)
 - [Thank you](#thank-you)
 
 ## Introduction
@@ -496,6 +497,11 @@ To properly run the Maltrail, [Python](http://www.python.org/download/) **2.6.x*
 
 This software is provided under a MIT License. See the accompanying [LICENSE](https://github.com/stamparm/maltrail/blob/master/LICENSE) file for more information.
 
+## Developers
+
+* Miroslav Stampar (@stamparm)
+* Mikhail Kasimov (@MikhailKasimov)
+
 ## Thank you
 
 * Thomas Kristner
@@ -503,6 +509,5 @@ This software is provided under a MIT License. See the accompanying [LICENSE](ht
 * James Lay
 * Ladislav Baco (@laciKE)
 * John Kristoff (@jtkdpu)
-* Mikhail Kasimov (@MikhailKasimov)
 * Michael M&uuml;nz (@mimugmail)
 * David Brush

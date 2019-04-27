@@ -24,7 +24,7 @@ config = AttribDict()
 trails = TrailsDict()
 
 NAME = "Maltrail"
-VERSION = "0.12.28"
+VERSION = "0.12.29"
 SERVER_HEADER = "%s/%s" % (NAME, VERSION)
 DATE_FORMAT = "%Y-%m-%d"
 ROTATING_CHARS = ('\\', '|', '|', '/', '-')
@@ -77,8 +77,8 @@ BAD_TRAIL_PREFIXES = ("127.", "192.168.", "localhost")
 LOCALHOST_IP = { 4: "127.0.0.1", 6: "::1" }
 IGNORE_DNS_QUERY_SUFFIXES = (".arpa", ".local", ".guest")
 VALID_DNS_CHARS = string.letters + string.digits + '-' + '.'  # Reference: http://stackoverflow.com/a/3523068
-SUSPICIOUS_CONTENT_TYPES = ("application/x-sh", "application/x-shellscript", "text/x-sh", "text/x-shellscript")
-SUSPICIOUS_DIRECT_DOWNLOAD_EXTENSIONS = set((".apk", ".exe", ".scr"))
+SUSPICIOUS_CONTENT_TYPES = ("application/x-sh", "application/x-shellscript", "application/hta", "text/x-sh", "text/x-shellscript")
+SUSPICIOUS_DIRECT_DOWNLOAD_EXTENSIONS = set((".apk", ".exe", ".hta", ".ps1", ".scr"))
 WHITELIST_DIRECT_DOWNLOAD_KEYWORDS = ("cgi", "/scripts/", "/_vti_bin/", "/bin/", "/pub/softpaq/", "/bios/", "/pc-axis/")
 SUSPICIOUS_HTTP_REQUEST_REGEXES = (
     ("potential sql injection", r"information_schema|sysdatabases|sysusers|floor\(rand\(|ORDER BY \d+|\bUNION\s+(ALL\s+)?SELECT\b|\b(UPDATEXML|EXTRACTVALUE)\(|\bCASE[^\w]+WHEN.*THEN\b|\bWAITFOR[^\w]+DELAY\b|\bCONVERT\(|VARCHAR\(|\bCOUNT\(\*\)|\b(pg_)?sleep\(|\bSELECT\b.*\bFROM\b.*\b(WHERE|GROUP|ORDER)\b|\bSELECT \w+ FROM \w+|\b(AND|OR|SELECT)\b.*/\*.*\*/|/\*.*\*/.*\b(AND|OR|SELECT)\b|\b(AND|OR)[^\w]+\d+['\") ]?[=><]['\"( ]?\d+|ODBC;DRIVER|\bINTO\s+(OUT|DUMP)FILE"),
@@ -386,9 +386,9 @@ def read_whitelist():
                 else:
                     WHITELIST.add(line)
                     
-# add rules to ignore event list from passed file                
+# add rules to ignore event list from passed file
 def add_ignorelist(filepath):
-    if filepath and os.path.isfile(filepath):         
+    if filepath and os.path.isfile(filepath):
         with open(filepath, "r") as f:
             for line in f:
                 line = re.sub(r"\s+", "", line)
@@ -406,7 +406,7 @@ def read_ignorelist():
     add_ignorelist(_)
                         
     if config.USER_IGNORELIST and os.path.isfile(config.USER_IGNORELIST):
-        add_ignorelist(config.USER_IGNORELIST)  
+        add_ignorelist(config.USER_IGNORELIST)
     
 def read_ua():
     global SUSPICIOUS_UA_REGEX
@@ -493,4 +493,3 @@ if __name__ != "__main__":
     read_worst_asn()
     read_cdn_ranges()
     read_bogon_ranges()
-

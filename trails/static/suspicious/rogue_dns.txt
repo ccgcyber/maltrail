@@ -1,0 +1,43 @@
+# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
+# See the file 'LICENSE' for copying permission
+
+# Reference: https://securelist.com/roaming-mantis-part-iv/90332/
+
+171.244.33.114:53
+171.244.33.116:53
+
+# Reference: https://twitter.com/bad_packets/status/1112087547050520577
+
+195.128.124.131:53
+195.128.126.165:53
+
+# Reference: https://twitter.com/bad_packets/status/1079251375987425280
+
+66.70.173.48:53
+
+# Reference: https://twitter.com/parseword/status/1093234498228097024
+
+144.217.191.145:53
+
+# Reference: https://twitter.com/bad_packets/status/1114236807367905280
+# Reference: https://www.ixiacom.com/company/blog/paypal-netflix-gmail-and-uber-users-among-targets-new-wave-dns-hijacking-attacks
+
+195.128.124.150:53
+195.128.124.181:53
+
+# Reference: https://twitter.com/ninoseki/status/1106842790351106048
+
+1.53.252.164:53
+1.53.252.215:53
+
+# Reference: https://blog.talosintelligence.com/2019/04/seaturtle.html
+
+95.179.150.101:53
+ns1.intersecdns.com
+ns2.intersecdns.com
+ns1.lcjcomputing.com
+ns2.lcjcomputing.com
+
+# Reference: https://blog.talosintelligence.com/2018/11/dnspionage-campaign-targets-middle-east.html (DNS Hijack Domains)
+
+185.20.187.8:53

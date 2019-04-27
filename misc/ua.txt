@@ -555,3 +555,58 @@ HaxerMen
 # Reference: https://twitter.com/ankit_anubhav/status/1069562868918566914
 
 jexboss
+
+# Reference: https://twitter.com/bad_packets/status/1095565095361368064
+
+Hacks
+
+# Reference: https://twitter.com/bad_packets/status/1096201963497111553
+
+Go-http-client
+
+# Reference: https://twitter.com/bad_packets/status/1088707628442644480
+
+Ronin
+
+# Reference: https://twitter.com/bad_packets/status/1088711085375479809
+
+Oof
+
+# Reference: https://perchsecurity.com/perch-news/threat-report-sunday-february-3rd-2019/
+
+Cayosin
+Cock
+
+# Reference: # Reference: https://unit42.paloaltonetworks.com/mirai-compiled-for-new-processor-surfaces/
+
+Blade
+Hello-World
+Hito
+
+# Reference: https://securitywithoutborders.org/blog/2019/03/29/exodus.html
+
+it.promofferte
+
+# Reference: https://twitter.com/SettiDavide89/status/1116682737455382528
+
+ransomware
+
+# Reference: https://research.checkpoint.com/the-muddy-waters-of-apt-attacks/
+
+Mozilla/4.0 (compatible; Clever Internet Suite)
+
+# Reference: https://twitter.com/James_inthe_box/status/1119932303088578561
+
+QXQ_35
+
+# Reference: https://blog.talosintelligence.com/2018/02/targeted-attacks-in-middle-east.html
+
+iq.46-|-
+
+# Reference: https://twitter.com/360Netlab/status/974374944711815168
+
+Geth
+
+# Reference: https://www.netskope.com/blog/malicious-google-sites
+
+otlook

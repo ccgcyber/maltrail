@@ -1,0 +1,32 @@
+# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
+# See the file 'LICENSE' for copying permission
+
+# Reference: https://twitter.com/slayersecurity/status/1115635967875014656
+
+/out-292242810.ps1
+/out-1584466740.ps1
+
+# Reference: https://twitter.com/slayersecurity/status/1115902366686031878
+
+/spid.ps1
+
+# Reference: https://twitter.com/x42x5a/status/1116272110912065536
+
+/out-113489727.ps1
+/out-734087850.ps1
+/out-1137236610.ps1
+
+# Reference: https://raw.githubusercontent.com/blackorbird/APT_REPORT/master/kimsuky/Smoke%20Screen.pdf
+
+/keylogger.ps1
+/keylogger1.ps1
+
+# Reference: https://twitter.com/malwrhunterteam/status/1118768633377955840
+
+/bs.ps1
+/indiapro.ps1
+
+# Reference: https://krebsonsecurity.com/wp-content/uploads/2019/04/wiproiocs.txt
+
+/abc.ps1
+/sc.ps1

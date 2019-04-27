@@ -29,14 +29,6 @@
 
 /loomistech/gate.php
 
-# Reference: https://twitter.com/James_inthe_box/status/1044957343568388097
-# Reference: https://pastebin.com/st49wnwB
-# Reference: https://pastebin.com/bPV4gVVL
-
-/4/forum.php
-/d2/forum.php
-/mlu/forum.php
-
 # Reference: https://twitter.com/nullcookies/status/1019569151503986689
 
 /bc0de.php
@@ -134,3 +126,45 @@ statconuter.com/c.php
 # Reference: https://twitter.com/executemalware/status/1112337168138149888
 
 /phpmailer/Pmxyz.php
+
+# Reference: https://twitter.com/albertzsigovits/status/1113096573284728839
+
+/asfdh4/auth.php
+
+# Reference: https://twitter.com/IpNigh/status/1113287915612798976
+
+/49rrf856hqofcuq6mkdntfdp.php
+
+# Reference: https://otx.alienvault.com/pulse/5ca5e12bcf299875864044a6
+# Reference: https://www.securityartwork.es/2019/04/02/militaryfinancingmaldoc/
+# Reference: https://blog.trendmicro.co.jp/archives/19054
+
+/7773/index.php
+/9125/gate.php 
+
+# Reference: https://www.bromium.com/mapping-malware-distribution-network/
+# Reference: https://otx.alienvault.com/pulse/5ca7142dd898276082584a58
+
+/olala/get.php
+
+# Reference: https://twitter.com/IpNigh/status/1114334454930190336
+
+/hcu9e676hqzffjez47ec6ggd.php
+
+# Reference: https://twitter.com/ViriBack/status/1114610878056402945
+
+/class-walker-page-up.php
+
+# Reference: http://marketplace.1c-bitrix.ru/blog/remove-virus-miner-from-the-site-to-1cbitrix/ (RU-lang)
+# Generic detection for compromised Bitrix CMS
+
+/bitrix/tools/check_files.php
+/bitrix/gadgets/bitrix/weather/lang/ru/exec/include.php
+
+# Reference: https://twitter.com/VK_Intel/status/1080919080616439808
+
+/spr_updates.php
+
+# Reference: https://twitter.com/packet_Wire/status/1118528816509591552
+
+/rz7g271ct2iv65rmhwwq42bu.php

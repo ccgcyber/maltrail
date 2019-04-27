@@ -1,0 +1,51 @@
+# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
+# See the file 'LICENSE' for copying permission
+
+# Reference: https://twitter.com/angel11VR/status/1115343202167533568
+# Reference: https://pastebin.com/0bX17LaY
+
+/out-761452637.hta
+
+# Reference: https://github.com/blackorbird/APT_REPORT/blob/master/kimsuky/aptnote0403
+
+/moonx.hta
+/shop/price/com/first.hta
+
+# Reference: https://twitter.com/neonprimetime/status/1116740246790602753
+
+/wormhta.hta
+
+# Reference: https://twitter.com/InQuest/status/1116772541312401408
+
+/ec470000/file.hta
+
+# Reference: https://twitter.com/JAMESWT_MHT/status/1118088254224515072
+
+/out-1618282703.hta
+
+# Reference: https://twitter.com/blackorbird/status/1118334122592591872
+# Reference: https://raw.githubusercontent.com/blackorbird/APT_REPORT/master/kimsuky/Smoke%20Screen.pdf
+
+/Ersrr0.hta
+/first.hta
+/fmaov0.hta
+/fwvuj0.hta
+/Htqgf0.hta
+/Msgxo.hta
+/Msgxo0.hta
+/Mylqn0.hta
+/Pkjjy.hta
+/Qfnaq.hta
+/Qzqrn0.hta
+/second.hta
+/szgfj0.hta
+/xtgnb0.hta
+/Yluhi0.hta
+
+# Reference: https://blog.talosintelligence.com/2019/04/threat-source-april-18-new-attacks.html
+
+/we.hta
+
+# Reference: https://twitter.com/pancak3lullz/status/1113084930475638784
+
+/9Y4wOJot.hta
