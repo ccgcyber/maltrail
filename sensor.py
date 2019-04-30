@@ -23,6 +23,7 @@ import re
 import socket
 import subprocess
 import struct
+import sys
 import threading
 import time
 import traceback
@@ -105,7 +106,8 @@ _last_logged_syn = None
 _last_udp = None
 _last_logged_udp = None
 _last_dns_exhaustion = None
-_quit = threading.Event()
+_done_count = 0
+_done_lock = threading.Lock()
 _subdomains = {}
 _subdomains_sec = None
 _dns_exhausted_domains = set()
@@ -150,22 +152,30 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
 
     result = False
     if not _check_domain_whitelisted(query) and all(_ in VALID_DNS_CHARS for _ in query):
-        parts = query.lower().split('.')
+        parts = query.split('.')
 
-        for i in xrange(0, len(parts)):
-            domain = '.'.join(parts[i:])
-            if domain in trails:
-                if domain == query:
-                    trail = domain
-                else:
-                    _ = ".%s" % domain
-                    trail = "(%s)%s" % (query[:-len(_)], _)
+        if ".onion." in query:
+            trail = re.sub(r"(\.onion)(\..*)", r"\1(\2)", query)
+            _ = trail.split('(')[0]
+            if _ in trails:
+                result = True
+                log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[_][0], trails[_][1]), packet)
 
-                if not (re.search(r"(?i)\A(d?ns|nf|mx)\d*\.", query) and any(_ in trails.get(domain, " ")[0] for _ in ("suspicious", "sinkhole"))):  # e.g. ns2.nobel.su
-                    if not ((query == trail) and any(_ in trails.get(domain, " ")[0] for _ in ("dynamic", "free web"))):  # e.g. noip.com
-                        result = True
-                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[domain][0], trails[domain][1]), packet)
-                        break
+        if not result:
+            for i in xrange(0, len(parts)):
+                domain = '.'.join(parts[i:])
+                if domain in trails:
+                    if domain == query:
+                        trail = domain
+                    else:
+                        _ = ".%s" % domain
+                        trail = "(%s)%s" % (query[:-len(_)], _)
+
+                    if not (re.search(r"(?i)\A(d?ns|nf|mx)\d*\.", query) and any(_ in trails.get(domain, " ")[0] for _ in ("suspicious", "sinkhole"))):  # e.g. ns2.nobel.su
+                        if not ((query == trail) and any(_ in trails.get(domain, " ")[0] for _ in ("dynamic", "free web"))):  # e.g. noip.com
+                            result = True
+                            log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[domain][0], trails[domain][1]), packet)
+                            break
 
         if not result and config.USE_HEURISTICS:
             if len(parts[0]) > SUSPICIOUS_DOMAIN_LENGTH_THRESHOLD and '-' not in parts[0]:
@@ -786,7 +796,8 @@ def init():
                     exit("[!] missing function 'plugin(event_tuple, packet)' in plugin script '%s'" % filename)
 
     if config.pcap_file:
-        _caps.append(pcapy.open_offline(config.pcap_file))
+        for _ in config.pcap_file.split(','):
+            _caps.append(pcapy.open_offline(_))
     else:
         interfaces = set(_.strip() for _ in config.MONITOR_INTERFACE.split(','))
 
@@ -932,6 +943,8 @@ def monitor():
 
     try:
         def _(_cap):
+            global _done_count
+
             datalink = _cap.datalink()
             while True:
                 success = False
@@ -941,7 +954,8 @@ def monitor():
                         success = True
                         packet_handler(datalink, header, packet)
                     elif config.pcap_file:
-                        _quit.set()
+                        with _done_lock:
+                            _done_count += 1
                         break
                 except (pcapy.PcapError, socket.timeout):
                     pass
@@ -957,7 +971,7 @@ def monitor():
         for _cap in _caps:
             threading.Thread(target=_, args=(_cap,)).start()
 
-        while _caps and not _quit.is_set():
+        while _caps and not _done_count == (config.pcap_file or "").count(',') + 1:
             time.sleep(1)
 
         print("[i] all capturing interfaces closed")
@@ -983,6 +997,16 @@ def monitor():
 def main():
     print("%s (sensor) #v%s\n" % (NAME, VERSION))
 
+    for i in xrange(1, len(sys.argv)):
+        if sys.argv[i] == "-i":
+            for j in xrange(i + 2, len(sys.argv)):
+                value = sys.argv[j]
+                if os.path.isfile(value):
+                    sys.argv[i + 1] += ",%s" % value
+                    sys.argv[j] = ''
+                else:
+                    break
+
     parser = optparse.OptionParser(version=VERSION)
     parser.add_option("-c", dest="config_file", default=CONFIG_FILE, help="configuration file (default: '%s')" % os.path.split(CONFIG_FILE)[-1])
     parser.add_option("-i", dest="pcap_file", help="open pcap file for offline analysis")
@@ -1006,10 +1030,12 @@ def main():
     if options.pcap_file:
         if options.pcap_file == '-':
             print("[i] using STDIN")
-        elif not os.path.isfile(options.pcap_file):
-            exit("[!] missing pcap file '%s'" % options.pcap_file)
         else:
-            print("[i] using pcap file '%s'" % options.pcap_file)
+            for _ in options.pcap_file.split(','):
+                if not os.path.isfile(_):
+                    exit("[!] missing pcap file '%s'" % _)
+
+            print("[i] using pcap file(s) '%s'" % options.pcap_file)
 
     if not config.DISABLE_CHECK_SUDO and not check_sudo():
         exit("[!] please run '%s' with sudo/Administrator privileges" % __file__)
