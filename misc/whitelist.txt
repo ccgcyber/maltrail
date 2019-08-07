@@ -836,6 +836,13 @@ check.googlezip.net
 ingress-guard.tk
 mshome.net
 playx.fun
+knjige.club
+etcd.socket
+philaorch.org
+mozilla.org
+discord.gg
+0.0.0.0
+255.255.255.255
 
 # NS of afraid.org
 

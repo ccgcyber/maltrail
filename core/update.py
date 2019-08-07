@@ -39,7 +39,6 @@ from core.settings import IPCAT_CSV_FILE
 from core.settings import IPCAT_SQLITE_FILE
 from core.settings import IPCAT_URL
 from core.settings import ROOT_DIR
-from core.settings import TRAILS_FILE
 from core.settings import USERS_DIR
 
 # patch for self-signed certificates (e.g. CUSTOM_TRAILS_URL)
@@ -85,7 +84,7 @@ def update_trails(force=False, offline=False):
         if not content or content.count(',') < 2:
             print "[x] unable to retrieve data from '%s'" % config.UPDATE_SERVER
         else:
-            with _fopen(TRAILS_FILE, "w+b") as f:
+            with _fopen(config.TRAILS_FILE, "w+b") as f:
                 f.write(content)
             trails = load_trails()
 
@@ -100,8 +99,11 @@ def update_trails(force=False, offline=False):
                 for filename in filenames:
                     trail_files.add(os.path.abspath(os.path.join(dirpath, filename)))
 
-        if not trails and (force or not os.path.isfile(TRAILS_FILE) or (time.time() - os.stat(TRAILS_FILE).st_mtime) >= config.UPDATE_PERIOD or os.stat(TRAILS_FILE).st_size == 0 or any(os.stat(_).st_mtime > os.stat(TRAILS_FILE).st_mtime for _ in trail_files)):
-            print "[i] updating trails (this might take a while)..."
+        if not trails and (force or not os.path.isfile(config.TRAILS_FILE) or (time.time() - os.stat(config.TRAILS_FILE).st_mtime) >= config.UPDATE_PERIOD or os.stat(config.TRAILS_FILE).st_size == 0 or any(os.stat(_).st_mtime > os.stat(config.TRAILS_FILE).st_mtime for _ in trail_files)):
+            if not config.no_updates:
+                print "[i] updating trails (this might take a while)..."
+            else:
+                print "[i] checking trails..."
 
             if not offline and (force or config.USE_FEED_UPDATES):
                 _ = os.path.abspath(os.path.join(ROOT_DIR, "trails", "feeds"))
@@ -135,7 +137,9 @@ def update_trails(force=False, offline=False):
 
                 for name, function in inspect.getmembers(module, inspect.isfunction):
                     if name == "fetch":
-                        print(" [o] '%s'%s" % (module.__url__, " " * 20 if len(module.__url__) < 20 else ""))
+                        url = module.__url__  # Note: to prevent "SyntaxError: can not delete variable 'module' referenced in nested scope"
+
+                        print(" [o] '%s'%s" % (url, " " * 20 if len(url) < 20 else ""))
                         sys.stdout.write("[?] progress: %d/%d (%d%%)\r" % (i, len(filenames), i * 100 / len(filenames)))
                         sys.stdout.flush()
 
@@ -153,8 +157,8 @@ def update_trails(force=False, offline=False):
                                     duplicates[item[0]].add(item[1][1])
                                 if not (item[0] in trails and (any(_ in item[1][0] for _ in LOW_PRIORITY_INFO_KEYWORDS) or trails[item[0]][1] in HIGH_PRIORITY_REFERENCES)) or (item[1][1] in HIGH_PRIORITY_REFERENCES and "history" not in item[1][0]) or any(_ in item[1][0] for _ in HIGH_PRIORITY_INFO_KEYWORDS):
                                     trails[item[0]] = item[1]
-                            if not results and "abuse.ch" not in module.__url__:
-                                print "[x] something went wrong during remote data retrieval ('%s')" % module.__url__
+                            if not results and not any(_ in url for _ in ("abuse.ch", "cobaltstrike")):
+                                print "[x] something went wrong during remote data retrieval ('%s')" % url
                         except Exception, ex:
                             print "[x] something went wrong during processing of feed file '%s' ('%s')" % (filename, ex)
 
@@ -221,6 +225,16 @@ def update_trails(force=False, offline=False):
                     if re.search(config.DISABLED_TRAILS_INFO_REGEX, trails[key][0]):
                         del trails[key]
                         continue
+
+                try:
+                    _key = key.decode("utf8").encode("idna")
+                    if _key != key:  # for domains with non-ASCII letters (e.g. phishing)
+                        trails[_key] = trails[key]
+                        del trails[key]
+                        key = _key
+                except:
+                    pass
+
                 if not key or re.search(r"\A(?i)\.?[a-z]+\Z", key) and not any(_ in trails[key][1] for _ in ("custom", "static")):
                     del trails[key]
                     continue
@@ -237,7 +251,7 @@ def update_trails(force=False, offline=False):
                     key = key[len("www."):]
                     if key:
                         trails[key] = _
-                if '?' in key:
+                if '?' in key and not key.startswith('/'):
                     _ = trails[key]
                     del trails[key]
                     key = key.split('?')[0]
@@ -276,19 +290,19 @@ def update_trails(force=False, offline=False):
 
             try:
                 if trails:
-                    with _fopen(TRAILS_FILE, "w+b") as f:
+                    with _fopen(config.TRAILS_FILE, "w+b") as f:
                         writer = csv.writer(f, delimiter=',', quotechar='\"', quoting=csv.QUOTE_MINIMAL)
                         for trail in trails:
                             writer.writerow((trail, trails[trail][0], trails[trail][1]))
 
                     success = True
             except Exception, ex:
-                print "[x] something went wrong during trails file write '%s' ('%s')" % (TRAILS_FILE, ex)
+                print "[x] something went wrong during trails file write '%s' ('%s')" % (config.TRAILS_FILE, ex)
 
             print "[i] update finished%s" % (40 * " ")
 
             if success:
-                print "[i] trails stored to '%s'" % TRAILS_FILE
+                print "[i] trails stored to '%s'" % config.TRAILS_FILE
 
     return trails
 
@@ -347,7 +361,7 @@ def main():
     else:
         if "-r" in sys.argv:
             results = []
-            with _fopen(TRAILS_FILE) as f:
+            with _fopen(config.TRAILS_FILE) as f:
                 for line in f:
                     if line and line[0].isdigit():
                         items = line.split(',', 2)

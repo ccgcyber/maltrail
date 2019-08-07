@@ -1817,43 +1817,166 @@ myservicessapps.com/firebase/win_new_cl.php
 
 # Reference: https://www.bleepingcomputer.com/virus-removal/remove-autoconfigurl-browser-hijacker
 
-http://fastaccessweb.com/wpad.dat
-http://get-access.me/wpad.dat
-http://mail.no-stop.net/wpad.dat
-http://non-block.com/wpad.dat
-http://non-block.net/wpad.dat
-http://nonblock.net/wpad.dat
-http://nonblocks.com/wpad.dat
-http://none-stop.net/wpad.dat
-http://noneblock.com/wpad.dat
-http://nostopped.net/wpad.dat
-http://stoppblock.biz/wpad.dat
-http://stoppblock.com/wpad.dat
-http://stoppblock.me/wpad.dat
-http://stoppblock.org/wpad.dat
-http://un-blocking.com/wpad.dat
-http://un-blocking.info/wpad.dat
-http://un-blocking.net/wpad.dat
-http://un-stop.com/wpad.dat
-http://un-stop.net/wpad.dat
-http://un-stop.org/wpad.dat
-http://unblockservice.com/wpad.dat
-http://unstop.me/wpad.dat
-http://unstopp.me/wpad.dat
-http://unstops.biz/wpad.dat
-http://unstops.net/wpad.dat
-http://unstopweb.com/wpad.dat
-http://unstopweb.net/wpad.dat
-http://unstopweb.org/wpad.dat
-http://ww.no-stop.net/wpad.dat
-http://ww.notblocked.net/wpad.dat
-http://ww1.no-blocked.com/wpad.dat
-http://ww38.no-blocked.com/wpad.dat
-http://ww41.no-blocked.com/wpad.dat
-http://www.no-blocked.com/wpad.dat
-http://www.nonblock.net/wpad.dat
-http://www.none-stop.net/wpad.dat
-http://www.stoppblock.com/wpad.dat
-http://www.unstopp.me/wpad.dat
-http://www.webunstop.org/wpad.dat
+fastaccessweb.com/wpad.dat
+get-access.me/wpad.dat
+mail.no-stop.net/wpad.dat
+non-block.com/wpad.dat
+non-block.net/wpad.dat
+nonblock.net/wpad.dat
+nonblocks.com/wpad.dat
+none-stop.net/wpad.dat
+no-stop.net/wpad.dat
+notblocked.net/wpad.dat
+no-blocked.com/wpad.dat
+nonblock.net/wpad.dat
+none-stop.net/wpad.dat
+noneblock.com/wpad.dat
+nostopped.net/wpad.dat
+stoppblock.biz/wpad.dat
+stoppblock.com/wpad.dat
+stoppblock.me/wpad.dat
+stoppblock.org/wpad.dat
+un-blocking.com/wpad.dat
+un-blocking.info/wpad.dat
+un-blocking.net/wpad.dat
+un-stop.com/wpad.dat
+un-stop.net/wpad.dat
+un-stop.org/wpad.dat
+unblockservice.com/wpad.dat
+unstop.me/wpad.dat
+unstopp.me/wpad.dat
+unstops.biz/wpad.dat
+unstops.net/wpad.dat
+unstopweb.com/wpad.dat
+unstopweb.net/wpad.dat
+unstopweb.org/wpad.dat
+webunstop.org/wpad.dat
 
+# Reference: https://twitter.com/James_inthe_box/status/1125543661259771904
+
+anyplace-control.com
+anyplace-gateway.info
+
+# Reference: https://twitter.com/raby_mr/status/1126706972466659328
+# Reference: https://app.any.run/tasks/8d827ab9-2ce5-4730-8652-b07328fa7814
+
+lifopp-sacoho.com
+
+
+# Reference: https://www.reverse.it/sample/c314fcf73fbd90c06867864834c7f62e29d2a217bde9b4bdc9b004e6b55d4697?environmentId=100
+# Reference: https://www.virustotal.com/#/file/c314fcf73fbd90c06867864834c7f62e29d2a217bde9b4bdc9b004e6b55d4697/detection
+
+wintoflashsuggestor.net
+
+# Reference: https://twitter.com/raby_mr/status/1131448142665097217
+# Reference: https://app.any.run/tasks/bdbca682-3f93-44ea-af57-e0174a660bcf/
+
+getgosoft.com
+static.215.3.202.116.clients.your-server.de
+
+# Reference: https://twitter.com/MalwarePatrol/status/1132329992384331781
+# Reference: https://twitter.com/MalwarePatrol/status/1132148797566590977
+
+bannerpt.casino.com
+banner3.casino.com
+
+# Reference: https://twitter.com/MalwarePatrol/status/1133960734587662336
+
+brestschool7.iatp.by
+
+# Reference: https://twitter.com/Mesiagh/status/1134186444799430656
+
+securybrowse.com
+
+# Reference: https://twitter.com/MalwarePatrol/status/1134504318059601920
+
+banner.dafapunter.com
+
+# Reference: https://twitter.com/MalwarePatrol/status/1134866707791667201
+
+dynamicdownloads.tweakbit.com
+
+# Reference: https://twitter.com/MalwarePatrol/status/1135229093732134913
+
+banner.it.casino.com
+
+# Reference: https://twitter.com/MalwarePatrol/status/1135953868939026432
+
+chat.ygosu.com
+
+# Reference: https://twitter.com/MalwarePatrol/status/1136859839236153344
+
+t1.daumcdn.net
+
+# Reference: https://twitter.com/MalwarePatrol/status/1137584613935763457
+
+url.tudown.com
+
+# Reference: https://twitter.com/MalwarePatrol/status/1138671778505666560
+
+123juzi.net
+
+# Reference: https://twitter.com/MalwarePatrol/status/1139034163795939328
+
+alsaei.com
+
+# Reference: https://twitter.com/LukasStefanko/status/1139064061809893376
+
+freegifts.top
+
+# Reference: https://blog.talosintelligence.com/2019/06/threat-roundup-0607-0614.html (# PUA.Win.Adware.Qjwmonkey-6992589-0)
+
+x.93ne.com
+cdn.zry97.com
+
+# Reference: https://twitter.com/MalwarePatrol/status/1143382823002345472
+
+software.goop.co.il
+
+# Reference: https://twitter.com/MalwarePatrol/status/1146100756493328384
+
+fastsoft.onlinedown.net
+
+# Reference: https://twitter.com/MalwarePatrol/status/1147006698441334785
+
+tool1.91danji.com
+
+# Reference: https://twitter.com/MalwarePatrol/status/1147550303501324288
+
+irc-files.org
+
+# Reference: https://twitter.com/MalwarePatrol/status/1149543416478306304
+
+premium.roxypalace.com
+
+# Reference: https://twitter.com/MalwarePatrol/status/1151355352832716803
+
+getfreevideo.world
+
+# Reference: https://twitter.com/MalwarePatrol/status/1152080131550138368
+
+dl.xetapp.us
+
+# Reference: https://twitter.com/Paladin3161/status/1151809951762964480
+# Reference: https://www.virustotal.com/gui/file/aacadf7b3bfc2ac8a9a342e5372c77218efa9c67602c3a15441094170a5f52d4/detection
+
+dl.ludashi.com
+dlres-a.iyims.com
+
+
+# Reference: https://www.virustotal.com/gui/ip-address/173.231.184.61/relations
+
+emnosy.com
+fa8072.com
+fnauendaieghidy.in
+kosher-toolbar.info
+kosher-transfer.info
+prgrjgcamebtawru.com
+rrsavings.com
+skype-soft.com
+trtromg.com
+update-srv.info
+
+# Reference: https://threatpost.com/malvertising-ad-blockers-mac-malware/146861/
+
+dailyads.org
