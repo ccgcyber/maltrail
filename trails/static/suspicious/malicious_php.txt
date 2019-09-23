@@ -491,3 +491,120 @@ westflies.com/api/api.php
 # Reference: https://twitter.com/PhishStats/status/1158280905892519936
 
 /o365ms.php
+
+# Reference: https://twitter.com/IpNigh/status/1159063350103420928
+
+/mwnsmre6in7pv7abig7tzfyu.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1159617579469742082
+
+/835pnjmr1w4p5ypvgcymfkkx.php
+
+# Reference: https://forums.modx.com/thread/102644/evo-1-2-1-hacked-again-and-again
+# Generic trails for compromised MODX CMS-es
+
+/assets/images/accesson.php
+/assets/images/customizer.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1161731505065988102
+
+/acabx352of60k6h87abrrjg6.php
+
+# Reference: https://twitter.com/James_inthe_box/status/1162068269387276289
+# Reference: https://app.any.run/tasks/6812075f-1785-494f-9624-eda8b19943c3/
+
+/add_bot.php
+
+# Reference: https://twitter.com/ANeilan/status/1162803350511017985
+
+/setoransnsv.php
+
+# Reference: https://twitter.com/smica83/status/1163222123923615745
+
+/transaction_find.php
+
+# Reference: https://unit42.paloaltonetworks.com/newly-registered-domains-malicious-abuse-by-bad-actors/
+
+/addbot?hwid=
+
+# Reference: https://malwarebreakdown.com/2017/07/24/the-seamless-campaign-drops-ramnit-follow-up-malware-azorult-stealer-smoke-loader-etc/
+
+syndication.exdynsrv.com
+tqbeu.redirectvoluum.com
+tqbeu.voluumtrk.com
+
+# Reference: https://twitter.com/IpNigh/status/1164328397314699265
+
+/9cfryg81syzg9u27cxh19tax.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1164917499281989632
+
+/8k1bkkn094xdivviaab8hs19.php
+
+# Reference: https://twitter.com/JAMESWT_MHT/status/1165926508084563968
+
+/107741af5648cf.php
+
+# Reference: https://twitter.com/luc4m/status/1166558549742411777
+
+/wnzwyq3o8jvv4fbjsc42sfvl.php
+
+# Reference: https://twitter.com/malware_traffic/status/1166838031556517888
+# Reference: https://app.any.run/tasks/2141fadd-0379-404f-b8e1-917035910c4b/
+
+/loader/gate.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1167816610805161984
+
+/s5a03tkf4q9d9nb73da3nhsi.php
+
+# Reference: https://twitter.com/killamjr/status/1168904634498502656
+
+/43333.php
+
+# Reference: https://twitter.com/IpNigh/status/1169988952096432129
+
+/d8fo713p7xcqwe3gmej9ahtl.php
+
+# Reference: https://twitter.com/tkanalyst/status/1170688633172443139
+
+/c0nf1g.php
+/conf1g.php
+/c0nfig.php
+
+# Reference: https://twitter.com/ViriBack/status/1170728460781871105
+
+/configurationssss.php
+/oficialmuieingaoaza.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1172452149625643008
+
+/j1x28e4tr691s8cen0eeu43d.php
+
+# Reference: https://twitter.com/Cyberfishio/status/1173202856654057472
+
+/rvqjseptt66izwsmtj5rwj6k.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1174339575570980865
+
+/b9aapumjlkzrcxw8sl4i2zor.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1173826189577850880
+
+/82gnq2z9u7lpl560f16htzzf.php
+
+# Reference: https://github.com/eset/malware-ioc/tree/master/stantinko (# The Safe Surfing injected script)
+
+safesurfing.me
+
+# Reference: https://twitter.com/IpNigh/status/1173924979462823938
+
+/101454858.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1175502232978100231
+
+/6b2vru1bujseuosd0gjvndag27524e5d5582cfb0ee5b91de81c038c5.php
+
+# Generic
+
+/gate.php

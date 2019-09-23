@@ -4708,3 +4708,99 @@ foxdos.cc
 
 8chan.co
 8ch.net
+
+# Reference: https://twitter.com/ScumBots/status/1160853968681144321
+
+gws.kr
+
+# Reference: https://www.virustotal.com/gui/domain/myihor.ru/relations
+
+myihor.ru
+
+# Reference: https://www.virustotal.com/gui/domain/orderbox-dns.com/details
+
+orderbox-dns.com
+
+# Reference: https://www.virustotal.com/gui/domain/securezdns.pw/relations
+
+securezdns.pw
+
+# Reference: https://securelist.com/dropper-in-google-play/92496/
+# Reference: https://otx.alienvault.com/pulse/5d655dfaa30d3ef9d3192d81
+# Reference: https://www.virustotal.com/gui/domain/abcdserver.com/relations
+
+abcdserver.com
+
+# Reference: https://twitter.com/KorbenD_Intel/status/1169996681259245569
+# Reference: https://www.virustotal.com/gui/domain/daniel2you.com/relations
+
+daniel2you.com
+
+# Reference: https://twitter.com/io_sono_io_IT/status/1170623641911906306
+# Reference: https://www.virustotal.com/gui/ip-address/104.151.46.71/relations
+
+.ac.cn
+cgzolm.cn
+chaao.cc
+fxgdb.cn
+rengpu.cc
+sengba.cc
+
+# Reference: https://twitter.com/rpsanch/status/1170906488677851137
+
+unicef-cummunity.com
+
+# Reference: https://www.virustotal.com/gui/domain/mtcc.me/relations
+
+mtcc.me
+
+# Reference: https://www.fortinet.com/blog/threat-research/zegost-campaign-targets-internal-interests.html
+# Reference: https://www.virustotal.com/gui/domain/heikc.com/relations
+
+heikc.com
+
+# Reference: https://twitter.com/nullcookies/status/1172225447427489792
+
+ifast.live
+
+# Reference: https://www.virustotal.com/gui/domain/sdns.se/relations
+
+sdns.se
+
+# Reference: https://www.virustotal.com/gui/domain/nullroute.pw/relations
+
+nullroute.pw
+
+# Reference: https://www.virustotal.com/gui/domain/siliconrouting.pw/relations 
+
+siliconrouting.pw
+
+# Reference: https://www.virustotal.com/gui/domain/baepaws.ru/relations
+
+baepaws.ru
+
+# Reference: https://www.virustotal.com/gui/domain/ultimate-discounter.com/relations
+
+ultimate-discounter.com
+
+# Reference: https://www.virustotal.com/gui/domain/qarallax.com/relations
+
+qarallax.com
+
+# Reference: # Reference: https://meltx0r.github.io/tech/2019/09/19/emissary-panda-apt.html
+# Reference: https://www.virustotal.com/gui/domain/dellrescue.com/relations
+# Reference: https://www.virustotal.com/gui/domain/redhatupdater.com/relations
+
+dellrescue.com
+redhatupdater.com
+
+# Reference: https://twitter.com/KesaGataMe0/status/1175753787857784834
+
+.cards
+
+# Reference: https://blog.trendmicro.com/trendlabs-security-intelligence/fileless-cryptocurrency-miner-ghostminer-weaponizes-wmi-objects-kills-other-cryptocurrency-mining-payloads/
+# Reference: https://www.virustotal.com/gui/domain/heroherohero.in/relations
+# Reference: https://www.virustotal.com/gui/domain/ctosus.ru/relations
+
+ctosus.ru
+heroherohero.in

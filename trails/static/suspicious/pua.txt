@@ -1815,43 +1815,6 @@ myservicessapps.com/firebase/offer55.php
 myservicessapps.com/firebase/offer6.php
 myservicessapps.com/firebase/win_new_cl.php
 
-# Reference: https://www.bleepingcomputer.com/virus-removal/remove-autoconfigurl-browser-hijacker
-
-fastaccessweb.com/wpad.dat
-get-access.me/wpad.dat
-mail.no-stop.net/wpad.dat
-non-block.com/wpad.dat
-non-block.net/wpad.dat
-nonblock.net/wpad.dat
-nonblocks.com/wpad.dat
-none-stop.net/wpad.dat
-no-stop.net/wpad.dat
-notblocked.net/wpad.dat
-no-blocked.com/wpad.dat
-nonblock.net/wpad.dat
-none-stop.net/wpad.dat
-noneblock.com/wpad.dat
-nostopped.net/wpad.dat
-stoppblock.biz/wpad.dat
-stoppblock.com/wpad.dat
-stoppblock.me/wpad.dat
-stoppblock.org/wpad.dat
-un-blocking.com/wpad.dat
-un-blocking.info/wpad.dat
-un-blocking.net/wpad.dat
-un-stop.com/wpad.dat
-un-stop.net/wpad.dat
-un-stop.org/wpad.dat
-unblockservice.com/wpad.dat
-unstop.me/wpad.dat
-unstopp.me/wpad.dat
-unstops.biz/wpad.dat
-unstops.net/wpad.dat
-unstopweb.com/wpad.dat
-unstopweb.net/wpad.dat
-unstopweb.org/wpad.dat
-webunstop.org/wpad.dat
-
 # Reference: https://twitter.com/James_inthe_box/status/1125543661259771904
 
 anyplace-control.com
@@ -1980,3 +1943,90 @@ update-srv.info
 # Reference: https://threatpost.com/malvertising-ad-blockers-mac-malware/146861/
 
 dailyads.org
+
+# Reference: https://www.virustotal.com/gui/ip-address/138.201.38.188/relations
+
+apps-windows.com
+besplatnyeprogrammy.ru
+downserv.ru
+freeversion.ru
+freeversions.ru
+installpack.download
+installpack.net
+installpack.ru
+mirprogramm.ru
+moiprogrammy.net
+servtodown.ru
+sftcdn.ru
+sftpps.ru
+sftwr.ru
+soft-apps.ru
+softcdn.ru
+softfiles.ru
+softhome.ru
+softmen.ru
+softobase.com
+tvoiprogrammy.ru
+
+# Reference: https://twitter.com/peterkruse/status/1161918179985244160
+
+anymediaconverter.com
+searcreetch.com
+
+# Reference: https://blog.malwarebytes.com/pups/2019/08/qxsearch-hijacker-fakes-failed-installs/
+
+bigsrch.xyz
+chissk.icu
+qxsearch.com
+wajm.icu
+xv11.xyz
+
+# Reference: https://unit42.paloaltonetworks.com/newly-registered-domains-malicious-abuse-by-bad-actors/
+
+installsvpn.com
+ketoweightlosspillsreviews.com
+llzvrjx.site
+mercinogenitor.com
+mey12d4.xyz
+system-alert-m99.xyz
+
+# Reference: https://unit42.paloaltonetworks.com/takedowns-and-adventures-in-deceptive-affiliate-marketing/
+
+beerandcupcakes.com
+bigislandroofing.com
+burnfat4tips.com
+cbdlifereview.com
+eastcoastrandr.com
+fallingrockfilms.com
+fastdiet4lines.world
+health4burnfats.world
+inteligen.org
+justinbieberfannews.com
+keywestinns.com
+mkmarketingservices.com
+modularelectronicsystems.com
+naturalgarciniacambogia.net
+onlinebusinesstrainingacademy.org
+onlinebusinesstrainingschool.org
+onlinebusinessu.org
+onlinejobtrainingacademy.com
+onlinejobtrainingschool.com
+onlineworktrainingschool.com
+pageinvestmentgroup.com
+printercustomersupportonline.com
+purefitketo.net
+saltwaterfall.com
+test.303.lt
+thelimitlessmind.asia
+urbansquares.com
+weightloss4tmz.com
+welcometomydiabeticlife.com
+
+
+# Reference: https://www.microsoft.com/security/blog/2017/06/22/understanding-the-true-size-of-fireball/?source=mmpc
+# Reference: https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Win32%2FGhokswa
+# Reference: https://www.virustotal.com/gui/domain/xa.firefox1.com/relations
+# Reference: https://malaysia.norton.com/online-threats/trojan.fireball-2017-060502-2214-99-writeup.html
+
+dmv9o2kt858uv.cloudfront.net
+firefox1.com

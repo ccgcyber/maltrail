@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 
 """
 Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
@@ -27,15 +27,16 @@ import sys
 import threading
 import time
 import traceback
-import urllib
-import urlparse
 
 from core.addr import inet_ntoa6
 from core.attribdict import AttribDict
 from core.common import check_connection
 from core.common import check_sudo
 from core.common import check_whitelisted
+from core.common import get_ex_message
+from core.common import get_text
 from core.common import load_trails
+from core.compat import xrange
 from core.enums import BLOCK_MARKER
 from core.enums import PROTO
 from core.enums import TRAIL
@@ -57,6 +58,7 @@ from core.settings import DNS_EXHAUSTION_THRESHOLD
 from core.settings import HTTP_TIME_FORMAT
 from core.settings import IGNORE_DNS_QUERY_SUFFIXES
 from core.settings import IPPROTO_LUT
+from core.settings import IS_WIN
 from core.settings import LOCALHOST_IP
 from core.settings import MMAP_ZFILL_CHUNK_LENGTH
 from core.settings import MAX_RESULT_CACHE_ENTRIES
@@ -89,6 +91,8 @@ from core.settings import WHITELIST_HTTP_REQUEST_PATHS
 from core.settings import WHITELIST_UA_KEYWORDS
 from core.update import update_ipcat
 from core.update import update_trails
+from thirdparty import six
+from thirdparty.six.moves import urllib as _urllib
 
 _buffer = None
 _caps = []
@@ -114,14 +118,17 @@ _dns_exhausted_domains = set()
 try:
     import pcapy
 except ImportError:
-    if subprocess.mswindows:
+    if IS_WIN:
         exit("[!] please install 'WinPcap' (e.g. 'http://www.winpcap.org/install/') and Pcapy (e.g. 'https://breakingcode.wordpress.com/?s=pcapy')")
     else:
-        msg, _ = "[!] please install 'Pcapy'", platform.linux_distribution()[0].lower()
-        for distro, install in {("fedora", "centos"): "sudo yum install pcapy", ("debian", "ubuntu"): "sudo apt-get install python-pcapy"}.items():
-            if _ in distro:
-                msg += " (e.g. '%s')" % install
-                break
+        msg = "[!] please install 'Pcapy'"
+
+        for distros, install in {("fedora", "centos"): "sudo yum install pcapy", ("debian", "ubuntu"): "sudo apt-get install python-pcapy"}.items():
+            for distro in distros:
+                if distro in (platform.uname()[3] or "").lower():
+                    msg += " (e.g. '%s')" % install
+                    break
+
         exit(msg)
 
 def _check_domain_member(query, domains):
@@ -188,7 +195,7 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
                         _ = ".%s" % domain
                         trail = "(%s)%s" % (query[:-len(_)], _)
 
-                    if not (re.search(r"(?i)\A(d?ns|nf|mx)\d*\.", query) and any(_ in trails.get(domain, " ")[0] for _ in ("suspicious", "sinkhole"))):  # e.g. ns2.nobel.su
+                    if not (re.search(r"(?i)\A([rd]?ns|nf|mx|nic)\d*\.", query) and any(_ in trails.get(domain, " ")[0] for _ in ("suspicious", "sinkhole"))):  # e.g. ns2.nobel.su
                         if not ((query == trail) and any(_ in trails.get(domain, " ")[0] for _ in ("dynamic", "free web"))):  # e.g. noip.com
                             result = True
                             log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[domain][0], trails[domain][1]), packet)
@@ -251,7 +258,7 @@ def _process_packet(packet, sec, usec, ip_offset):
                 _connect_src_details.clear()
 
         ip_data = packet[ip_offset:]
-        ip_version = ord(ip_data[0]) >> 4
+        ip_version = ord(ip_data[0:1]) >> 4
         localhost_ip = LOCALHOST_IP[ip_version]
 
         if ip_version == 0x04:  # IPv4
@@ -314,7 +321,7 @@ def _process_packet(packet, sec, usec, ip_offset):
             else:
                 tcph_length = doff_reserved >> 4
                 h_size = iph_length + (tcph_length << 2)
-                tcp_data = ip_data[h_size:]
+                tcp_data = get_text(ip_data[h_size:])
 
                 if tcp_data.startswith("HTTP/"):
                     if any(_ in tcp_data[:tcp_data.find("\r\n\r\n")] for _ in ("X-Sinkhole:", "X-Malware-Sinkhole:", "Server: You got served", "Server: Apache 1.0/SinkSoft", "sinkdns.org")) or "\r\n\r\nsinkhole" in tcp_data:
@@ -409,7 +416,7 @@ def _process_packet(packet, sec, usec, ip_offset):
                             last_index = tcp_data.find("\r\n", first_index)
                             if last_index >= 0:
                                 user_agent = tcp_data[first_index:last_index]
-                                user_agent = urllib.unquote(user_agent).strip()
+                                user_agent = _urllib.parse.unquote(user_agent).strip()
 
                         if user_agent:
                             result = _result_cache.get(user_agent)
@@ -464,8 +471,8 @@ def _process_packet(packet, sec, usec, ip_offset):
                             return
 
                         if config.USE_HEURISTICS:
-                            unquoted_path = urllib.unquote(path)
-                            unquoted_post_data = urllib.unquote(post_data or "")
+                            unquoted_path = _urllib.parse.unquote(path)
+                            unquoted_post_data = _urllib.parse.unquote(post_data or "")
                             for char in SUSPICIOUS_HTTP_REQUEST_FORCE_ENCODE_CHARS:
                                 replacement = SUSPICIOUS_HTTP_REQUEST_FORCE_ENCODE_CHARS[char]
                                 path = path.replace(char, replacement)
@@ -495,12 +502,12 @@ def _process_packet(packet, sec, usec, ip_offset):
                                                 break
                                         _result_cache[unquoted_post_data] = found or ""
                                     if found:
-                                        trail = "%s(%s \(%s %s\))" % (host, path, method, post_data.strip())
+                                        trail = "%s(%s \\(%s %s\\))" % (host, path, method, post_data.strip())
                                         log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.HTTP, trail, "%s (suspicious)" % found, "(heuristic)"), packet)
                                         return
 
                             if '.' in path:
-                                _ = urlparse.urlparse("http://%s" % url)  # dummy scheme
+                                _ = _urllib.parse.urlparse("http://%s" % url)  # dummy scheme
                                 path = path.lower()
                                 filename = _.path.split('/')[-1]
                                 name, extension = os.path.splitext(filename)
@@ -552,11 +559,11 @@ def _process_packet(packet, sec, usec, ip_offset):
                         query = ""
 
                         while len(dns_data) > offset:
-                            length = ord(dns_data[offset])
+                            length = ord(dns_data[offset:offset + 1])
                             if not length:
                                 query = query[:-1]
                                 break
-                            query += dns_data[offset + 1:offset + length + 1] + '.'
+                            query += get_text(dns_data[offset + 1:offset + length + 1]) + '.'
                             offset += length + 1
 
                         query = query.lower()
@@ -566,7 +573,7 @@ def _process_packet(packet, sec, usec, ip_offset):
 
                         parts = query.split('.')
 
-                        if ord(dns_data[2]) & 0xfe == 0x00:  # standard query (both recursive and non-recursive)
+                        if ord(dns_data[2:3]) & 0xfe == 0x00:  # standard query (both recursive and non-recursive)
                             type_, class_ = struct.unpack("!HH", dns_data[offset + 1:offset + 5])
 
                             if len(parts) > 2:
@@ -611,12 +618,12 @@ def _process_packet(packet, sec, usec, ip_offset):
                                 _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, packet)
 
                         elif config.USE_HEURISTICS:
-                            if ord(dns_data[2]) & 0x80:  # standard response
-                                if ord(dns_data[3]) == 0x80:  # recursion available, no error
+                            if ord(dns_data[2:3]) & 0x80:  # standard response
+                                if ord(dns_data[3:4]) == 0x80:  # recursion available, no error
                                     _ = offset + 5
                                     try:
                                         while _ < len(dns_data):
-                                            if ord(dns_data[_]) & 0xc0 != 0 and dns_data[_ + 2] == "\00" and dns_data[_ + 3] == "\x01":  # Type A
+                                            if ord(dns_data[_:_ + 1]) & 0xc0 != 0 and dns_data[_ + 2] == "\00" and dns_data[_ + 3] == "\x01":  # Type A
                                                 break
                                             else:
                                                 _ += 12 + struct.unpack("!H", dns_data[_ + 10: _ + 12])[0]
@@ -635,15 +642,15 @@ def _process_packet(packet, sec, usec, ip_offset):
                                     except IndexError:
                                         pass
 
-                                elif ord(dns_data[3]) == 0x83:  # recursion available, no such name
+                                elif ord(dns_data[3:4]) == 0x83:  # recursion available, no such name
                                     if '.'.join(parts[-2:]) not in _dns_exhausted_domains and not _check_domain_whitelisted(query) and not _check_domain_member(query, trails):
                                         if parts[-1].isdigit():
                                             return
 
                                         if not (len(parts) > 4 and all(_.isdigit() and int(_) < 256 for _ in parts[:4])):  # generic check for DNSBL IP lookups
                                             for _ in filter(None, (query, "*.%s" % '.'.join(parts[-2:]) if query.count('.') > 1 else None)):
-                                                if _ not in NO_SUCH_NAME_COUNTERS or NO_SUCH_NAME_COUNTERS[_][0] != sec / 3600:
-                                                    NO_SUCH_NAME_COUNTERS[_] = [sec / 3600, 1, set()]
+                                                if _ not in NO_SUCH_NAME_COUNTERS or NO_SUCH_NAME_COUNTERS[_][0] != sec // 3600:
+                                                    NO_SUCH_NAME_COUNTERS[_] = [sec // 3600, 1, set()]
                                                 else:
                                                     NO_SUCH_NAME_COUNTERS[_][1] += 1
                                                     NO_SUCH_NAME_COUNTERS[_][2].add(query)
@@ -697,10 +704,10 @@ def _process_packet(packet, sec, usec, ip_offset):
 
         elif protocol in IPPROTO_LUT:  # non-TCP/UDP (e.g. ICMP)
             if protocol == socket.IPPROTO_ICMP:
-                if ord(ip_data[iph_length]) != 0x08:  # Non-echo request
+                if ord(ip_data[iph_length:iph_length + 1]) != 0x08:  # Non-echo request
                     return
             elif protocol == socket.IPPROTO_ICMPV6:
-                if ord(ip_data[iph_length]) != 0x80:  # Non-echo request
+                if ord(ip_data[iph_length:iph_length + 1]) != 0x80:  # Non-echo request
                     return
 
             if dst_ip in trails:
@@ -759,14 +766,17 @@ def init():
 
         _regex = ""
         for trail in trails:
-            if re.search(r"[\].][*+]|\[[a-z0-9_.\-]+\]", trail, re.I):
-                try:
-                    re.compile(trail)
-                except:
-                    pass
-                else:
-                    if re.escape(trail) != trail:
-                        _regex += "|(?P<g%s>%s)" % (_regex.count("(?P<g"), trail)
+            if "static" in trails[trail][1]:
+                if re.search(r"[\].][*+]|\[[a-z0-9_.\-]+\]", trail, re.I):
+                    try:
+                        re.compile(trail)
+                    except:
+                        pass
+                    else:
+                        if re.escape(trail) != trail:
+                            index = _regex.count("(?P<g")
+                            if index < 100:  # Reference: https://stackoverflow.com/questions/478458/python-regular-expressions-with-more-than-100-groups
+                                _regex += "|(?P<g%s>%s)" % (index, trail)
 
         trails._regex = _regex.strip('|')
 
@@ -827,7 +837,7 @@ def init():
                     if name == "plugin" and not set(inspect.getargspec(function).args) & set(("event_tuple', 'packet")):
                         found = True
                         config.plugin_functions.append(function)
-                        function.func_name = module.__name__
+                        function.__name__ = module.__name__
 
                 if not found:
                     exit("[!] missing function 'plugin(event_tuple, packet)' in plugin script '%s'" % filename)
@@ -839,7 +849,7 @@ def init():
         interfaces = set(_.strip() for _ in config.MONITOR_INTERFACE.split(','))
 
         if (config.MONITOR_INTERFACE or "").lower() == "any":
-            if subprocess.mswindows or "any" not in pcapy.findalldevs():
+            if IS_WIN or "any" not in pcapy.findalldevs():
                 print("[x] virtual interface 'any' missing. Replacing it with all interface names")
                 interfaces = pcapy.findalldevs()
             else:
@@ -878,7 +888,7 @@ def init():
     if _multiprocessing:
         _init_multiprocessing()
 
-    if not subprocess.mswindows and not config.DISABLE_CPU_AFFINITY:
+    if not IS_WIN and not config.DISABLE_CPU_AFFINITY:
         try:
             try:
                 mod = int(subprocess.check_output("grep -c ^processor /proc/cpuinfo", stderr=subprocess.STDOUT, shell=True).strip())
@@ -912,8 +922,8 @@ def _init_multiprocessing():
         try:
             _buffer = mmap.mmap(-1, config.CAPTURE_BUFFER)  # http://www.alexonlinux.com/direct-io-in-python
 
-            _ = "\x00" * MMAP_ZFILL_CHUNK_LENGTH
-            for i in xrange(config.CAPTURE_BUFFER / MMAP_ZFILL_CHUNK_LENGTH):
+            _ = b"\x00" * MMAP_ZFILL_CHUNK_LENGTH
+            for i in xrange(config.CAPTURE_BUFFER // MMAP_ZFILL_CHUNK_LENGTH):
                 _buffer.write(_)
             _buffer.seek(0)
         except KeyboardInterrupt:
@@ -940,20 +950,28 @@ def monitor():
         global _count
 
         ip_offset = None
-        dlt_offset = DLT_OFFSETS[datalink]
+        try:
+            dlt_offset = DLT_OFFSETS[datalink]
+        except KeyError:
+            log_error("Received unexpected datalink (%d)" % datalink)
+            return
 
         try:
             if datalink == pcapy.DLT_RAW:
                 ip_offset = dlt_offset
 
             elif datalink == pcapy.DLT_PPP:
-                if packet[2:4] in ("\x00\x21", "\x00\x57"):  # (IPv4, IPv6)
+                if packet[2:4] in (b"\x00\x21", b"\x00\x57"):  # (IPv4, IPv6)
+                    ip_offset = dlt_offset
+
+            elif datalink == pcapy.DLT_NULL:
+                if packet[0:4] in (b"\x02\x00\x00\x00", b"\x23\x00\x00\x00"):  # (IPv4, IPv6)
                     ip_offset = dlt_offset
 
             elif dlt_offset >= 2:
-                if packet[dlt_offset - 2:dlt_offset] == "\x81\x00":  # VLAN
+                if packet[dlt_offset - 2:dlt_offset] == b"\x81\x00":  # VLAN
                     dlt_offset += 4
-                if packet[dlt_offset - 2:dlt_offset] in ("\x08\x00", "\x86\xdd"):  # (IPv4, IPv6)
+                if packet[dlt_offset - 2:dlt_offset] in (b"\x08\x00", b"\x86\xdd"):  # (IPv4, IPv6)
                     ip_offset = dlt_offset
 
         except IndexError:
@@ -963,7 +981,10 @@ def monitor():
             return
 
         try:
-            sec, usec = header.getts()
+            if six.PY3:  # https://github.com/helpsystems/pcapy/issues/37#issuecomment-530795813
+                sec, usec = [int(_) for _ in ("%.6f" % time.time()).split('.')]
+            else:
+                sec, usec = header.getts()
             if _multiprocessing:
                 if _locks.count:
                     _locks.count.acquire()
@@ -983,22 +1004,29 @@ def monitor():
             global _done_count
 
             datalink = _cap.datalink()
-            while True:
-                success = False
-                try:
-                    (header, packet) = _cap.next()
-                    if header is not None:
-                        success = True
-                        packet_handler(datalink, header, packet)
-                    elif config.pcap_file:
-                        with _done_lock:
-                            _done_count += 1
-                        break
-                except (pcapy.PcapError, socket.timeout):
-                    pass
 
-                if not success:
-                    time.sleep(REGULAR_SENSOR_SLEEP_TIME)
+            if six.PY3:  # https://github.com/helpsystems/pcapy/issues/37#issuecomment-530795813
+                def _loop_handler(header, packet):
+                    packet_handler(datalink, header, packet)
+
+                _cap.loop(-1, _loop_handler)
+            else:
+                while True:
+                    success = False
+                    try:
+                        (header, packet) = _cap.next()
+                        if header is not None:
+                            success = True
+                            packet_handler(datalink, header, packet)
+                        elif config.pcap_file:
+                            with _done_lock:
+                                _done_count += 1
+                            break
+                    except (pcapy.PcapError, socket.timeout):
+                        pass
+
+                    if not success:
+                        time.sleep(REGULAR_SENSOR_SLEEP_TIME)
 
         if len(_caps) > 1:
             if _multiprocessing:
@@ -1024,7 +1052,7 @@ def monitor():
         if _multiprocessing:
             try:
                 for _ in xrange(config.PROCESS_COUNT - 1):
-                    write_block(_buffer, _n.value, "", BLOCK_MARKER.END)
+                    write_block(_buffer, _n.value, b"", BLOCK_MARKER.END)
                     _n.value = _n.value + 1
                 while _multiprocessing.active_children():
                     time.sleep(REGULAR_SENSOR_SLEEP_TIME)
@@ -1032,9 +1060,9 @@ def monitor():
                 pass
 
 def main():
-    print("%s (sensor) #v%s\n" % (NAME, VERSION))
-
     for i in xrange(1, len(sys.argv)):
+        if sys.argv[i] == "-q":
+            sys.stdout = open(os.devnull, 'w')
         if sys.argv[i] == "-i":
             for j in xrange(i + 2, len(sys.argv)):
                 value = sys.argv[j]
@@ -1044,11 +1072,14 @@ def main():
                 else:
                     break
 
+    print("%s (sensor) #v%s\n" % (NAME, VERSION))
+
     parser = optparse.OptionParser(version=VERSION)
     parser.add_option("-c", dest="config_file", default=CONFIG_FILE, help="configuration file (default: '%s')" % os.path.split(CONFIG_FILE)[-1])
     parser.add_option("-i", dest="pcap_file", help="open pcap file for offline analysis")
     parser.add_option("-p", dest="plugins", help="plugin(s) to be used per event")
-    parser.add_option("--console", dest="console", action="store_true", help="print events to console (too)")
+    parser.add_option("-q", dest="quiet", action="store_true", help="turn off regular output")
+    parser.add_option("--console", dest="console", action="store_true", help="print events to console (Note: switch '-q' might be useful)")
     parser.add_option("--no-updates", dest="no_updates", action="store_true", help="disable (online) trail updates")
     parser.add_option("--debug", dest="debug", action="store_true", help=optparse.SUPPRESS_HELP)
     options, _ = parser.parse_args()
@@ -1056,7 +1087,7 @@ def main():
     read_config(options.config_file)
 
     for option in dir(options):
-        if isinstance(getattr(options, option), (basestring, bool)) and not option.startswith('_'):
+        if isinstance(getattr(options, option), (six.string_types, bool)) and not option.startswith('_'):
             config[option] = getattr(options, option)
 
     if options.debug:
@@ -1091,8 +1122,8 @@ if __name__ == "__main__":
     except SystemExit as ex:
         show_final = False
 
-        if isinstance(getattr(ex, "message"), basestring):
-            print(ex)
+        if isinstance(get_ex_message(ex), six.string_types):
+            print(get_ex_message(ex))
             os._exit(1)
     except IOError:
         show_final = False

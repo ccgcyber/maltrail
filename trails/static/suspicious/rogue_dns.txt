@@ -7,11 +7,15 @@
 # Reference: https://twitter.com/ninoseki/status/1127109264877600768
 # Reference: https://drive.google.com/file/d/12TaMKqqjkr_r3iq3LbPcGc6LKv2k1Hmw/view
 # Reference: https://twitter.com/ninoseki/status/1156038231172894721
+# Reference: https://twitter.com/ZeroCERT/status/1118840257334525952
+# Reference: https://www.facebook.com/zerocert/posts/1143176292521769 (Korean)
 
 1.53.252.164:53
 1.53.252.215:53
 1.171.160.155:53
+1.171.166.13:53
 1.171.175.119:53
+1.171.46.86:53
 118.30.28.38:53
 118.30.28.39:53
 118.168.200.231:53
@@ -118,8 +122,22 @@ ns2.whatnexthost.com
 82.163.143.135:53
 
 # Reference: https://www.platinbilisim.com.tr/TR/Medya/Duyurular/dikkat-ghost-dns-261 (Turkish)
+# Reference: https://blog.netlab.360.com/70-different-types-of-home-routers-all-together-100000-are-being-hijacked-by-ghostdns-en/
+# Reference: https://twitter.com/ninoseki/status/1055224900829491200
 
 139.60.162.188:53
+139.60.162.201:53
+144.22.104.185:53
+173.82.168.104:53
+18.223.2.98:53
+185.70.186.4:53
+185.70.186.7:53
+192.99.187.193:53
+198.27.121.241:53
+200.196.240.104:53
+200.196.240.120:53
+35.185.9.164:53
+80.211.37.41:53
 
 # Reference: https://www.proofpoint.com/us/threat-insight/post/home-routers-under-attack-malvertising-windows-android-devices
 
@@ -383,16 +401,6 @@ ns3.gatherreceive.net
 ns4.gatherreceive.net
 63.251.106.22:53
 
-# Reference: https://www.virustotal.com/gui/ip-address/184.73.137.229/relations
-# Reference: https://www.virustotal.com/gui/ip-address/34.229.84.179/relations
-# Reference: https://www.virustotal.com/gui/ip-address/34.230.76.81/relations
-# Reference: https://www.virustotal.com/gui/ip-address/54.227.204.233/relations
-
-184.73.137.229:53
-34.229.84.179:53
-34.230.76.81:53
-54.227.204.233:53
-
 # Reference: https://www.welivesecurity.com/2016/06/02/crouching-tiger-hidden-dns/
 
 199.203.131.145:53
@@ -555,3 +563,153 @@ ns4.gatherreceive.net
 # Reference: https://twitter.com/ninoseki/status/1157110166086569985
 
 185.205.210.23:53
+
+# Reference: https://twitter.com/PhishingAi/status/1158769283263946752
+# Reference: https://www.virustotal.com/gui/domain/ns1.villeflux.com/relations
+# Reference: https://www.virustotal.com/gui/domain/ns2.villeflux.com/details
+# Reference: https://www.virustotal.com/gui/domain/dns1.villeflux.com/details
+# Reference: https://www.virustotal.com/gui/domain/dns2.villeflux.com/details
+
+111.90.150.148:53
+111.90.150.47:53
+ns1.villeflux.com
+ns2.villeflux.com
+dns1.villeflux.com
+dns2.villeflux.com
+
+# Reference: https://security.stackexchange.com/questions/181328/did-i-just-get-dns-hijacked
+# Reference: https://www.virustotal.com/gui/ip-address/185.183.96.174/details
+
+185.183.96.174:53
+
+# Reference: https://twitter.com/PhishingAi/status/1159309706222956544
+
+192.210.142.146:53
+ns1.colloc-rotcross.com
+ns2.colloc-rotcross.com
+
+# Reference: https://twitter.com/JAMESWT_MHT/status/852540935653208064
+
+46.105.86.80:53
+
+# Reference: https://twitter.com/ninoseki/status/1161151559100588032
+
+158.69.94.9:53
+
+# Reference: https://github.com/reaperb0t/GhostDNS/blob/master/Remote_DNS_Changing_Exploits_not_GHOSTDNS_specific/37214.txt
+
+133.71.33.7:53
+
+# Reference: https://github.com/reaperb0t/GhostDNS/blob/master/Remote_DNS_Changing_Exploits_not_GHOSTDNS_specific/42197.sh
+
+133.7.133.7:53
+
+# Reference: https://twitter.com/ninoseki/status/1128573489667907586
+
+162.241.224.56:53
+
+# Reference: https://twitter.com/david_jursa/status/1119573958095974400
+
+172.245.211.58:53
+23.94.66.186:53
+
+# Reference: https://twitter.com/MichaelMburu_/status/1119243257203048448
+
+172.27.197.232:53
+
+# Reference: https://twitter.com/ninoseki/status/1104181886824243200
+
+65.181.123.142:53
+65.181.123.143:53
+
+# Reference: https://twitter.com/ninoseki/status/1073152249969336320
+
+144.217.223.218:53
+35.247.250.124:53
+
+# Reference: https://twitter.com/ninoseki/status/1047697757731864576
+
+18.191.81.137:53
+
+# Reference: https://twitter.com/strayanmegaman/status/1001580761684717568
+# Reference: https://www.bitdefender.com/box/blog/iot-news/800000-draytek-routers-risk-dns-hijacking-attack-update-firmware/
+
+38.134.121.95:53
+
+# Reference: https://twitter.com/ricmarks/status/966733953406291968
+
+18.219.162.248:53
+
+# Reference: https://twitter.com/leppie/status/661234162758721536
+
+23.91.114.130:53
+
+# Reference: https://twitter.com/abek42/status/642610851095158784
+
+5.152.219.51:53
+
+# Reference: https://twitter.com/teksquisite/status/473233221862182912
+
+184.107.180.178:53
+
+# Reference: https://twitter.com/nikcub/status/347579443994312704
+
+204.11.56.17:53
+
+# Reference: https://twitter.com/moukahal/status/194886840447279104
+
+213.109.79.255:53
+64.28.191.255:53
+67.210.15.255:53
+77.67.83.255:53
+85.255.127.255:53
+93.188.167.255:53
+
+# Reference: https://twitter.com/bugsbane/status/74691655663497216
+
+188.229.88.7:53
+
+# Reference: https://security.stackexchange.com/questions/104480/investigating-a-possible-rogue-dns-server-maybe-dnschanger
+
+93.158.212.36:53
+
+# Reference: https://blog.scrt.ch/2017/07/10/numerous-swiss-domain-names-temporarily-hijacked/
+# Reference: https://www.virustotal.com/gui/domain/ns1.dnshost.ga/relations
+# Reference: https://www.virustotal.com/gui/domain/ns2.dnshost.ga/relations
+
+46.183.219.205:53
+46.183.219.206:53
+46.183.219.227:53
+ns1.dnshost.ga
+ns2.dnshost.ga
+
+# Reference: https://twitter.com/ninoseki/status/1164163472445173760
+
+38.91.106.137:53
+
+# Reference: https://twitter.com/david_jursa/status/1134355920639660037
+
+80.82.77.166:53
+
+# Reference: https://twitter.com/david_jursa/status/1166314807634604035
+
+23.227.192.58:53
+
+# Reference: https://twitter.com/david_jursa/status/1156517825122570240
+
+23.94.245.170:53
+
+# Reference: https://twitter.com/david_jursa/status/1114134608671649792
+
+23.92.222.100:53
+23.92.222.243:53
+
+# Reference: https://twitter.com/david_jursa/status/1106154345878507520
+
+198.12.64.210:53
+
+# Reference: https://www.symantec.com/security_response/writeup.jsp?docid=2007-011811-1222-99&tabid=2
+# Reference: https://www.virustotal.com/en/file/46a45be62c49ca51c4ae2e45727c6578e6872c3a9bc7ac7ccb9f83d96464e93a/analysis/
+
+85.255.115.21:53
+85.255.112.91:53

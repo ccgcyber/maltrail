@@ -233,3 +233,36 @@ officeapplications.net
 # Reference: https://blog.team-cymru.com/2019/07/25/unmasking-ave_maria/
 
 warzone.io
+
+# Reference: https://twitter.com/david_jursa/status/1148607348610609152
+# Reference: https://pastebin.com/8BU6qfYB
+
+clearmatechecker.site
+d3s687mnstf2nl.cloudfront.net
+infoxxtechxx.gq
+stockmatejappzee.site
+
+# Reference: https://twitter.com/benkow_/status/1168598376977448960
+
+http://5.188.60.32
+
+# Reference: https://twitter.com/dave_daves/status/1169259923420659713
+
+http://157.245.71.111
+
+# Reference: https://twitter.com/adulau/status/1169300878345588742
+
+libc.so
+libc6.so
+
+# Reference: https://twitter.com/killamjr/status/1171122456528150528
+
+repairgreatlyquickfile.icu
+
+# Reference: https://twitter.com/Jan0fficial/status/1171157538970230786
+
+stressthem.to
+
+# Reference: https://unit42.paloaltonetworks.com/the-legend-of-adwind-a-commodity-rat-saga-in-eight-parts/
+
+indetectables.net

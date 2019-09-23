@@ -528,3 +528,69 @@ http://156.236.102.78
 # Reference: https://twitter.com/securitydoggo/status/1158370884899495936
 
 /2019-National-Intelligence-Coordinating-Agency-Survey-Questionnaire.js
+
+# Reference: https://blog.malwarebytes.com/threat-analysis/2018/04/fakeupdates-campaign-leverages-multiple-website-platforms/
+
+boobahbabies.com
+eventsbysteph.com
+query.network
+connect.clevelandskin.net
+connect.clevelandskin.org
+track.amishbrand.com
+track.positiverefreshment.org
+link.easycounter210.com
+click.clickanalytics208.com
+/s_code.js?cid=
+
+# Reference: https://twitter.com/James_inthe_box/status/1159917575301582848
+
+/JFd0mx.js
+/rKPcLW.js
+
+# Reference: https://twitter.com/VK_Intel/status/1162434460731813893
+
+cloudflara.org
+
+
+# Reference: https://www.fireeye.com/blog/threat-research/2019/08/game-over-detecting-and-stopping-an-apt41-operation.html
+# Reference: https://www.virustotal.com/gui/ip-address/67.229.97.229/relations
+
+/pass_sqzr.jsp
+
+# Reference: https://twitter.com/JAMESWT_MHT/status/1164140106095177731
+# Reference: https://app.any.run/tasks/0c5278c0-d505-4873-b612-9318dbbc2733/
+
+/ajwngsj.js
+
+# Reference: https://twitter.com/JAMESWT_MHT/status/1167096432236650497
+
+/0f.js
+/1f.js
+/2f.js
+/3f.js
+/4f.js
+/5f.js
+/6f.js
+/7f.js
+/8f.js
+/9f.js
+
+# Reference: https://twitter.com/StopMalvertisin/status/1167121250847580162
+
+/msg_frr_w3.js
+/myjs28_frr_c1.js
+/myjs28_frr_s37.js
+
+# Reference: https://blog.talosintelligence.com/2019/08/rat-ratatouille-revrat-orcus.html
+
+/r2.js
+
+# Reference: https://twitter.com/killamjr/status/1171122456528150528
+
+tut-64.com
+yourservice.live
+0wnpr0m0.com
+
+# Reference: https://twitter.com/shotgunner101/status/1174324923499765760
+
+/5d7c50e85111d.js

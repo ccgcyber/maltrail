@@ -213,3 +213,36 @@
 # Reference: https://twitter.com/alex_lanstein/status/988851524406099968
 
 /LPOKGGTEFFGFJ.hta
+
+# Reference: https://twitter.com/FewAtoms/status/1159473273870196736
+
+/out-1379808530.hta
+
+# Reference: https://twitter.com/reecdeep/status/1159833486817034241
+
+/elnino.hta
+
+# Reference: https://twitter.com/w3ndige/status/1168437823193669632
+
+/2055970.hta
+
+# Reference: https://twitter.com/Zerophage1337/status/1007645365133246464
+
+/dwie.hta
+
+# Reference: https://otx.alienvault.com/pulse/5d7a4780d9dfe5be7ab9296e
+
+/Lfvbu0.hta
+/Msgxo0.hta
+/Qbjoo0.hta
+/Rjboi0.hta
+/Rnlnb0.hta
+/Vamva0.hta
+
+# Reference: https://twitter.com/rpsanch/status/1172548993177522176
+
+/ManTechJobs.hta
+
+# Reference: https://twitter.com/i/status/1172612874708996096
+
+/Tickets.hta
