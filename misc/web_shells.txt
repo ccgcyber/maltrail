@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
+# Copyright (c) 2014-2020 Maltrail developers (https://github.com/stamparm/maltrail/)
 # See the file 'LICENSE' for copying permission
 
 # Reference: https://github.com/emposha/PHP-Shell-Detector
@@ -256,3 +256,7 @@ aspcmd.asp
 kacak.asp
 newaspcmd.asp
 pouya.asp
+
+# Reference: https://twitter.com/killamjr/status/1191923979549921280
+
+cxxz.php

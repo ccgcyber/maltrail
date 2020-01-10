@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
+# Copyright (c) 2014-2020 Maltrail developers (https://github.com/stamparm/maltrail/)
 # See the file 'LICENSE' for copying permission
 
 # Reference: https://github.com/deepfield/dnsflow-merit/blob/f484bc792c1b743057a9e6a443cf9fe26ae444fe/src/blacklists/domains1.txt
@@ -517,7 +517,6 @@ w00d00pipls.net
 retireterrify.ru
 banan-service.org
 jkbioindia.com
-clicksor.com
 date-me.ro
 j5b.kr
 serfinworld.com
@@ -3933,7 +3932,6 @@ libynozegokido.com
 lixumokyfo.com
 lrvou.info
 luxury-pride.ru
-meb.gov.tr
 mestferrit.co.cc
 milrphsrqtqpwtwr.org
 moririnejuf.com
@@ -9175,7 +9173,6 @@ cometfing.com
 crqsluvnlqmjrpq.org
 data-ero-advertising.com
 drlouxvsslqnsblv.org
-ero-advertising.com
 eukmzlcpqg.co.tv
 euolrvmtnliwlp.info
 fff43dfsfdsdfs.com
@@ -13337,7 +13334,6 @@ zepills.ru
 zz.cdbeta.com
 allmetalforums.com
 groupeflo-franchises.net
-joins.com
 p6ox.co.cc
 sipyjo.cn
 taruntextiles.com
@@ -14247,7 +14243,6 @@ newhunter599.net
 official-opera-mini.ru
 ozbeachbikes.com
 pisxzxe.qpoe.com
-plus500.com
 premiumsafe.info
 prime-vermond.ru
 rautexton.com
@@ -14603,7 +14598,6 @@ parahole.ru
 pcmegarapido.com
 pendosrulit.com
 pharm.alltabstore.com
-prettylikeher.com
 profit-kilobics.ru
 profitkilobics.ru
 protect-holes.ru
@@ -16187,7 +16181,6 @@ ridikuluskouture.com
 romantise.blogspot.com
 sana-ir.com
 sectool.ru
-smartcj.com
 solutionnice.info
 stralfors.home.pl
 syaniu.com
@@ -16872,7 +16865,6 @@ bio-free.ru
 bio-oib.ru
 bio-tube.ru
 buypartylights.com
-clicksor.com
 coderoute.ru
 corpadsinc.com
 counnter.cn
@@ -19560,7 +19552,6 @@ bestdriverstar.net
 bigappsidea.com
 bigtreeapps.com
 billscheidlerforrep.com
-bit.do
 bjart999.com
 boatpropshop.com
 bond.trajesdeodalisca.cl
@@ -21923,7 +21914,6 @@ longsome.net
 longwing.net
 machinepeople.net
 machinepower.net
-melbourneit.hotkeysparking.com
 membersystem.net
 mothernorth.net
 mouthfeel.net

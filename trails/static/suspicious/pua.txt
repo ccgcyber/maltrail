@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
+# Copyright (c) 2014-2020 Maltrail developers (https://github.com/stamparm/maltrail/)
 # See the file 'LICENSE' for copying permission
 
 # Reference: https://en.wikipedia.org/wiki/Browser_hijacking
@@ -83,7 +83,6 @@ mywebsearch.com
 imesh.net
 mlstat.com
 mysearchdial.com
-dartsearch.net
 vidolog.com
 stamplive.com
 qvo6.com
@@ -325,7 +324,6 @@ pipoffers.apnpartners.com
 kqzyfj.com
 zapmeta.ws
 ivelog.com
-counter.yadro.ru
 getwebbar.com
 ads234.com
 ads345.com
@@ -333,7 +331,6 @@ safesearch.net
 interyield.jmp9.com
 interyield.td563.com
 filebulldog.com
-imgfarm.com
 arcadefrontier.com
 
 # Reference: http://www.rescuemybrowser.com/fwdservice-com-virus-removal
@@ -551,12 +548,6 @@ masternard.info
 masteroid.info
 masteroids.info
 
-# Reference: http://www.freefixer.com/b/remove-sync-search-spotxchange-com-from-firefox-chrome-and-internet-explorer/
-# Reference: https://www.urlquery.net/report.php?id=1456783674925
-
-spotxchange.com
-eclampsialemontree.net
-
 # Reference: http://www.fixingvirus.com/how-can-i-remove-htxpm-tonginjs-info-completely/
 tonginjs.info
 
@@ -770,10 +761,6 @@ clkdown.info
 # Reference: https://www.threatcrowd.org/domain.php?domain=khit.cn
 
 khit.cn
-
-# Reference: https://www.threatcrowd.org/domain.php?domain=apnanalytics.com
-
-apnanalytics.com
 
 # Reference: https://superuser.com/questions/642002/is-driverpack-solution-trustworthy
 # Reference: https://sitecheck.sucuri.net/results/update.drp.su
@@ -1142,16 +1129,6 @@ lip.healthcakes.men
 
 z11.cnzz.com
 z4.cnzz.com
-
-# Reference: https://howtoremove.guide/s-thebrighttag-com-malware-remove/
-
-thebrighttag.com
-
-# Reference: http://it-help.info/how-to/hijackers/2963-how-to-remove-epicunitscan-info-easily
-# Reference: https://www.symantec.com/security-center/writeup/2015-080623-5927-99#technicaldescription
-
-epicunitscan.info
-mynamedomain.koko
 
 # Reference: https://www.virustotal.com/#/file/2098df714d8b57bbe7e57ce922146e5f8f41aa8d842e2cc10adbb23eccb8ed21/behavior
 # Reference: https://www.threatcrowd.org/ip.php?ip=95.211.95.250
@@ -2030,3 +2007,64 @@ welcometomydiabeticlife.com
 
 dmv9o2kt858uv.cloudfront.net
 firefox1.com
+
+# Reference: https://blog.ensilo.com/leveraging-reputation-services
+
+tuwoqol.com
+wugulaf.com
+cwnpu.com
+bdubnium.com
+pydac.com
+dabfd.com
+fodfr.com
+codfs.com
+qaofd.com
+ziuet.com
+pocxc.com
+uyvsa.com
+bxvdc.com
+adofd.com
+
+# Reference: https://github.com/advanced-threat-research/IOCs/blob/master/2014/2014-12-16-installcube-how-russian-programmers-turn-adware-into-cash/installcube-how-russian-programmers-turn-adware-into-cash.csv
+
+cubinapi.com
+
+# Reference: https://github.com/advanced-threat-research/IOCs/blob/master/2016/2016-01-28-file-hosting-site-turns-file-adware/file-hosting-site-turns-file-adware.csv
+
+file-space.org
+castplatform.com
+
+# Reference: https://github.com/advanced-threat-research/IOCs/blob/master/2016/2016-08-10-bing-vc-hijacks-browser-using-legitimate-applications/bing-vc-hijacks-browser-using-legitimate-applications.csv
+
+fixbrowserredirect.net
+
+# Reference: https://www.virustotal.com/gui/file/be4bbb433bca473c960bc696b1dfb10202f827abab3a19a7fed37ed18d7ed814/behavior/VirusTotal%20Jujubox
+
+update.clientstaticserv.com
+
+# Reference: https://twitter.com/securiteoff/status/740562516699447296 (# LoadMoney)
+
+bpeouxcwqhenm.lasersteam178.ru
+
+# Reference: https://app.any.run/tasks/8f28abcc-cbaf-4f47-bbfa-b00f515a1a4f/ (# ICELoader)
+# Reference: https://any.run/report/ee5f807ada03b89e19c2e222d260c613f7961cc8ccf879638f1dc1ad44d10968/8b24b983-95cd-46aa-8629-7c94d5012cb2
+
+lulusoft.com
+webcompanion.com
+/request/autok?user=
+/request/conditions?user=
+/request/offers?user=
+/request/report?user=
+
+# Reference: https://app.any.run/tasks/053837ea-0070-473d-93d7-a6953d7e973d/
+# Reference: https://www.virustotal.com/gui/domain/ocrtoword.com/relations
+
+appuniverseapplication.com
+ocrtoword.com
+securestudies.com
+
+# Reference: https://www.securityhome.eu/malware/malware.php?mal_id=19882282935775d0c2205563.12724842
+
+staticpm.com
+updaterss.com
+dpliveupdate.com

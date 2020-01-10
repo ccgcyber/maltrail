@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
+Copyright (c) 2014-2020 Maltrail developers (https://github.com/stamparm/maltrail/)
 See the file 'LICENSE' for copying permission
 """
 
@@ -55,6 +55,7 @@ from core.settings import CONSONANTS
 from core.settings import DAILY_SECS
 from core.settings import DLT_OFFSETS
 from core.settings import DNS_EXHAUSTION_THRESHOLD
+from core.settings import GENERIC_SINKHOLE_REGEX
 from core.settings import HTTP_TIME_FORMAT
 from core.settings import IGNORE_DNS_QUERY_SUFFIXES
 from core.settings import IPPROTO_LUT
@@ -80,15 +81,15 @@ from core.settings import SUSPICIOUS_HTTP_REQUEST_REGEXES
 from core.settings import SUSPICIOUS_HTTP_REQUEST_FORCE_ENCODE_CHARS
 from core.settings import SUSPICIOUS_PROXY_PROBE_PRE_CONDITION
 from core.settings import SUSPICIOUS_UA_REGEX
+from core.settings import VALID_DNS_NAME_REGEX
 from core.settings import trails
-from core.settings import VALID_DNS_CHARS
 from core.settings import VERSION
 from core.settings import WEB_SHELLS
 from core.settings import WHITELIST
 from core.settings import WHITELIST_DIRECT_DOWNLOAD_KEYWORDS
 from core.settings import WHITELIST_LONG_DOMAIN_NAME_KEYWORDS
 from core.settings import WHITELIST_HTTP_REQUEST_PATHS
-from core.settings import WHITELIST_UA_KEYWORDS
+from core.settings import WHITELIST_UA_REGEX
 from core.update import update_ipcat
 from core.update import update_trails
 from thirdparty import six
@@ -157,10 +158,10 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
         return
 
     result = False
-    if not _check_domain_whitelisted(query) and all(_ in VALID_DNS_CHARS for _ in query):
+    if re.search(VALID_DNS_NAME_REGEX, query) is not None and not _check_domain_whitelisted(query):
         parts = query.split('.')
 
-        if getattr(trails, "_regex", None):
+        if trails._regex:
             match = re.search(trails._regex, query)
             if match:
                 group, trail = [_ for _ in match.groupdict().items() if _[1] is not None][0]
@@ -175,6 +176,8 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
                         trail = "(%s)%s" % (prefix, trail)
                     if suffix:
                         trail = "%s(%s)" % (trail, suffix)
+
+                    trail = trail.replace(".)", ").")
 
                     log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[candidate][0], trails[candidate][1]), packet)
 
@@ -196,7 +199,7 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
                         trail = "(%s)%s" % (query[:-len(_)], _)
 
                     if not (re.search(r"(?i)\A([rd]?ns|nf|mx|nic)\d*\.", query) and any(_ in trails.get(domain, " ")[0] for _ in ("suspicious", "sinkhole"))):  # e.g. ns2.nobel.su
-                        if not ((query == trail) and any(_ in trails.get(domain, " ")[0] for _ in ("dynamic", "free web"))):  # e.g. noip.com
+                        if not ((query == trail or parts[0] == "www") and any(_ in trails.get(domain, " ")[0] for _ in ("dynamic", "free web"))):  # e.g. noip.com
                             result = True
                             log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[domain][0], trails[domain][1]), packet)
                             break
@@ -300,14 +303,16 @@ def _process_packet(packet, sec, usec, ip_offset):
                     _last_logged_syn = _last_syn
                     if _ != _last_logged_syn:
                         trail = dst_ip if dst_ip in trails else "%s:%s" % (dst_ip, dst_port)
-                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP if ':' not in trail else TRAIL.IPORT, trail, trails[trail][0], trails[trail][1]), packet)
+                        if not any(_ in trails[trail][0] for _ in ("attacker",)) and not ("parking site" in trails[trail][0] and dst_port not in (80, 443)):
+                            log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP if ':' not in trail else TRAIL.IPORT, trail, trails[trail][0], trails[trail][1]), packet)
 
                 elif (src_ip in trails or "%s:%s" % (src_ip, src_port) in trails) and dst_ip != localhost_ip:
                     _ = _last_logged_syn
                     _last_logged_syn = _last_syn
                     if _ != _last_logged_syn:
                         trail = src_ip if src_ip in trails else "%s:%s" % (src_ip, src_port)
-                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP if ':' not in trail else TRAIL.IPORT, trail, trails[trail][0], trails[trail][1]), packet)
+                        if not any(_ in trails[trail][0] for _ in ("malware",)):
+                            log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP if ':' not in trail else TRAIL.IPORT, trail, trails[trail][0], trails[trail][1]), packet)
 
                 if config.USE_HEURISTICS:
                     if dst_ip != localhost_ip:
@@ -324,14 +329,16 @@ def _process_packet(packet, sec, usec, ip_offset):
                 tcp_data = get_text(ip_data[h_size:])
 
                 if tcp_data.startswith("HTTP/"):
-                    if any(_ in tcp_data[:tcp_data.find("\r\n\r\n")] for _ in ("X-Sinkhole:", "X-Malware-Sinkhole:", "Server: You got served", "Server: Apache 1.0/SinkSoft", "sinkdns.org")) or "\r\n\r\nsinkhole" in tcp_data:
-                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP, src_ip, "sinkhole response (malware)", "(heuristic)"), packet)
+                    match = re.search(GENERIC_SINKHOLE_REGEX, tcp_data[:2000])
+                    if match:
+                        trail = match.group(0)
+                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.HTTP, trail, "sinkhole response (malware)", "(heuristic)"), packet)
                     else:
                         index = tcp_data.find("<title>")
                         if index >= 0:
                             title = tcp_data[index + len("<title>"):tcp_data.find("</title>", index)]
                             if all(_ in title.lower() for _ in ("this domain", "has been seized")):
-                                log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP, title, "seized domain (suspicious)", "(heuristic)"), packet)
+                                log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.HTTP, title, "seized domain (suspicious)", "(heuristic)"), packet)
 
                     content_type = None
                     first_index = tcp_data.find("\r\nContent-Type:")
@@ -421,7 +428,7 @@ def _process_packet(packet, sec, usec, ip_offset):
                         if user_agent:
                             result = _result_cache.get(user_agent)
                             if result is None:
-                                if not any(_ in user_agent for _ in WHITELIST_UA_KEYWORDS):
+                                if re.search(WHITELIST_UA_REGEX, user_agent, re.I) is None:
                                     match = re.search(SUSPICIOUS_UA_REGEX, user_agent)
                                     if match:
                                         def _(value):
@@ -471,6 +478,9 @@ def _process_packet(packet, sec, usec, ip_offset):
                             return
 
                         if config.USE_HEURISTICS:
+                            match = re.search(r"\bX-Forwarded-For:\s*([0-9.]+)", packet, re.I)
+                            if match:
+                                src_ip = "%s,%s" % (src_ip, match.group(1))
                             unquoted_path = _urllib.parse.unquote(path)
                             unquoted_post_data = _urllib.parse.unquote(post_data or "")
                             for char in SUSPICIOUS_HTTP_REQUEST_FORCE_ENCODE_CHARS:
@@ -568,12 +578,12 @@ def _process_packet(packet, sec, usec, ip_offset):
 
                         query = query.lower()
 
-                        if not query or '.' not in query or not all(_ in VALID_DNS_CHARS for _ in query) or any(_ in query for _ in (".intranet.",)) or query.split('.')[-1] in IGNORE_DNS_QUERY_SUFFIXES:
+                        if not query or re.search(VALID_DNS_NAME_REGEX, query) is None or any(_ in query for _ in (".intranet.",)) or query.split('.')[-1] in IGNORE_DNS_QUERY_SUFFIXES:
                             return
 
                         parts = query.split('.')
 
-                        if ord(dns_data[2:3]) & 0xfe == 0x00:  # standard query (both recursive and non-recursive)
+                        if ord(dns_data[2:3]) & 0xfa == 0x00:  # standard query (both recursive and non-recursive)
                             type_, class_ = struct.unpack("!HH", dns_data[offset + 1:offset + 5])
 
                             if len(parts) > 2:
@@ -599,9 +609,10 @@ def _process_packet(packet, sec, usec, ip_offset):
                                         else:
                                             if (sec - (_last_dns_exhaustion or 0)) > 60:
                                                 trail = "(%s).%s" % ('.'.join(parts[:-2]), '.'.join(parts[-2:]))
-                                                log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.DNS, trail, "potential dns exhaustion (suspicious)", "(heuristic)"), packet)
-                                                _dns_exhausted_domains.add(domain)
-                                                _last_dns_exhaustion = sec
+                                                if re.search(r"bl\b", trail) is None:  # generic check for DNSBLs (Note: alternative is to check whitelist)
+                                                    log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.DNS, trail, "potential dns exhaustion (suspicious)", "(heuristic)"), packet)
+                                                    _dns_exhausted_domains.add(domain)
+                                                    _last_dns_exhaustion = sec
 
                                             return
 
@@ -673,17 +684,10 @@ def _process_packet(packet, sec, usec, ip_offset):
 
                                                         break
 
-                                            if len(parts) > 2:
-                                                part = parts[0] if parts[0] != "www" else parts[1]
-                                                trail = "(%s).%s" % ('.'.join(parts[:-2]), '.'.join(parts[-2:]))
-                                            elif len(parts) == 2:
+                                            if len(parts) == 2 and parts[0] and '-' not in parts[0]:
                                                 part = parts[0]
                                                 trail = "(%s).%s" % (parts[0], parts[1])
-                                            else:
-                                                part = query
-                                                trail = query
 
-                                            if part and '-' not in part:
                                                 result = _result_cache.get(part)
 
                                                 if result is None:
@@ -856,7 +860,7 @@ def init():
                 print("[?] in case of any problems with packet capture on virtual interface 'any', please put all monitoring interfaces to promiscuous mode manually (e.g. 'sudo ifconfig eth0 promisc')")
 
         for interface in interfaces:
-            if interface.lower() != "any" and interface not in pcapy.findalldevs():
+            if interface.lower() != "any" and re.sub(r"(?i)\Anetmap:", "", interface) not in pcapy.findalldevs():
                 hint = "[?] available interfaces: '%s'" % ",".join(pcapy.findalldevs())
                 exit("[!] interface '%s' not found\n%s" % (interface, hint))
 
@@ -953,7 +957,7 @@ def monitor():
         try:
             dlt_offset = DLT_OFFSETS[datalink]
         except KeyError:
-            log_error("Received unexpected datalink (%d)" % datalink)
+            log_error("Received unexpected datalink (%d)" % datalink, single=True)
             return
 
         try:
@@ -985,17 +989,21 @@ def monitor():
                 sec, usec = [int(_) for _ in ("%.6f" % time.time()).split('.')]
             else:
                 sec, usec = header.getts()
+
             if _multiprocessing:
+                block = struct.pack("=III", sec, usec, ip_offset) + packet
+
                 if _locks.count:
                     _locks.count.acquire()
 
-                write_block(_buffer, _count, struct.pack("=III", sec, usec, ip_offset) + packet)
+                write_block(_buffer, _count, block)
                 _n.value = _count = _count + 1
 
                 if _locks.count:
                     _locks.count.release()
             else:
                 _process_packet(packet, sec, usec, ip_offset)
+
         except socket.timeout:
             pass
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
+Copyright (c) 2014-2020 Maltrail developers (https://github.com/stamparm/maltrail/)
 See the file 'LICENSE' for copying permission
 """
 from __future__ import print_function
@@ -37,6 +37,7 @@ from thirdparty.six.moves import socketserver as _socketserver
 _condensed_events = {}
 _condensing_thread = None
 _condensing_lock = threading.Lock()
+_single_messages = set()
 _thread_data = threading.local()
 
 def create_log_directory():
@@ -136,7 +137,7 @@ def log_event(event_tuple, packet=None, skip_write=False, skip_condensing=False)
         sec, usec, src_ip, src_port, dst_ip, dst_port, proto, trail_type, trail, info, reference = event_tuple
         if ignore_event(event_tuple):
             return
-        
+
         if not (any(check_whitelisted(_) for _ in (src_ip, dst_ip)) and trail_type != TRAIL.DNS):  # DNS requests/responses can't be whitelisted based on src_ip/dst_ip
             if not skip_write:
                 localtime = "%s.%06d" % (time.strftime(TIME_FORMAT, time.localtime(int(sec))), usec)
@@ -190,7 +191,7 @@ def log_event(event_tuple, packet=None, skip_write=False, skip_condensing=False)
                     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
                     s.sendto(_.encode(UNICODE_ENCODING), (remote_host, int(remote_port)))
 
-                if config.DISABLE_LOCAL_LOG_STORAGE and not any(config.LOG_SERVER, config.SYSLOG_SERVER) or config.console:
+                if (config.DISABLE_LOCAL_LOG_STORAGE and not any((config.LOG_SERVER, config.SYSLOG_SERVER))) or config.console:
                     sys.stderr.write(event)
                     sys.stderr.flush()
 
@@ -201,7 +202,13 @@ def log_event(event_tuple, packet=None, skip_write=False, skip_condensing=False)
         if config.SHOW_DEBUG:
             traceback.print_exc()
 
-def log_error(msg):
+def log_error(msg, single=False):
+    if single:
+        if msg in _single_messages:
+            return
+        else:
+            _single_messages.add(msg)
+
     try:
         handle = get_error_log_handle()
         os.write(handle, ("%s %s\n" % (time.strftime(TIME_FORMAT, time.localtime()), msg)).encode(UNICODE_ENCODING))
@@ -221,7 +228,8 @@ def start_logd(address=None, port=None, join=False):
                 if data[0:1].isdigit():     # Note: regular format with timestamp in front
                     sec, event = data.split(b' ', 1)
                 else:                       # Note: naive format without timestamp in front
-                    sec = datetime.datetime.strptime(data[1:data.find(b'.')].decode(UNICODE_ENCODING), TIME_FORMAT).timestamp()
+                    event_date = datetime.datetime.strptime(data[1:data.find(b'.')].decode(UNICODE_ENCODING), TIME_FORMAT)
+                    sec = int(time.mktime(event_date.timetuple()))
                     event = data
 
                 if not event.endswith(b'\n'):

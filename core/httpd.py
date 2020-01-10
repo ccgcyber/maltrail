@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
+Copyright (c) 2014-2020 Maltrail developers (https://github.com/stamparm/maltrail/)
 See the file 'LICENSE' for copying permission
 """
 from __future__ import print_function
@@ -102,8 +102,7 @@ def start_httpd(address=None, port=None, join=False, pem=None):
             try:
                 request.shutdown()
             except:
-                if config.SHOW_DEBUG:
-                    traceback.print_exc()
+                pass
 
     class ReqHandler(_BaseHTTPServer.BaseHTTPRequestHandler):
         def do_GET(self):
@@ -162,7 +161,7 @@ def start_httpd(address=None, port=None, join=False, pem=None):
                         self.send_header(HTTP_HEADER.LAST_MODIFIED, last_modified)
 
                         # For CSP policy directives see: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/
-                        self.send_header(HTTP_HEADER.CONTENT_SECURITY_POLICY, "default-src 'self'; style-src 'self' 'unsafe-inline'; " +
+                        self.send_header(HTTP_HEADER.CONTENT_SECURITY_POLICY, "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src *; " +
                                                                               "script-src 'self' 'unsafe-eval' https://stat.ripe.net; " +
                                                                               "frame-src *; object-src 'none'; block-all-mixed-content;")
                         if extension not in (".htm", ".html"):
@@ -181,7 +180,7 @@ def start_httpd(address=None, port=None, join=False, pem=None):
                     content = content.encode(UNICODE_ENCODING)
 
                 for match in re.finditer(b"<\\!(\\w+)\\!>", content):
-                    name = match.group(1)
+                    name = match.group(1).decode(UNICODE_ENCODING)
                     _ = getattr(self, "_%s" % name.lower(), None)
                     if _:
                         content = self._format(content, **{ name: _() })
@@ -200,10 +199,13 @@ def start_httpd(address=None, port=None, join=False, pem=None):
 
             self.end_headers()
 
-            if content:
-                self.wfile.write(content)
+            try:
+                if content:
+                    self.wfile.write(content)
 
-            self.wfile.flush()
+                self.wfile.flush()
+            except:
+                pass
 
         def do_POST(self):
             length = self.headers.get(HTTP_HEADER.CONTENT_LENGTH)
@@ -264,10 +266,18 @@ def start_httpd(address=None, port=None, join=False, pem=None):
         def _version(self):
             return VERSION
 
+        def _logo(self):
+            if config.HEADER_LOGO:
+                retval = config.HEADER_LOGO
+            else:
+                retval = '<img src="images/mlogo.png" style="width: 25px">altrail'
+
+            return retval
+
         def _format(self, content, **params):
             if content:
                 for key, value in params.items():
-                    content = content.replace("<!%s!>" % key, value)
+                    content = content.replace(b"<!%s!>" % key.encode(UNICODE_ENCODING), value.encode(UNICODE_ENCODING))
 
             return content
 
@@ -280,6 +290,12 @@ def start_httpd(address=None, port=None, join=False, pem=None):
                     for entry in (config.USERS or []):
                         entry = re.sub(r"\s", "", entry)
                         username, stored_hash, uid, netfilter = entry.split(':')
+
+                        try:
+                            uid = int(uid)
+                        except ValueError:
+                            uid = None
+
                         if username == params.get("username"):
                             try:
                                 if params.get("hash") == hashlib.sha256((stored_hash.strip() + params.get("nonce")).encode(UNICODE_ENCODING)).hexdigest():
@@ -336,7 +352,7 @@ def start_httpd(address=None, port=None, join=False, pem=None):
                     if addresses:
                         netfilters.add(get_regex(addresses))
 
-                SESSIONS[session_id] = AttribDict({"username": username, "uid": uid, "netfilters": netfilters, "expiration": expiration, "client_ip": self.client_address[0]})
+                SESSIONS[session_id] = AttribDict({"username": username, "uid": uid, "netfilters": netfilters, "mask_custom": config.ENABLE_MASK_CUSTOM and uid >= 1000, "expiration": expiration, "client_ip": self.client_address[0]})
             else:
                 time.sleep(UNAUTHORIZED_SLEEP_TIME)
                 self.send_response(_http_client.UNAUTHORIZED)
@@ -469,7 +485,7 @@ def start_httpd(address=None, port=None, join=False, pem=None):
                         if start == 0 or not session.range_handle:
                             session.range_handle = range_handle
 
-                        if session.netfilters is None:
+                        if session.netfilters is None and not session.mask_custom:
                             session.range_handle.seek(start)
                             self.send_response(_http_client.PARTIAL_CONTENT)
                             self.send_header(HTTP_HEADER.CONNECTION, "close")
@@ -482,7 +498,7 @@ def start_httpd(address=None, port=None, join=False, pem=None):
                             self.send_header(HTTP_HEADER.CONTENT_TYPE, "text/plain")
 
                             buffer, addresses, netmasks, regex = io.StringIO(), set(), [], ""
-                            for netfilter in session.netfilters:
+                            for netfilter in session.netfilters or []:
                                 if not netfilter:
                                     continue
                                 if '/' in netfilter:
@@ -496,8 +512,9 @@ def start_httpd(address=None, port=None, join=False, pem=None):
                                     return
 
                             for line in session.range_handle:
-                                display = False
+                                display = session.netfilters is None
                                 ip = None
+                                line = line.decode(UNICODE_ENCODING, "ignore")
 
                                 if regex:
                                     match = re.search(regex, line)
@@ -522,6 +539,9 @@ def start_httpd(address=None, port=None, join=False, pem=None):
                                                     addresses.add(ip)
                                                     display = True
                                                     break
+
+                                if session.mask_custom and "(custom)" in line:
+                                    line = re.sub(r'("[^"]+"|[^ ]+) \(custom\)', "- (custom)", line)
 
                                 if display:
                                     if ",%s" % ip in line or "%s," % ip in line:

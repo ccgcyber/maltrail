@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Copyright (c) 2014-2019 Maltrail developers (https://github.com/stamparm/maltrail/)
+Copyright (c) 2014-2020 Maltrail developers (https://github.com/stamparm/maltrail/)
 See the file 'LICENSE' for copying permission
 """
 from __future__ import print_function
@@ -123,8 +123,8 @@ def update_trails(force=False, offline=False):
             if _ not in sys.path:
                 sys.path.append(_)
 
-            filenames += [os.path.join(_, "static")]
             filenames += [os.path.join(_, "custom")]
+            filenames += [os.path.join(_, "static")]    # Note: higher priority than previous one because of dummy user trails (FE)
 
             filenames = [_ for _ in filenames if "__init__.py" not in _]
 
@@ -249,7 +249,7 @@ def update_trails(force=False, offline=False):
                     del trails[key]
                     continue
                 if re.search(r"\A\d+\.\d+\.\d+\.\d+\Z", key):
-                    if any(_ in trails[key][0] for _ in ("parking site", "sinkhole")) and key in duplicates:
+                    if any(_ in trails[key][0] for _ in ("parking site", "sinkhole")) and key in duplicates:    # Note: delete (e.g.) junk custom trails if static trail is a sinkhole
                         del duplicates[key]
                     if trails[key][0] == "malware":
                         trails[key] = ("potential malware site", trails[key][1])
@@ -286,9 +286,10 @@ def update_trails(force=False, offline=False):
             read_whitelist()
 
             for key in list(trails.keys()):
+                match = re.search(r"\A(\d+\.\d+\.\d+\.\d+)\b", key)
                 if check_whitelisted(key) or any(key.startswith(_) for _ in BAD_TRAIL_PREFIXES):
                     del trails[key]
-                elif re.search(r"\A\d+\.\d+\.\d+\.\d+\Z", key) and (bogon_ip(key) or cdn_ip(key)):
+                elif match and (bogon_ip(match.group(1)) or cdn_ip(match.group(1))) and not any(_ in trails[key][0] for _ in ("parking", "sinkhole")):
                     del trails[key]
                 else:
                     try:
