@@ -4434,6 +4434,7 @@ biz.nf
 biz14.com
 bz.cm
 c0m.li
+c1.biz
 cd.am
 ce.ms
 ch.vu
@@ -4922,16 +4923,6 @@ blogoveg.org
 
 g1ee.com
 
-# Reference: https://www.virustotal.com/gui/domain/easydns.com/relations
-# Reference: https://www.virustotal.com/gui/domain/easydns.net/relations
-# Reference: https://www.virustotal.com/gui/domain/easydns.org/relations
-# Reference: https://www.virustotal.com/gui/domain/eluma101.com/relations
-
-easydns.com
-easydns.net
-easydns.org
-eluma101.com
-
 # Reference: https://pastebin.com/29uSdMAk
 # Reference: https://www.virustotal.com/gui/file/ff0fb3dbc9170b42ca07bcbcca2c90dbe7e28eed7a6f8861cc91fcef691726d7/detection
 
@@ -5010,10 +5001,6 @@ cfxcheats.com
 
 xcheats.cf
 
-# Reference: https://twitter.com/kyleehmke/status/1207779048086286336
-
-minjust-gov-ua.com
-
 # Reference: https://www.virustotal.com/gui/domain/monk249.date/details
 
 monk249.date
@@ -5026,3 +5013,23 @@ hospedagemdesites.ws
 # Reference: https://www.virustotal.com/gui/file/6a6826cbe38a06a2b381c208519c4891ccb95c49958c2173cd2eef3db62329eb/detection
 
 spamcannibal.xyz
+
+# Reference: https://www.virustotal.com/gui/domain/gydns.eu/relations
+
+gydns.eu
+
+# Reference: https://www.virustotal.com/gui/domain/emstats.su/relations
+
+emstats.su
+
+# Reference: https://www.virustotal.com/gui/domain/n6dns.eu/relations
+
+n6dns.eu
+
+# Reference: https://twitter.com/D3LabIT/status/1230756245511917570
+
+zekelliott.com
+
+# Reference: https://www.virustotal.com/gui/domain/ubibancaa.fun/relations
+
+ubibancaa.fun

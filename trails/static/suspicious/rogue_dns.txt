@@ -9,9 +9,12 @@
 # Reference: https://twitter.com/ninoseki/status/1156038231172894721
 # Reference: https://twitter.com/ZeroCERT/status/1118840257334525952
 # Reference: https://www.facebook.com/zerocert/posts/1143176292521769 (Korean)
+# Reference: https://twitter.com/ninoseki/status/1230280519771774976
 
 1.53.252.164:53
 1.53.252.215:53
+1.53.252.213:53
+1.53.252.214:53
 1.171.160.155:53
 1.171.166.13:53
 1.171.175.119:53
@@ -19,6 +22,8 @@
 118.30.28.38:53
 118.30.28.39:53
 118.168.200.231:53
+125.212.235.130:53
+125.212.235.131:53
 128.14.6.12:53
 128.14.6.13:53
 171.244.3.110:53
@@ -756,3 +761,31 @@ ns2.dnshost.ga
 # Reference: https://twitter.com/ninoseki/status/1207634830927679488
 
 107.155.152.15:53
+
+# Reference: https://www.domaintools.com/resources/blog/finding-additional-indicators-with-passive-dns-within-domaintools-iris
+# Reference: https://otx.alienvault.com/pulse/5e3d2b649a5e2e8c862e769f
+
+142.53.169.189:53
+167.99.40.72:53
+185.205.210.23:53
+198.211.125.184:53
+45.56.92.19:53
+82.102.14.218:53
+82.196.11.127:53
+89.163.206.26:53
+dns.cloudipnameserver.com
+dns.cloudnameservice.com
+dns.interland.com
+dnsnode.netnod.se
+ns1.cloudnamedns.com
+ns1.frobbit.se
+ns1.mmfasi.com
+ns2.cloudnamedns.com
+ns2.mmfasi.com
+ns3.mmfasi.com
+ns30.ucg.ae
+ns31.ucg.ae
+ns4.mmfasi.com
+resolve.cloudipnameserver.com
+resolve.cloudnameservice.com
+resolve.interland.com

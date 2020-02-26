@@ -1239,3 +1239,39 @@ undefined
 # Reference: https://twitter.com/bad_packets/status/1214701789649354752
 
 B4ckdoor
+
+# Reference: https://twitter.com/bad_packets/status/1229607800273113088
+
+B4ckdoor-owned-you
+
+# Reference: https://intezer.com/blog-new-iranian-campaign-tailored-to-us-companies-uses-updated-toolset/
+
+IEMoblie
+
+# Reference: https://twitter.com/reecdeep/status/1218098821143703552
+
+KSKJJGJ
+
+# Reference: https://twitter.com/c3rb3ru5d3d53c/status/1223790397744390146
+
+MR\_ROBOT
+
+# Reference: https://twitter.com/VessOnSecurity/status/1224051153232715783
+
+dark\_NeXus\_Qbot
+minerword
+MSIE5.01
+Qbot
+
+# Reference: https://twitter.com/FaLconIntel/status/1226012099240873984
+
+Naruto Uzumake
+
+# Misc
+
+information_schema
+sysdatabases
+sysusers
+SELECT[^\n]*FROM[^\n]*WHERE
+\b(pg_)sleep\(
+\bUNION\s+(ALL\s+)?SELECT\b

@@ -7,6 +7,7 @@ localhost
 lan
 local
 localdomain
+corp
 
 # triggering suspicious (sub)domain names
 
@@ -140,6 +141,7 @@ netdna-cdn.com
 nowvideo.sx
 nsatc.net
 officeshoes.ws
+onmicrosoft.com
 opendns.com
 oraclecloud.com
 outlook.com
@@ -190,6 +192,7 @@ verisign.com
 verisign.net
 weborama.fr
 weebly.com
+windows.com
 windows.net
 wordpress.com
 wsusoffline.net
@@ -197,6 +200,7 @@ yahoo.com
 yahoodns.net
 yimg.com
 yvimg.kz
+zextras.com
 zillya.com
 zillya.ua
 zillyaoem.com
@@ -471,6 +475,10 @@ nk-slaven-belupo.hr
 fongyeh.com.tw
 ee.ncu.edu.tw
 hupt.hr
+heartjohn.com
+cima.hr
+cm-lagoa.pt
+databridgemarketresearch.com
 
 # found as false positive on cybercrime-tracker.net
 
@@ -493,6 +501,7 @@ defensacentral.com
 # found as false positive on bambenekconsulting.com
 
 parkingcrew.net
+caseking.net
 
 # triggering parked site events
 
@@ -503,6 +512,7 @@ budi.in
 # found as false positive on abuse.ch
 
 citibank.com
+naver.com
 
 # found as false positive in otx.alienvault.com
 
@@ -530,6 +540,7 @@ bit.nl
 blocklist.de
 blocklist.messaging.microsoft.com
 blogspambl.com
+brightmail.com
 burnt-tech.com
 choon.net
 cyberlogic.net
@@ -875,6 +886,7 @@ sophosxl.net
 # Generic
 
 bswireless.ddns.net
+boxcdn.net
 diogen.duckdns.org
 mifux.duckdns.org
 psiloveyou.xyz
@@ -1077,6 +1089,14 @@ dc11.wix.com
 sslstatic.wix.com
 stores-counters.wix.com
 wwworigin.wix.com
+edu.cn
+edu.sg
+edu.ph
+ibb.co
+imgbb.com
+uvnc.com
+glotorrents.pw
+mandiant.com
 
 # NS of afraid.org
 
@@ -1159,6 +1179,9 @@ rotumal.com
 red-gate.com
 clicksor.com
 as2pawnib8ib.com
+srvng.xyz
+rbi.cloud
+comm100.com
 
 # Google crawlers
 
@@ -2679,3 +2702,10 @@ yuio.top
 
 hf-hd.top
 nn-mod.top
+reseau-js.com
+coloros.com
+
+# Exceptions for abuse.ch (dirty patch for addresses used by outside scanners introducing noise being recognized as 'malware')
+
+scan.casualaffinity.net
+jhasdjahsdjasfkdaskdfasbot.niggacumyafacenet.xyz

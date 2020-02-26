@@ -985,19 +985,232 @@ zctrack.com
 
 /5d54ff24322827.php
 
+# Reference: https://twitter.com/MalwarePatrol/status/1218263998963077121
+
+/1ynjmpv989zfji1p3mmyi73q.php
+
 # Reference: https://twitter.com/0_1_0_1_0_0_0_0/status/1215267911666950145
 # Reference: https://app.any.run/tasks/3d00b564-5584-41bf-bbc9-177f53315c96/
+# Reference: https://www.virustotal.com/gui/ip-address/18.219.52.4/relations
 
+/PediuPraPostarPostou.php
 /PostaEstaPorra.php
+/VaiPostaProPai.php
+
+# Reference: https://twitter.com/dubstard/status/1215705048824655873
+
+/secure-bankofamerica-personal-information-update.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1219351173024624640
+
+/1yroihdrc99ceanyt77k0h82.php
+
+# Reference: https://twitter.com/wwp96/status/1219614957416873984
+
+/d380803e561db4.php
+
+# Reference: https://twitter.com/dubstard/status/1219703659111636993
+
+/tDxhinc.php
+
+# Reference: https://twitter.com/IpNigh/status/1220249931946037249
+
+/yo0io9tpd5y85cjgsivluoif.php
+
+# Reference: https://www.virustotal.com/gui/domain/megagemes.info/relations
+
+/eueueuueueue.php
+/momomoomomom.php
+/ozozozozoz.php
+/usksdjqjwjoweidjcslkm.php
+/usuususususuusus.php
+
+# Reference: https://www.virustotal.com/gui/domain/newbook-t.info/relations
+
+/downloadcdneu98680113.php
+/downloadcdnus46745341.php
+/downloadcdnus46745343.php
+
+# Reference: https://twitter.com/IntezerLabs/status/1221789726702800897
+
+/ddos.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1222099275607351296
+
+/2gv5x6lg8sugbhjmtg7ezufe.php
+
+# Reference: https://www.virustotal.com/gui/domain/web.riderit.com/relations
+# Reference: https://app.any.run/tasks/193b764b-c408-4226-9a66-8400d1b1f4f9/
+
+/0251e9e6dd2b6761318cf74b9c7cfbcc.php
+/21a44295fbc5e240b8897759c8d4ecbd.php
+/2eff7f856c921b9679658fc1076ad8df.php
+/3192bf6e779334e01ff1f354b369e992.php
+/3a6966fd4933d209199b9bf401c56325.php
+/42f5aabbcbba40b021ac48b5d03424eb.php
+/4a122e1be14c64455d732d6809397908.php
+/4c76a53c02e96376537dd399c26d42e6.php
+/4ebcbf3ba7ccb02dfb195c7d5ca7787d.php
+/597684641290261a2d9b5e4f3c31448f.php
+/5a2eec141864de49a45bb29ac52dbe6b.php
+/5fa33fb8aff4f22b08f6371b434982ae.php
+/7b86de71fe96e99fdb691ef6232bf67d.php
+/824e747ac0a4b302b94c5c8811aecffc.php
+/921f92a5d1a046bfb48a3c9ea2e85893.php
+/93b9f5a0890ae2b6cfbfd44ab5f5698f.php
+/9e9ec25815b236f8481bf58f872f9499.php
+/a647cd724dccdc618bde9486f9048c1d.php
+/a8d7ca744ce9804d9684ead43bcc3f12.php
+/c516cd9f3d02c0a9657652b835170278.php
+/c6e905de8a762015cd177be60cd6bd67.php
+/c899b67fe5f3939e234fa5e427fda4eb.php
+/dd45006971f6dc8fe2abe8ea9904a2fe.php
+/dd7e6cce27c6cc2b70d705559c9a158b.php
+/de33e172deb9cd1a01cc95a3198b5ff2.php
+/dedfa9292432a75b835f7e73b6f3b84f.php
+/e649d1894bdae5a5d60226290297fdf3.php
+/e6f482cc5f9dd0a1d18cb925499c1e6b.php
+/ea0645ba64ff256edb90e1c12a0a4cdb.php
+/ef0390ca68e9e2a0e3851e0cf6b22353.php
+/f7d2dd7b5bdd9919634388790cc9c4fa.php
+
+# Reference: https://twitter.com/unmaskparasites/status/1222242298404179970
+
+/backdoor.php
+/inject.php
+
+# Reference: https://twitter.com/smica83/status/1222440174489100288
+
+/5h5qibac2xyhjtvuig3gaabo.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1224424598650966018
+
+/8gtd3b4wfigyiks4byoj5jyd.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1226236539216257024
+
+/6x39zirn3k4gr0njt1fotypx.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1225285279050870784
+
+/0cpc8mjcq211xolw8ma10v2j.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1226885813667074049
+
+/pn4nfl0niuptkem28h804gz5.php
+
+# Reference: https://app.any.run/tasks/9683cba3-6fcd-4264-91f1-575da5329677/
+
+/api/X.php
+
+# Reference: https://twitter.com/ninoseki/status/1223376549287620610
+
+/0cpc8mjcq211xolw8ma10v2j.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1227535087438311424
+
+/lg50lqqckgrorhfbk7z0nt07.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1228410873984831489
+
+/2qs8brx2ayrqu6954pwroacc.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1228471256787439616
+
+/5r9z334kjramxzfizndwlq98.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1231370355291414529
+
+/67u7is2tdmnp9bj0pr4511f8.php
+
+/ZuluDaka1.php
+/ZuluDaka2.php
+/ZuluDaka3.php
+/ZuluDaka4.php
+/ZuluDaka5.php
+/ZuluDaka6.php
+/ZuluDaka7.php
+/ZuluDaka8.php
+
+# Reference: https://twitter.com/IpNigh/status/1224406954564517889
+
+/captura01Controller.php
+
+# Reference: https://www.virustotal.com/gui/file/f92ffc14ebc9ea2be74f7a6f73fa2055e345a42428171cee6491e6903816dce3/detection
+
+/0ec71210595a57.php
+/5d54ff24322827.php
+/a92079a4564cf9.php
+/b3a443d2dcbd9f.php
+/d380803e561db4.php
+
+# Reference: https://twitter.com/JayTHL/status/1227122437885698049
+
+/74633a062dfc6c.php
+
+# Reference: https://www.virustotal.com/gui/domain/ipblasta.com/relations
+
+/860cce76152de2.php
+
+# Reference: https://twitter.com/wwp96/status/1227265060566917120
+
+/095ac16cdd62d1.php
+
+# Reference: https://www.virustotal.com/gui/ip-address/89.208.229.55/relations
+
+/acbf8e37fb139b.php
+/ca4341dad4fe26.php
+
+# Reference: https://twitter.com/pancak3lullz/status/1230522568026673153
+
+/85b4aa12e220f7.php
+
+# Reference: https://twitter.com/tkanalyst/status/1229794466816389120
+
+/usexosell.php
+/usflexexosell.php
+
+# Reference: https://securityaffairs.co/wordpress/98124/cyber-crime/uncovering-new-magecart-implant.html
+
+/ar906.php
+/ar2497.php
+
+# Reference: https://blog.prevailion.com/2020/02/phps-labyrinth-weaponized-wordpress.html
+# Reference: https://otx.alienvault.com/pulse/5e4d6c5790faacd62f7afed6
+
+brilns.com
+crilns.com
+devata.icu
+dolodos.top
+frilns.com
+kdsidsiadsakfsas.com
+medsource.top
+oajdasnndkdahm.com
+pervas.top
+piastas.gdn
+piasuna.gdn
+semasa.icu
+tdreg.icu
+tdreg.top
+tretas.top
+trilns.com
+vosmas.icu
+vtoras.top
 
 # Generic
 
 /7328-dating-verification-card.php
 /canadiane-compte.php
+/ccgate.php
 /dating-verification-card.php
+/evreigate.php
 /gate.php
 /gate1.php
+/gate2.php
 /gate.get
 /online-dating-verification-card.php
+/ravufgate.php
 /screenshot_gate.php
+/tgate.php
+/uadmin/adm.php
 /verification-card.php

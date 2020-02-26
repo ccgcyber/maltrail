@@ -1358,7 +1358,7 @@ function initDetails() {
                         if (duplicates !== null) {
                             var items = duplicates[1].split(',');
                             data = data.replace(duplicates[0], "");
-                            return ((data.substr(0, 1) != '(') ? '<i>' + data + '</i>': data) + '<span title="' + duplicates[1].replace(/,([^ ])/g, ", $1") + '" class="duplicates">+' + items.length + '</span>';
+                            return ((data.substr(0, 1) != '(') ? '<i>' + data + '</i>': data) + '<span title="' + duplicates[1].replace(/,([^ ])/g, ", $1") + '" class="duplicates">+' + items.length + '</span>' + '<span class="searchable">' + duplicates[1] + "</span>";
                         }
                     }
                     return (data.substr(0, 1) != '(') ? '<i>' + data + '</i>': data;
@@ -2848,6 +2848,17 @@ function dayEnd(tick_seconds) {
 
     return Math.floor(value.getTime());
 }
+
+$(document).keyup(function(e){
+    var key = e.which || e.keyCode;
+
+    if (key === 37) {        // left
+        $("#details_previous").click();
+    }
+    else if (key === 39) {    // right
+        $("#details_next").click();
+    }
+});
 
 $(document).ready(function() {
     var from = dayStart(new Date().getTime());
