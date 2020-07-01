@@ -29,6 +29,7 @@ from core.common import get_regex
 from core.common import ipcat_lookup
 from core.common import worst_asns
 from core.compat import xrange
+from core.datatype import LRUDict
 from core.enums import HTTP_HEADER
 from core.settings import config
 from core.settings import CONTENT_EXTENSIONS_EXCLUSIONS
@@ -39,6 +40,7 @@ from core.settings import HTML_DIR
 from core.settings import HTTP_TIME_FORMAT
 from core.settings import IS_WIN
 from core.settings import MAX_NOFILE
+from core.settings import MAX_RESULT_CACHE_ENTRIES
 from core.settings import NAME
 from core.settings import PING_RESPONSE
 from core.settings import SESSION_COOKIE_NAME
@@ -67,6 +69,8 @@ try:
     resource.setrlimit(resource.RLIMIT_NOFILE, (MAX_NOFILE, MAX_NOFILE))
 except:
     pass
+
+_result_cache = LRUDict(MAX_RESULT_CACHE_ENTRIES)
 
 def start_httpd(address=None, port=None, join=False, pem=None):
     """
@@ -160,7 +164,7 @@ def start_httpd(address=None, port=None, join=False, pem=None):
                         self.send_header(HTTP_HEADER.LAST_MODIFIED, last_modified)
 
                         # For CSP policy directives see: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/
-                        self.send_header(HTTP_HEADER.CONTENT_SECURITY_POLICY, "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src *; " +
+                        self.send_header(HTTP_HEADER.CONTENT_SECURITY_POLICY, "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src * blob:; " +
                                                                               "script-src 'self' 'unsafe-eval' https://stat.ripe.net; " +
                                                                               "frame-src *; object-src 'none'; block-all-mixed-content;")
                         if extension not in (".htm", ".html"):
@@ -184,7 +188,7 @@ def start_httpd(address=None, port=None, join=False, pem=None):
                     if _:
                         content = self._format(content, **{ name: _() })
 
-                if "gzip" in self.headers.get(HTTP_HEADER.ACCEPT_ENCODING):
+                if "gzip" in self.headers.get(HTTP_HEADER.ACCEPT_ENCODING, ""):
                     self.send_header(HTTP_HEADER.CONTENT_ENCODING, "gzip")
                     _ = six.BytesIO()
                     compress = gzip.GzipFile("", "w+b", 9, _)
@@ -438,6 +442,37 @@ def start_httpd(address=None, port=None, join=False, pem=None):
 
             return PING_RESPONSE
 
+        def _fail2ban(self, params):
+            self.send_response(_http_client.OK)
+            self.send_header(HTTP_HEADER.CONNECTION, "close")
+            self.send_header(HTTP_HEADER.CONTENT_TYPE, "text/plain")
+
+            content = ""
+            key = "fail2ban|%d" % (int(time.time()) >> 3)
+
+            if config.FAIL2BAN_REGEX:
+                try:
+                    re.compile(config.FAIL2BAN_REGEX)
+                except re.error:
+                    content = "invalid regular expression used in option FAIL2BAN_REGEX"
+                else:
+                    if key in _result_cache:
+                        content = _result_cache[key]
+                    else:
+                        result = set()
+                        _ = os.path.join(config.LOG_DIR, "%s.log" % datetime.datetime.now().strftime("%Y-%m-%d"))
+                        if os.path.isfile(_):
+                            for line in open(_, "r"):
+                                if re.search(config.FAIL2BAN_REGEX, line, re.I):
+                                    result.add(line.split()[3])
+
+                        content = "\n".join(result)
+                        _result_cache[key] = content
+            else:
+                content = "configuration option FAIL2BAN_REGEX not set"
+
+            return content
+
         def _events(self, params):
             session = self.get_session()
 
@@ -681,7 +716,7 @@ def start_httpd(address=None, port=None, join=False, pem=None):
         else:
             raise
 
-    print("[i] starting HTTP%s server at 'http%s://%s:%d/'" % ('S' if pem else "", 's' if pem else "", server.server_address[0], server.server_address[1]))
+    print("[i] starting HTTP%s server at http%s://%s:%d/" % ('S' if pem else "", 's' if pem else "", server.server_address[0], server.server_address[1]))
 
     print("[o] running...")
 

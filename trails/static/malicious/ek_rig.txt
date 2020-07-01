@@ -111,6 +111,33 @@ fiestalume.info
 
 tldrbox.top
 
+# Reference: https://twitter.com/FaLconIntel/status/1235580218842083329
+
+fiestagg.info
+morethanyouneed.xyz
+
+# Reference: https://app.any.run/tasks/828e1e86-c4ee-4251-a20d-6aacc6b4b9cf/
+
+http://82.146.46.180
+
+# Reference: https://twitter.com/FaLconIntel/status/1241568444551741441
+# Reference: https://app.any.run/tasks/e074bc0d-7edf-4e58-86ad-f7e3dd8df714/
+
+http://176.57.220.16
+
+# Reference: https://isc.sans.edu/forums/diary/CryptoShield+Ransomware+from+Rig+EK/22047/Hancitor/Pony
+
+need.southpadreforsale.com
+star.southpadrefishingguide.com
+
+# Reference: https://twitter.com/david_jursa/status/1250716073437073409
+
+likeaboss.club
+
+# Reference: https://twitter.com/nao_sec/status/1254025079635075073
+
+http://188.225.27.75
+
 # Generic trails
 
 \b(atztds|mtxtds)[0-9a-z]+\.(world|xyz)

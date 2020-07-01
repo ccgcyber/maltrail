@@ -84,6 +84,7 @@ fslcdn.net
 footprintdns.com
 footprintpredict.com
 garmin.com
+gcontent.eu
 gexperiments1.com
 gexperiments2.com
 gexperiments3.com
@@ -214,8 +215,9 @@ kasserver.com
 sl-reverse.com
 t-com.hr
 tedata.net
+vkcache.com
 
-# to ignore in direct .exe downloads
+# to ignore in direct .exe/.bin downloads
 
 360safe.com
 7-zip.org
@@ -232,6 +234,7 @@ anti-virus.by
 bitdefender.com
 bleepingcomputer.com
 cnet.com
+comodo.com
 cwfservice.net
 dell.com
 devbuilds.kaspersky-labs.com
@@ -252,11 +255,14 @@ gimp.org
 googleapis.com
 google.com
 googlesyndication.com
+gpsonextra.net
 gvt1.com
+here.com
 hitmanpro.com
 hp.com
 htc.com
 intel.com
+izatcloud.net
 justbasic.com
 kmplayer.com
 lenovo.com
@@ -369,11 +375,14 @@ rea.co.ke
 
 atw.hu
 gandi.net
+tz-tribunj.hr
+josip-stadler.org
 
 # appeared on malwaredomainlist.com
 
 hausnet.ru
 triangleservicesltd.com
+outlinearray.com
 
 # Reference: https://answers.microsoft.com/en-us/msoffice/forum/msoffice_outlook-mso_winother-mso_o365b/sync-euexebid/a2f18771-d49a-44dc-8c2a-0dac6a8eb0b2
 
@@ -479,12 +488,21 @@ heartjohn.com
 cima.hr
 cm-lagoa.pt
 databridgemarketresearch.com
+iutoic-dhaka.edu
+africanspicesafaris.com
+sample.com
+saol.com
+putvjernika.com
+affordableunixhost.net
+steroidportal.com
+medicosdelmundo.org
 
 # found as false positive on cybercrime-tracker.net
 
 geocities.ws
 crotour.com
 condomchoice.co.uk
+92.222.150.60   # nameserver for sci-hub.tw
 
 # found as false positive on urlvir.com
 
@@ -508,6 +526,9 @@ caseking.net
 svijet7.com
 artbetting.de
 budi.in
+svgroup.net
+neodrive.co
+gofaka.com
 
 # found as false positive on abuse.ch
 
@@ -885,6 +906,56 @@ sophosxl.net
 
 # Generic
 
+chogoon.com
+seagull.ddns.net
+tracker.empire-js.us
+rufus.ie
+sci-hub.tw
+fe.core.pw
+gns1.core.pw
+gns2.core.pw
+mail4.itu.ch
+mail5.itu.ch
+mail8.itu.ch
+mail9.itu.ch
+l850.home
+bluecoat.com
+beautifultokio.ddns.net
+cigla.dyndns-work.com
+tracker.kicks-ass.net
+vsnl.net.in
+multilanguage.xyz
+accorhotels.ws
+pixhost.icu
+sharepoint.com
+sk1.selfip.org
+promotools.cc
+admin.ch
+adns1.easydns.com
+adns2.easydns.com
+litocam.myftp.org
+krapanj.dyndns.info
+dynamic.tstt.net.tt
+aviation-is.better-than.tv
+bravohr.dynu.net
+oyvine.dyndns.org
+croportal.net
+elektrokrk.com
+pohrani.com
+ns-08.webnode.com
+ns-09.webnode.com
+swisscom.com
+tecajevi.freeservers.com
+mail.webnode.com
+mail1.webnode.com
+mail2.webnode.com
+accesstutor.tripod.com
+a.jimdo.com
+tstt.net.tt
+static.wix.com
+services-geo.wix.com
+shoutout.wix.com
+huaweicloudwaf.com
 bswireless.ddns.net
 boxcdn.net
 diogen.duckdns.org
@@ -916,7 +987,11 @@ frog.wix.com
 8.8.4.4
 8.8.8.8
 1.0.0.1
+1.0.0.2
+1.0.0.3
 1.1.1.1
+1.1.1.2
+1.1.1.3
 9.9.9.9
 185.228.168.168
 185.228.168.169
@@ -924,6 +999,11 @@ frog.wix.com
 208.67.220.123
 208.67.222.123
 208.67.222.222
+64.6.64.6
+84.200.69.80
+89.233.43.71
+94.130.110.185
+94.247.43.254
 0.0.0.0
 255.255.255.255
 opendsp.com
@@ -932,6 +1012,10 @@ tru.am
 put.re
 2606:4700:4700::1001
 2606:4700:4700::1111
+2606:4700:4700::1002
+2606:4700:4700::1112
+2606:4700:4700::1003
+2606:4700:4700::1113
 msn.com
 azureedge.net
 rubrkik.ga
@@ -1097,6 +1181,34 @@ imgbb.com
 uvnc.com
 glotorrents.pw
 mandiant.com
+pgz505.servehttp.com
+prszg.ddns.net
+dynupdate.noip.com
+davor.dyndns-server.com
+hardjura.selfip.info
+japa88.ddns.net
+notar-jakic.dyndns.biz
+pozega.dyndns.org
+prszg.dyndns.org
+kastela.dyndns.info
+members.dyndns.org
+bolnica-vt.no-ip.org
+ncore.cc
+news-host.pw
+mozilla.com
+office365.com
+.goog
+members.webs.com
+mp3viper.me
+emp3world.so
+btorrent.xyz
+justproxy.io
+
+# long-domain names (e.g. 03020749dotbjdot89dot249dot108dot53q1w2e3rty)
+
+waseda.jp
+u-paris.fr
+london.ac.uk
 
 # NS of afraid.org
 
@@ -1112,6 +1224,13 @@ nf5.no-ip.com
 
 # Sh.ty ad / tracker networks introducing noise (e.g. long subdomain names)
 
+lunrac.com
+51.la
+tradeaccess.ltd
+yldbt.com
+trackidea.xyz
+marketingcloudapis.com
+online-metrix.net
 adbrn.com
 adsco.re
 adshostnet.com
@@ -1182,14 +1301,45 @@ as2pawnib8ib.com
 srvng.xyz
 rbi.cloud
 comm100.com
+adcolony.xyz
+newss.pw
+inputstreamreader.link
+dll-host.cf
+ms-dev.cf
+networkhost.ga
+network-host.cf
+ioexception.in
+service-host.cf
+dll-server.ga
+svc-host.net
 
 # Google crawlers
 
 35.184.0.0/13
 
+# Google (appeared on VoipBL)
+# Reference: https://emailstuff.org/spf/check/_netblocks.google.com
+
+35.190.247.0/24
+64.233.160.0/19
+66.102.0.0/20
+66.249.80.0/20
+72.14.192.0/18
+74.125.0.0/16
+108.177.8.0/21
+173.194.0.0/16
+209.85.128.0/17
+216.58.192.0/19
+216.239.32.0/19
+
 # Google
 
 216.58.192.0/19
+172.253.0.0/16
+
+# Apple
+
+17.0.0.0/8
 
 # Microsoft
 
@@ -1245,6 +1395,10 @@ fbsbx.com
 remedypub.ga
 victoryms.fun
 roysong666.vicp.cc
+biblemission.jkub.com
+sun.itsaol.com
+abx.publicvm.com
+loginrecovery.org
 
 # Reference: https://419scam.org/419-by-domain.htm  # Note: only .tn as most seen as noise
 
@@ -2704,8 +2858,89 @@ hf-hd.top
 nn-mod.top
 reseau-js.com
 coloros.com
+sagawa-exp.co.jp
+au-e.com
+big-post.com
+voyance-au-top.com
+cat-cnc.com
+cat-nip.com
 
 # Exceptions for abuse.ch (dirty patch for addresses used by outside scanners introducing noise being recognized as 'malware')
 
 scan.casualaffinity.net
 jhasdjahsdjasfkdaskdfasbot.niggacumyafacenet.xyz
+
+# Reference: https://twitter.com/0xBanana/status/1234141822345191425
+
+rpi.bnon.xyz
+
+# Reference: https://kb.easydns.com/knowledge/transferring-a-domain-to-easydns/
+
+rush.easydns.com
+nirvana.easydns.net
+motorhead.easydns.org
+dns1.easydns.com
+dns2.easydns.net
+dns3.easydns.ca
+dns3.easydns.org
+dns4.easydns.info
+
+# Reference: https://twitter.com/xyz/status/1235984620237123584
+
+gen.xyz
+
+# Reference: https://github.com/stamparm/maltrail/pull/7271#issuecomment-596401544
+
+namebright.com
+
+# Reference: https://b-ok.cc/  # "Part of Z-Library project. The world's largest ebook library."
+
+b-ok.cc
+
+# Reference: https://www.virustotal.com/gui/file/b7e3795dfe43361b5b1bcfcc5f5f440261b9f79f8953fe94b6e87e8fc3c19a63/behavior/Dr.Web%20vxCube
+# Note: AutoPico/KMSPico/AutoKMS
+
+110.noip.me
+skms.ddns.net
+3rss.vicp.net
+kms.digiboy.ir
+
+# Reference: https://www.virustotal.com/gui/domain/eventory.cc/relations
+
+eventory.cc
+
+# Reference: https://pastecode.xyz/
+
+pastecode.xyz
+
+# Reference: https://exchange.xforce.ibmcloud.com (# Otherwise MT will mistakenly trigger on links like https://exchange.xforce.ibmcloud.com/url/hfgfr56745fg.com/admin/gate.php)
+
+ibmcloud.com
+exchange.xforce.ibmcloud.com
+
+# Reference: https://github.com/stamparm/maltrail/pull/8701/commits/9ecad095a48f774e32f4069113f195a7bf883662
+# Reference: https://www.virustotal.com/gui/domain/nvpn.so/relations
+
+nvpn.so
+
+# Reference: https://www.malwaredomainlist.com/mdl2.php?inactive=&sort=Date&search=&colsearch=All&ascordesc=DESC&quantity=100&page=22
+# Note: rupor.info is legit news site, which was compromised in 2009 due to MDL database. On 2020-06-03 rupor.info is clean.
+
+rupor.info
+
+# Reference: https://www.virustotal.com/gui/domain/rusvesna.su/detection
+
+rusvesna.su
+
+# Reference: https://www.virustotal.com/gui/domain/tilda.cc/relations
+
+tilda.cc
+tilda.wc
+
+# Reference: https://www.virustotal.com/gui/domain/gogol-mogol.su/relations
+
+gogol-mogol.su
+
+# Reference: https://www.virustotal.com/gui/domain/lissyara.su/detection
+
+lissyara.su

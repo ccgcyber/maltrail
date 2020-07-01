@@ -43,6 +43,7 @@ from core.settings import IS_WIN
 from core.settings import ROOT_DIR
 from core.settings import UNICODE_ENCODING
 from core.settings import USERS_DIR
+from core.trailsdict import TrailsDict
 from thirdparty import six
 from thirdparty.six.moves import urllib as _urllib
 
@@ -72,7 +73,7 @@ def update_trails(force=False, offline=False):
     """
 
     success = False
-    trails = {}
+    trails = TrailsDict()
     duplicates = {}
 
     try:
@@ -228,6 +229,7 @@ def update_trails(force=False, offline=False):
             for key in list(trails.keys()):
                 if key not in trails:
                     continue
+
                 if config.DISABLED_TRAILS_INFO_REGEX:
                     if re.search(config.DISABLED_TRAILS_INFO_REGEX, trails[key][0]):
                         del trails[key]
@@ -245,38 +247,51 @@ def update_trails(force=False, offline=False):
                 except:
                     pass
 
-                if not key or re.search(r"\A(?i)\.?[a-z]+\Z", key) and not any(_ in trails[key][1] for _ in ("custom", "static")):
+                if not key or re.search(r"(?i)\A\.?[a-z]+\Z", key) and not any(_ in trails[key][1] for _ in ("custom", "static")):
                     del trails[key]
                     continue
+
                 if re.search(r"\A\d+\.\d+\.\d+\.\d+\Z", key):
                     if any(_ in trails[key][0] for _ in ("parking site", "sinkhole")) and key in duplicates:    # Note: delete (e.g.) junk custom trails if static trail is a sinkhole
                         del duplicates[key]
+
                     if trails[key][0] == "malware":
                         trails[key] = ("potential malware site", trails[key][1])
+
+                    if config.get("IP_MINIMUM_FEEDS", 3) > 1:
+                        if (key not in duplicates or len(duplicates[key]) < config.get("IP_MINIMUM_FEEDS", 3)) and re.search(r"\b(custom|static)\b", trails[key][1]) is None:
+                            del trails[key]
+                            continue
+
                 if trails[key][0] == "ransomware":
                     trails[key] = ("ransomware (malware)", trails[key][1])
+
                 if key.startswith("www.") and '/' not in key:
                     _ = trails[key]
                     del trails[key]
                     key = key[len("www."):]
                     if key:
                         trails[key] = _
+
                 if '?' in key and not key.startswith('/'):
                     _ = trails[key]
                     del trails[key]
                     key = key.split('?')[0]
                     if key:
                         trails[key] = _
+
                 if '//' in key:
                     _ = trails[key]
                     del trails[key]
                     key = key.replace('//', '/')
                     trails[key] = _
+
                 if key != key.lower():
                     _ = trails[key]
                     del trails[key]
                     key = key.lower()
                     trails[key] = _
+
                 if key in duplicates:
                     _ = trails[key]
                     others = sorted(duplicates[key] - set((_[1],)))
@@ -366,8 +381,10 @@ def main():
         read_config(sys.argv[sys.argv.index("-c") + 1])
 
     try:
-        update_trails(force=True)
-        update_ipcat()
+        offline = "--offline" in sys.argv
+        update_trails(force=True, offline=offline)
+        if not offline:
+            update_ipcat()
     except KeyboardInterrupt:
         print("\r[x] Ctrl-C pressed")
     else:
@@ -395,6 +412,11 @@ def main():
             for result in results:
                 sys.stderr.write("%s\t%s\n" % (result[0], result[1]))
                 sys.stderr.flush()
+
+        if "--console" in sys.argv:
+            with _fopen(config.TRAILS_FILE, "rb" if six.PY2 else 'r', open if six.PY2 else codecs.open) as f:
+                for line in f:
+                    sys.stdout.write(line)
 
 if __name__ == "__main__":
     main()

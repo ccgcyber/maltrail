@@ -253,3 +253,49 @@
 # Reference: https://twitter.com/DynamicAnalysis/status/1231999794035535875
 
 /po.ps1
+
+# Reference: https://pastebin.com/uveiJed9
+# Reference: https://www.virustotal.com/gui/domain/gm-adv.com/relations
+
+/dhl%20invoice.ps1
+/dhlinvoice.ps1
+/dhl_invoice.ps1
+/order.ps1
+/quotation.ps1
+/remit.ps1
+/sec.ps1
+
+# Reference: https://twitter.com/c_APT_ure/status/1235231442906603520/photo/1
+# Reference: https://www.virustotal.com/gui/domain/umeed.app/relations
+
+/hk.ps1
+/quote.ps1
+
+# Reference: https://twitter.com/KorbenD_Intel/status/1238102354320166912
+
+/Miao.ps1
+
+# Reference: https://www.virustotal.com/gui/domain/crypterfile.com/relations
+
+/crypt.ps1
+
+# Reference: https://twitter.com/reecdeep/status/1272464515544776704
+
+/Sheet.ps1
+
+# Reference: https://twitter.com/JAMESWT_MHT/status/1275338252531249152
+
+/crimea.ps1
+
+# Reference: https://twitter.com/DeadlyLynn/status/1275998401524424704
+
+/leess1982.ps1
+
+# Reference: https://twitter.com/BlackonIntel/status/1276166654980956161
+
+/keda.ps1
+/pikachu.ps1
+/pikachu616.ps1
+/pikachu616_5556.ps1
+/pikachu6165556.ps1
+/pikachu_7777.ps1

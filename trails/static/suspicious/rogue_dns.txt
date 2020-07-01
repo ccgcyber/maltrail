@@ -1,48 +1,6 @@
 # Copyright (c) 2014-2020 Maltrail developers (https://github.com/stamparm/maltrail/)
 # See the file 'LICENSE' for copying permission
 
-# Reference: https://securelist.com/roaming-mantis-part-iv/90332/
-# Reference: https://twitter.com/ninoseki/status/1106842790351106048
-# Reference: https://twitter.com/ninoseki/status/1150379897820332032
-# Reference: https://twitter.com/ninoseki/status/1127109264877600768
-# Reference: https://drive.google.com/file/d/12TaMKqqjkr_r3iq3LbPcGc6LKv2k1Hmw/view
-# Reference: https://twitter.com/ninoseki/status/1156038231172894721
-# Reference: https://twitter.com/ZeroCERT/status/1118840257334525952
-# Reference: https://www.facebook.com/zerocert/posts/1143176292521769 (Korean)
-# Reference: https://twitter.com/ninoseki/status/1230280519771774976
-
-1.53.252.164:53
-1.53.252.215:53
-1.53.252.213:53
-1.53.252.214:53
-1.171.160.155:53
-1.171.166.13:53
-1.171.175.119:53
-1.171.46.86:53
-118.30.28.38:53
-118.30.28.39:53
-118.168.200.231:53
-125.212.235.130:53
-125.212.235.131:53
-128.14.6.12:53
-128.14.6.13:53
-171.244.3.110:53
-171.244.3.111:53
-171.244.33.114:53
-171.244.33.116:53
-220.136.110.179:53
-42.112.35.45:53
-42.112.35.46:53
-42.112.35.47:53
-42.112.35.48:53
-42.112.35.49:53
-42.112.35.50:53
-42.112.35.51:53
-42.112.35.52:53
-42.112.35.53:53
-42.112.35.54:53
-42.112.35.55:53
-
 # Reference: https://twitter.com/bad_packets/status/1079251375987425280
 
 66.70.173.48:53
@@ -51,7 +9,7 @@
 
 144.217.191.145:53
 
-# Reference: # Reference: https://twitter.com/bad_packets/status/1112087547050520577
+# Reference: https://twitter.com/bad_packets/status/1112087547050520577
 # Reference: https://twitter.com/bad_packets/status/1114236807367905280
 # Reference: https://www.ixiacom.com/company/blog/paypal-netflix-gmail-and-uber-users-among-targets-new-wave-dns-hijacking-attacks
 # Reference: https://securityboulevard.com/2019/04/paypal-netflix-gmail-and-uber-users-among-targets-in-new-wave-of-dns-hijacking-attacks/
@@ -108,11 +66,6 @@ ns2.firstdnshoster.com
 217.12.210.54:53
 91.217.137.37:53
 
-# Reference: https://twitter.com/ninoseki/status/1144557737516232705
-
-118.30.28.38:53
-118.30.28.39:53
-
 # Reference: https://twitter.com/MetallicaMVP/status/1148919883255750656
 # Reference: https://forums.malwarebytes.com/topic/249242-removal-instructions-for-extenbro/
 
@@ -121,37 +74,6 @@ ns2.firstdnshoster.com
 116.203.6.218:53
 185.130.104.222:53
 185.162.93.213:53
-
-# Reference: https://www.virustotal.com/gui/ip-address/204.93.216.151/relations (# See phishing domains related to this IP in respective trail)
-# Reference: https://www.virustotal.com/gui/domain/ns1.whatnexthost.com/details
-# Reference: https://www.virustotal.com/gui/domain/ns2.whatnexthost.com/details
-
-ns1.whatnexthost.com
-ns2.whatnexthost.com
-204.93.216.151:53
-
-# Reference: https://www.scmagazineuk.com/new-mac-malware-mami-hijacks-dns-connections/article/1473476
-
-82.163.142.137:53
-82.163.143.135:53
-
-# Reference: https://www.platinbilisim.com.tr/TR/Medya/Duyurular/dikkat-ghost-dns-261 (Turkish)
-# Reference: https://blog.netlab.360.com/70-different-types-of-home-routers-all-together-100000-are-being-hijacked-by-ghostdns-en/
-# Reference: https://twitter.com/ninoseki/status/1055224900829491200
-
-139.60.162.188:53
-139.60.162.201:53
-144.22.104.185:53
-173.82.168.104:53
-18.223.2.98:53
-185.70.186.4:53
-185.70.186.7:53
-192.99.187.193:53
-198.27.121.241:53
-200.196.240.104:53
-200.196.240.120:53
-35.185.9.164:53
-80.211.37.41:53
 
 # Reference: https://www.proofpoint.com/us/threat-insight/post/home-routers-under-attack-malvertising-windows-android-devices
 
@@ -245,175 +167,10 @@ ns2.whatnexthost.com
 5.45.75.11:53
 5.45.75.36:53
 
-# Reference: https://www.virustotal.com/gui/ip-address/139.59.80.101/relations (# phishing domains are in phishing.txt trail)
-# Reference: https://www.virustotal.com/gui/domain/ns1.fakesemoiin23.com/relations
-# Reference: https://www.virustotal.com/gui/domain/ns2.fakesemoiin23.com/relations
-
-ns1.fakesemoiin23.com
-ns2.fakesemoiin23.com
-139.59.80.101:53
-
-# Reference: https://www.virustotal.com/gui/domain/upgrinfo.com/relations
-
-ns1.upgrinfo.com
-ns2.upgrinfo.com
-
-# Reference: https://www.virustotal.com/gui/ip-address/162.220.8.212/relations
-
-ns1.sagema.biz
-ns2.sagema.biz
-162.220.8.212:53
-
-# Reference: https://twitter.com/ANeilan/status/1150246352053575680
-# Reference: https://www.virustotal.com/gui/ip-address/167.114.28.162/relations
-
-ns1.i-tunes-ld.com
-ns2.i-tunes-ld.com
-167.114.28.162:53
-
-# Reference: https://twitter.com/P3pperP0tts/status/1150405598816677888
-# Reference: https://twitter.com/P3pperP0tts/status/1150419408197693442
-
-5.132.191.104:53
-92.163.33.248:53
-206.189.120.248:53
-ns1.vic.au.dns.opennic.glue
-ns2.vic.au.dns.opennic.glue
-
 # Reference: https://decoded.avast.io/threatintel/router-exploit-kits-an-overview-of-routercsrf-attacks-and-dns-hijacking-in-brazil/
 
 192.169.243.50:53
 104.238.80.102:53
-
-# Reference: https://www.virustotal.com/gui/ip-address/185.28.193.195/relations (# dns addresses only)
-
-dns1.reserve-dns-test.biz
-dns2.reserve-dns-test.biz
-dns45.reserve-dns-test.biz
-dns46.reserve-dns-test.biz
-ns1.bestuserweb.com
-ns1.capcdn.com
-ns1.celebritiesfotos.com
-ns1.cialis-sale.com
-ns1.cialisonline-bestrxstore.com
-ns1.dedichnrtye.com
-ns1.delns.com
-ns1.edinaustralia.com
-ns1.everesthost.net
-ns1.familyhoteshop.com
-ns1.generic-cialisrxstore.com
-ns1.givebodyweb.com
-ns1.handtoolguide.com
-ns1.hookupjustforfck.com
-ns1.hotcasinosonline.net
-ns1.hotcasinosuk.com
-ns1.ivemed.com
-ns1.kashns.com
-ns1.magichotcompany.com
-ns1.medsexpress24.com
-ns1.memphisrocktour.com
-ns1.mostfallweb.com
-ns1.newmansurfing.com
-ns1.newmedicalsale.com
-ns1.nsrehost.com
-ns1.office-courier.com
-ns1.onlyuserweb.com
-ns1.otherintoweb.com
-ns1.outmoneyweb.com
-ns1.parkingdnsonline.com
-ns1.potentialpharmacy.com
-ns1.potutenresept.com
-ns1.quickneasypay.com
-ns1.rewrite-jobs.com
-ns1.seo-konzultant.com
-ns1.shemazu.com
-ns1.sildenafilsverige.com
-ns1.skinny-video.com
-ns1.startnowtrade.com
-ns1.tiyoomedia.com
-ns1.trythissale.com
-ns1.tube-anal.com
-ns1.twitterdemographics.com
-ns1.userfallweb.com
-ns1.viagra-femenino.com
-ns1.viagraonline-4rxonlinestore.com
-ns1.vipills.net
-ns1.workhotweb.com
-ns1.xxxsextub.com
-ns10.corposs.com
-ns1google.com
-ns2.bestuserweb.com
-ns2.capcdn.com
-ns2.celebritiesfotos.com
-ns2.cialis-sale.com
-ns2.cialisonline-bestrxstore.com
-ns2.delns.com
-ns2.edinaustralia.com
-ns2.everesthost.net
-ns2.familyhoteshop.com
-ns2.givebodyweb.com
-ns2.homerxdeal.com
-ns2.hookupjustforfck.com
-ns2.hotcasinosuk.com
-ns2.ivemed.com
-ns2.magichotcompany.com
-ns2.medsexpress24.com
-ns2.memphisrocktour.com
-ns2.mostfallweb.com
-ns2.newmansurfing.com
-ns2.newmedicalsale.com
-ns2.office-courier.com
-ns2.onlyuserweb.com
-ns2.otherintoweb.com
-ns2.outmoneyweb.com
-ns2.parkingdnsonline.com
-ns2.potutenresept.com
-ns2.rewrite-jobs.com
-ns2.seo-konzultant.com
-ns2.shemazu.com
-ns2.skinny-video.com
-ns2.startnowtrade.com
-ns2.subreg.net
-ns2.tiyoomedia.com
-ns2.trythissale.com
-ns2.tube-anal.com
-ns2.twitterdemographics.com
-ns2.userfallweb.com
-ns2.viagra-femenino.com
-ns2.viagraonline-4rxonlinestore.com
-ns2.viagraonline-rxpharmacybest.com
-ns2.vipills.net
-ns2.workhotweb.com
-ns2.xxxsextub.com
-ns3.everesthost.net
-ns3.freecelebfilms.com
-ns3.hotcasinosonline.net
-ns3.hotcasinosuk.com
-ns3.medsexpress24.com
-ns3.pokiesnzonline.com
-ns3.potentialpharmacy.com
-ns3.seo-konzultant.com
-ns3.startnowtrade.com
-ns3.trythissale.com
-ns4.freecelebfilms.com
-ns4.hotcasinosonline.net
-ns4.hotcasinosuk.com
-ns4.startnowtrade.com
-ns4.trythissale.com
-ns4.whatsappannunci.com
-ns5.whatsappannunci.com
-ns9.corposs.com
-185.28.193.195:53
-
-# Reference: https://twitter.com/DGAFeedAlerts/status/1151931732725293060
-# Reference: https://www.virustotal.com/gui/domain/gatherreceive.net/details
-# Reference: https://www.virustotal.com/gui/ip-address/63.251.106.22/relations
-
-ns1.gatherreceive.net
-ns2.gatherreceive.net
-ns3.gatherreceive.net
-ns4.gatherreceive.net
-63.251.106.22:53
 
 # Reference: https://www.welivesecurity.com/2016/06/02/crouching-tiger-hidden-dns/
 
@@ -578,49 +335,14 @@ ns4.gatherreceive.net
 
 185.205.210.23:53
 
-# Reference: https://twitter.com/PhishingAi/status/1158769283263946752
-# Reference: https://www.virustotal.com/gui/domain/ns1.villeflux.com/relations
-# Reference: https://www.virustotal.com/gui/domain/ns2.villeflux.com/details
-# Reference: https://www.virustotal.com/gui/domain/dns1.villeflux.com/details
-# Reference: https://www.virustotal.com/gui/domain/dns2.villeflux.com/details
-
-111.90.150.148:53
-111.90.150.47:53
-ns1.villeflux.com
-ns2.villeflux.com
-dns1.villeflux.com
-dns2.villeflux.com
-
 # Reference: https://security.stackexchange.com/questions/181328/did-i-just-get-dns-hijacked
 # Reference: https://www.virustotal.com/gui/ip-address/185.183.96.174/details
 
 185.183.96.174:53
 
-# Reference: https://twitter.com/PhishingAi/status/1159309706222956544
-
-192.210.142.146:53
-ns1.colloc-rotcross.com
-ns2.colloc-rotcross.com
-
 # Reference: https://twitter.com/JAMESWT_MHT/status/852540935653208064
 
 46.105.86.80:53
-
-# Reference: https://twitter.com/ninoseki/status/1161151559100588032
-
-158.69.94.9:53
-
-# Reference: https://github.com/reaperb0t/GhostDNS/blob/master/Remote_DNS_Changing_Exploits_not_GHOSTDNS_specific/37214.txt
-
-133.71.33.7:53
-
-# Reference: https://github.com/reaperb0t/GhostDNS/blob/master/Remote_DNS_Changing_Exploits_not_GHOSTDNS_specific/42197.sh
-
-133.7.133.7:53
-
-# Reference: https://twitter.com/ninoseki/status/1128573489667907586
-
-162.241.224.56:53
 
 # Reference: https://twitter.com/david_jursa/status/1119573958095974400
 
@@ -635,15 +357,6 @@ ns2.colloc-rotcross.com
 
 65.181.123.142:53
 65.181.123.143:53
-
-# Reference: https://twitter.com/ninoseki/status/1073152249969336320
-
-144.217.223.218:53
-35.247.250.124:53
-
-# Reference: https://twitter.com/ninoseki/status/1047697757731864576
-
-18.191.81.137:53
 
 # Reference: https://twitter.com/strayanmegaman/status/1001580761684717568
 # Reference: https://www.bitdefender.com/box/blog/iot-news/800000-draytek-routers-risk-dns-hijacking-attack-update-firmware/
@@ -745,10 +458,6 @@ ns2.dnshost.ga
 91.132.139.183:53
 91.132.139.254:53
 
-# Reference: https://twitter.com/ninoseki/status/1202216201700757504
-
-185.243.114.216:53
-
 # Reference: https://twitter.com/david_jursa/status/1172522037254008833
 
 77.95.229.240:53
@@ -758,10 +467,6 @@ ns2.dnshost.ga
 192.3.207.10:53
 198.46.234.210:53
 
-# Reference: https://twitter.com/ninoseki/status/1207634830927679488
-
-107.155.152.15:53
-
 # Reference: https://www.domaintools.com/resources/blog/finding-additional-indicators-with-passive-dns-within-domaintools-iris
 # Reference: https://otx.alienvault.com/pulse/5e3d2b649a5e2e8c862e769f
 
@@ -769,7 +474,6 @@ ns2.dnshost.ga
 167.99.40.72:53
 185.205.210.23:53
 198.211.125.184:53
-45.56.92.19:53
 82.102.14.218:53
 82.196.11.127:53
 89.163.206.26:53
@@ -789,3 +493,16 @@ ns4.mmfasi.com
 resolve.cloudipnameserver.com
 resolve.cloudnameservice.com
 resolve.interland.com
+
+# Reference: https://twitter.com/NoceraInformat1/status/1222976385494519810
+
+89.207.131.21:53
+
+# Reference: https://www.bleepingcomputer.com/news/security/hackers-hijack-routers-dns-to-spread-malicious-covid-19-apps/
+
+109.234.35.230:53
+94.103.82.249:53
+
+# Reference: https://twitter.com/bad_packets/status/1264290514406240257
+
+111.90.159.53:53

@@ -186,15 +186,17 @@ http://89.32.251.136
 
 # Reference: https://www.zscaler.com/blogs/research/magecart-activity-and-campaign-enhancements
 # Reference: https://www.virustotal.com/gui/domain/dnsden.biz/relations
+# Reference: https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/anyone-can-check-for-magecart-with-just-the-browser/
 
 http://93.187.129.249/gate.php
-developer-js.info/gate.php
+developer-js.info
 dnsden.biz
-jquery-bin.com/gate.php
+jquery-bin.com
 jsreload.pw
 jqueryextd.at
 routingzen.com
-saterday-race.com/gate.php
+saterday-race.com
+scriptvault.org
 /errors/default/gate.php
 
 # Reference: https://twitter.com/killamjr/status/1151142181643702277
@@ -774,10 +776,6 @@ theresevit.com
 # Reference: https://twitter.com/jknsCo/status/1200061735278911488
 
 googlemgrteg.com
-
-# Reference: https://twitter.com/jknsCo/status/1200372639895826432
-
-secure-magenta1.be2bill.com
 
 # Reference: https://twitter.com/eComscan/status/1200749626988662784
 
@@ -1542,3 +1540,749 @@ zs.mk
 # Reference: https://twitter.com/xuy1202/status/1232162075285147648
 
 ns-scripts.com
+
+# Reference: https://twitter.com/gwillem/status/1232246887367028737
+# Reference: https://www.virustotal.com/gui/domain/cloudmgrtracker.com/detection
+
+cloudmgrtracker.com
+
+# Reference: https://twitter.com/MBThreatIntel/status/1232404872999231488
+
+pluginmagento.net
+
+# Reference: https://twitter.com/xuy1202/status/1232581248083582976
+
+data-safeguard.com
+
+# Reference: https://twitter.com/MBThreatIntel/status/1232726202281889793
+# Reference: https://blog.malwarebytes.com/threat-analysis/2020/02/fraudsters-cloak-credit-card-skimmer-with-fake-content-delivery-network-ngrok-server/
+
+cdn-mediafiles.org
+cdn-sources.org
+d68344fb.ngrok.io
+
+# Reference: https://sansec.io/labs/2020/02/25/longest-skimming-operation-yet/
+
+aleopeople.info
+bizlawyer.org
+contentequare.com
+cquotinent.com
+jackhemmingway.com
+joyjewell.com
+installerr.pw
+installerr.site
+pizdasniff.site
+qitcdn.net
+securedcdn.net
+thefei.com
+vk-a6t5h7f3k.site
+/5d507d3e6fdc7.js
+/5d55d10058c9d.js
+/5d570bebe00ed.js
+
+# Reference: https://twitter.com/felixaime/status/1234111603831910400
+
+webscriptly.com
+
+# Reference: https://twitter.com/felixaime/status/1224257587555770368
+
+jquerytxtplugin.com
+
+# Reference: https://twitter.com/unmaskparasites/status/1234536106953146369
+
+http://163.172.136.230
+
+# Reference: https://twitter.com/unmaskparasites/status/1234917686242619393
+# Reference: https://www.virustotal.com/gui/ip-address/83.166.248.67/relations
+
+autocapital.pw
+http.ps
+xxx-club.pw
+y5.ms
+
+# Reference: https://twitter.com/felixaime/status/1235131517908570113
+# Reference: https://www.virustotal.com/gui/ip-address/185.181.164.216/relations
+# Reference: https://www.virustotal.com/gui/ip-address/47.56.114.152/relations
+# Reference: https://www.virustotal.com/gui/domain/wp-includ.com/relations
+# Reference: https://twitter.com/500mk500/status/1235330678700548098
+
+reportgns.com
+sucuritester.com
+wp-includ.com
+
+# Reference: https://web.misker.me/blog/malware/2020/03/04/Raindrop-PoppedShop.html
+# Reference: https://www.virustotal.com/gui/domain/googletagmanagrapis.com/detection
+
+googletagmanagrapis.com
+
+# Reference: https://twitter.com/felixaime/status/1236201312842326016
+
+savemoneyoffice.com/js/varien/print.js
+
+# Reference: https://twitter.com/felixaime/status/1236321303902269441
+
+imprintcenter.com/js/embed.min.js
+imprintcenter.com/js/flash/
+
+# Reference: https://twitter.com/jeromesegura/status/1121811483195633670
+# Reference: https://blog.malwarebytes.com/cybercrime/2019/04/github-hosted-magecart-skimmer-used-against-hundreds-of-e-commerce-sites/
+
+jquerylol.ru
+
+# Reference: https://twitter.com/rootprivilege/status/1233065094965125120
+# Reference: https://pastebin.com/4seW3Aya
+
+neuro-programmer.de/e.php
+neuro-programmer.de/test.php
+
+# Reference: https://twitter.com/fletchsec/status/1175180643514355713
+
+kursy.atas.pl/templates/system/html/data/red.php
+
+# Reference: https://www.virustotal.com/gui/ip-address/181.214.86.150/relations
+
+get-js.com
+marketplace-magento.net
+
+# Reference: https://twitter.com/d09r_/status/1238302755032166400
+# Reference: https://www.virustotal.com/gui/ip-address/178.33.71.232/relations
+# Reference: https://www.virustotal.com/gui/domain/theresevit.com/relations
+
+jsvault.net
+linkedtop.com
+
+# Reference: https://twitter.com/ydklijnsma/status/1232727444962107392
+
+google-anallytic.com
+google--analytics.com
+google-analyitics.com
+google-anolytics.com
+
+# Reference: https://twitter.com/AffableKraut/status/1207664349634011137
+
+bizrateservices.com
+j-queries.com
+teamsystems.info
+towbarchat.com
+twinkhelp.com
+
+# Reference: https://twitter.com/AffableKraut/status/1169489081568497664
+
+gmagea.com
+
+# Reference: https://twitter.com/AffableKraut/status/1169458435290804225
+
+genidaff.com
+strchckr.com
+tfalseacc.com
+tryuseracc.com
+vaccss.com
+
+# Reference: https://twitter.com/AffableKraut/status/1169458426344333312
+
+htjar.com
+
+# Reference: https://twitter.com/AffableKraut/status/1166223620886208513
+
+shellsn.ru
+
+# Reference: https://twitter.com/AffableKraut/status/1159677725994622976
+
+jquery.in.ua
+
+# Reference: https://twitter.com/AffableKraut/status/1133599840544468992
+
+jqueryes.com
+
+# Reference: https://twitter.com/MBThreatIntel/status/1238537326956933121
+
+cookiepro.cloud
+
+# Reference: https://www.riskiq.com/blog/labs/magecart-nutribullet/
+# Reference: https://otx.alienvault.com/pulse/5e72332db0bfef80752cec40
+
+amerisleep.github.io
+3lift.org
+abtasty.net
+adaptivecss.org
+adorebeauty.org
+all-about-sneakers.org
+ar500arnor.com
+authorizecdn.com
+bannerbuzz.info
+battery-force.org
+batterynart.com
+blackriverimaging.org
+braincdn.org
+btosports.net
+cdnassels.com
+cdnmage.com
+chicksaddlery.net
+childsplayclothing.org
+christohperward.org
+citywlnery.org
+closetlondon.org
+cmytuok.top
+coffemokko.com
+coffetea.org
+configsysrc.info
+dahlie.org
+davidsfootwear.org
+dobell.su
+elegrina.com
+energycoffe.org
+energytea.org
+etradesupply.org
+exrpesso.org
+foodandcot.com
+freshchat.info
+freshdepor.com
+greatfurnituretradingco.org
+info-js.link
+jewsondirect.com
+js-cloud.com
+kandypens.net
+kik-vape.org
+labbe.biz
+lamoodbighats.net
+link-js.link
+livechatinc.org
+londontea.net
+mage-checkout.org
+magejavascripts.com
+magescripts.pw
+magesecuritys.com
+majsurplus.com
+map-js.link
+mcloudjs.com
+mechat.info
+melbounestorm.com
+misshaus.org
+mylrendyphone.com
+mypiltow.com
+nililotan.org
+oakandfort.org
+ottocap.org
+parks.su
+paypaypay.org
+pmtonline.su
+prodealscenter.com
+replacemyremote.org
+sagecdn.org
+scriptoscript.com
+security-payment.su
+shop-rnib.org
+slickjs.org
+slickmin.com
+smart-js.link
+swappastore.com
+teacoffe.net
+top5value.com
+track-js.link
+ukcoffe.com
+verywellfitnesse.com
+walletgear.org
+webanalyzer.net
+zapaljs.com
+zoplm.com
+
+# Reference: https://twitter.com/felixaime/status/1241765974929530884
+
+googletagmanage.com
+
+# Reference: https://twitter.com/MBThreatIntel/status/1241837000564428800
+
+sucurl.net
+
+# Reference: https://www.virustotal.com/gui/domain/sucuri.pro/relations
+
+sucuri.pro
+
+# Reference: https://twitter.com/MBThreatIntel/status/1242538048044150784
+# Reference: https://www.virustotal.com/gui/domain/allegrolearnings.com/relations
+
+allegrolearnings.com/blogs/media/embed.min.js
+allegrolearnings.com/blogs/media/common.js
+
+# Reference: https://www.virustotal.com/gui/ip-address/161.117.236.58/relations
+
+jquerrycdn.xyz
+
+# Reference: https://twitter.com/d09r_/status/1242845745218228224
+# Reference: https://twitter.com/securityaffairs/status/1242873730235277313
+# Reference: https://securityaffairs.co/wordpress/100449/hacking/tupperware-site-hacked.html
+# Reference: https://blog.malwarebytes.com/hacking-2/2020/03/criminals-hack-tupperware-website-with-credit-card-skimmer/
+
+deskofhelp.com
+
+# Reference: https://twitter.com/felixaime/status/1243083359212969984
+
+gocgle-analytics.com
+
+# Reference: https://twitter.com/felixaime/status/1243561946982625284
+
+oldworldaccents.net/js/embed.min.js
+
+# Reference: https://www.virustotal.com/gui/domain/google-analytics.gq/relations
+
+google-analytics.gq
+
+# Reference: https://twitter.com/felixaime/status/1247414542759575552
+
+google-analytc.com
+
+# Reference: https://twitter.com/unmaskparasites/status/1247886037881196547
+# Reference: https://blog.sucuri.net/2020/01/web-swiper-in-image-title.html
+# Reference: https://www.virustotal.com/gui/domain/intljs.rmtag.net/relations
+# Reference: https://www.virustotal.com/gui/ip-address/82.202.161.89/relations
+
+intljs.rmtag.net
+pollyfill.com
+
+# Reference: https://twitter.com/d09r_/status/1247951999305302016
+
+googheusercontent.com
+googlatagmanager.com
+googlausercontent.com
+google5sercontent.com
+googleafalytics.com
+googleanadytics.com
+googleanahytics.com
+googleanal9tics.com
+googleanalxtics.com
+googleanaly4ics.com
+googleanalydics.com
+googleanalypics.com
+googleanalytacs.com
+googleanalytias.com
+googleanalytibs.com
+googleanalyticc.com
+googleanalyticr.com
+googleanalyticw.com
+googleanalytigs.com
+googleanalytiks.com
+googleanalytkcs.com
+googleanalytmcs.com
+googleanalytycs.com
+googleanalyuics.com
+googleanalyvics.com
+googleanamytics.com
+googleananytics.com
+googleanclytics.com
+googleanelytics.com
+googleanilytics.com
+googleanqlytics.com
+googleaoalytics.com
+googlecnalytics.com
+googledagmanager.com
+googleenalytics.com
+googleesercontent.com
+googleinalytics.com
+googlepagmanager.com
+googleqnalytics.com
+googleqsercontent.com
+googletacmanager.com
+googletaemanager.com
+googletag-anager.com
+googletageanager.com
+googletagianager.com
+googletaglanager.com
+googletagmafager.com
+googletagmajager.com
+googletagmalager.com
+googletagmanacer.com
+googletagmanaeer.com
+googletagmanafer.com
+googletagmanagar.com
+googletagmanagdr.com
+googletagmanage2.com
+googletagmanageapi.com
+googletagmanageb.com
+googletagmanagep.com
+googletagmanages.com
+googletagmanagev.com
+googletagmanagez.com
+googletagmanaggr.com
+googletagmanagmr.com
+googletagmanagris.com
+googletagmanagrs.com
+googletagmanagrsapi.com
+googletagmanagur.com
+googletagmanaoer.com
+googletagmanawer.com
+googletagmancger.com
+googletagmaneger.com
+googletagmaniger.com
+googletagmanqger.com
+googletagmaoager.com
+googletagmcnager.com
+googletagminager.com
+googletagmqnager.com
+googletagoanager.com
+googletaomanager.com
+googletawmanager.com
+googletcgmanager.com
+googletigmanager.com
+googletqgmanager.com
+googletsercontent.com
+googleu3ercontent.com
+googleuagmanager.com
+googleucercontent.com
+googleuqercontent.com
+googleurercontent.com
+googleusarcontent.com
+googleusdrcontent.com
+googleuse2content.com
+googleusebcontent.com
+googleusepcontent.com
+googleuseraontent.com
+googleuserbontent.com
+googleusercgntent.com
+googleuserckntent.com
+googleusercmntent.com
+googleusercnntent.com
+googleusercoftent.com
+googleusercojtent.com
+googleusercoltent.com
+googlganalytics.com
+googluanalytics.com
+googmeanalytics.com
+
+# Reference: https://twitter.com/felixaime/status/1248154035053637632
+
+google-analytcsapi.com
+
+# Reference: https://www.perimeterx.com/resources/blog/2020/new-stealth-magecart-attack-bypasses-payment-services-using-iframes/
+# Reference: https://www.virustotal.com/gui/ip-address/83.166.250.66/relations
+
+braintreegateway24.com
+braintreegateway24.tech
+braintreegateway.services
+
+# Reference: https://twitter.com/felixaime/status/1250807334676414465
+
+tag-css.icu
+
+# Reference: https://twitter.com/MBThreatIntel/status/1252265931088080896
+
+vetality.site
+
+# Reference: https://twitter.com/MBThreatIntel/status/1252285343555960833
+
+ducatigrenoble.com/skin/frontend/ves_brave/default/css/bootstrap.php
+
+# Reference: https://twitter.com/MBThreatIntel/status/1252338975265546242
+
+clipbutton.com.br/catalog/discount.php
+tivents.de/media/wysiwyg/paypal4.gif
+
+# Reference: https://twitter.com/felixaime/status/1253039202465468419
+
+securityipa.club
+
+# Reference: https://unit42.paloaltonetworks.com/how-cybercriminals-prey-on-the-covid-19-pandemic/ (# Skimmer)
+# Reference: https://www.virustotal.com/gui/domain/sunrisepromos.com/relations
+
+sunrisepromos.com/js/lib/ccard.js
+
+# Reference: https://securityaffairs.co/wordpress/98124/cyber-crime/uncovering-new-magecart-implant.html
+# Reference: https://marcoramilli.com/2020/02/19/uncovering-new-magecart-implant-attacking-ecommerce/
+# Reference: https://labs.sucuri.net/web-skimmer-with-a-domain-name-generator-follow-up/
+# Reference: https://twitter.com/AffableKraut/status/1257937430709186560
+
+ql201000.pw
+ql201041.pw
+ql201243.pw
+ql201456.pw
+ql201463.pw
+ql201721.pw
+ql202141.pw
+ql202412.pw
+ql202657.pw
+ql202989.pw
+q(l|r)[0-9]{5,6}\.pw
+/js/ar/ar906.php
+/js/ar/ar2497.php
+/js/ar/ar7938.php
+
+# Reference: https://blog.sucuri.net/2020/04/web-skimmer-with-a-domain-name-generator.html
+
+gooogletagmanager.online
+
+# Reference: https://twitter.com/Bank_Security/status/1258130762685186048
+# Reference: https://blog.malwarebytes.com/threat-analysis/2020/05/credit-card-skimmer-masquerades-as-favicon/
+# Reference: https://www.virustotal.com/gui/ip-address/83.166.242.105/relations
+
+myicons.net/d/favicon.png
+psas.pw
+
+# Reference: https://twitter.com/felixaime/status/1258800483524804608
+
+jquerycdn.at
+
+# Reference: https://twitter.com/felixaime/status/1258834331163922432
+
+jquerye.at
+
+# Reference: https://twitter.com/felixaime/status/1260822992180973572
+
+cdnjustuno.icu
+manag.icu
+targetad.icu
+
+# Reference: https://twitter.com/felixaime/status/1260827294723170304
+
+tags-app.icu
+tags-bootstrap.icu
+
+# Reference: https://twitter.com/MBThreatIntel/status/1269400469845061632
+
+tagapp.icu
+
+# Reference: https://twitter.com/AffableKraut/status/1261157021027622912
+# Reference: https://gist.github.com/krautface/c2f2d6d0c4516afc47efcbe17e561e0c
+
+priangan.com/wp-content/languages/blogid/
+
+# Reference: https://twitter.com/tosscoinwitcher/status/1261353530465456128
+# Reference: https://twitter.com/500mk500/status/1261361366339903488
+# Reference: https://www.virustotal.com/gui/domain/googletagmanagr.com/detection
+
+googletagmanagr.com
+
+# Reference: https://twitter.com/MBThreatIntel/status/1262893385448210434
+
+magentorates.com
+
+# Reference: https://twitter.com/MBThreatIntel/status/1263850035382378497
+# Reference: https://twitter.com/500mk500/status/1263861204327505928
+# Reference: https://twitter.com/d09r_/status/1263864711847620609
+# Reference: https://www.virustotal.com/gui/ip-address/5.188.62.173/relations
+# Reference: https://www.virustotal.com/gui/ip-address/176.123.6.37/relations
+
+padmin.xyz
+hostssl.uno
+hostssl.xyz
+shopssl.xyz
+idtransfer.icu
+
+# Reference: https://twitter.com/MBThreatIntel/status/1263876741094727680
+# Reference: https://www.virustotal.com/gui/ip-address/23.106.215.85/relations
+
+cdncontentserver.com
+onlineimageservices.com
+
+# Reference: https://www.reflectiz.com/the-gocgle-web-skimming-campaign/
+
+gocgle-analytics.cm
+gocgle-analytics.net
+gocgletagmanager.cm
+gocgletagmanager.com
+
+# Reference: https://www.virustotal.com/gui/ip-address/194.180.224.112/relations
+
+authcrize.net
+gcogle-analytics.com
+gocgle-analytics.net
+gooqle-analytics.com
+gooqle-analytics.net
+secure-authorize.net
+wanalytic.is
+
+# Reference: https://twitter.com/felixaime/status/1264124350883602432
+# Reference: https://www.virustotal.com/gui/ip-address/161.35.202.72/relations
+
+cdndoubleclick.net
+
+# Reference: https://twitter.com/felixaime/status/1264567401380753409
+
+cdn-contentstore.com
+cdn-sources.com
+
+# Reference: https://twitter.com/AffableKraut/status/1265349583925841922
+
+ads-fbstatistic.com
+
+# Reference: https://twitter.com/felixaime/status/1265175178532831237
+
+livechatcdn.com
+
+# Reference: https://twitter.com/felixaime/status/1265176411322499072
+
+cloudfrontapi.com
+cloudfrontapi.net
+
+# Reference: https://twitter.com/MBThreatIntel/status/1266397492658098176
+
+s3.amazonaws.com/content.zipboss.com/code/zipboss.dev.js
+
+# Reference: https://twitter.com/felixaime/status/1267045708932222976
+
+apibazaarvoice.com
+
+# Reference: https://twitter.com/benkow_/status/1267034595758833667
+
+http://89.82.251.136/counter/index.php
+
+# Reference: https://twitter.com/felixaime/status/1267095794571792384
+
+http://45.197.141.250/analytics.php
+happykid.in/image/catalog/d_blog_module/review/jjs.js
+
+# Reference: https://twitter.com/eclipsepicards/status/1268240487233867778
+
+platinumus.top
+
+# Reference: https://twitter.com/MBThreatIntel/status/1267874481113989121
+
+googleapifs.space
+
+# Reference: https://twitter.com/felixaime/status/1267729483987062786
+
+ssecurapi.club
+
+# Reference: https://twitter.com/MBThreatIntel/status/1268340229347270657
+
+jquerylib.at
+
+# Reference: https://twitter.com/MBThreatIntel/status/1268982125543387136
+
+cdnn-aws.com
+
+# Reference: https://twitter.com/unmaskparasites/status/1269005294325108738
+
+hits-cache.com
+
+# Reference: https://blog.sucuri.net/2020/06/evasion-tactics-in-hybrid-credit-card-skimmers.html
+# Reference: https://www.virustotal.com/gui/ip-address/185.110.132.220/relations
+
+http://185.110.132.220
+jshost.org
+
+# Reference: https://twitter.com/prsecurity_/status/1269843378088247296
+
+http://185.4.65.69
+http://185.4.65.72
+http://185.4.66.82
+http://37.252.0.91
+http://37.252.0.115
+http://37.252.0.150
+http://37.252.0.149
+http://37.252.0.196
+http://37.252.0.199
+http://5.45.80.46
+http://5.45.82.166
+http://5.45.82.189
+http://5.45.83.202
+http://5.45.83.223
+
+# Reference: https://twitter.com/unmaskparasites/status/1270064808864419841
+# Reference: https://www.virustotal.com/gui/ip-address/54.38.49.244/relations
+
+jsassets.net
+payprocessor.net
+
+# Reference: https://twitter.com/MBThreatIntel/status/1270150196333142016
+
+locol.site
+
+# Reference: https://twitter.com/JWilsonSecurity/status/1270087185795026944
+
+t.obet.us/gagal/log.php
+
+# Reference: https://twitter.com/MBThreatIntel/status/1270861231776137218
+# Reference: https://twitter.com/500mk500/status/1270945615812460544
+# Reference: https://www.virustotal.com/gui/ip-address/176.121.14.189/relations
+
+chatajax.com
+jqueryalert.com
+jqueryapiscript.com
+
+# Reference: https://twitter.com/felixaime/status/1271061780849209344
+# Reference: https://www.virustotal.com/gui/ip-address/193.32.161.74/relations
+
+cdnxmljquerybucket.com
+jqueryapichecker.com
+tagmanagercdn.com
+tagmanagerxmlraw.com
+xmljqueryscoring.com
+xmlrawdataresponse.com
+
+# Reference: https://securityaffairs.co/wordpress/104776/hacking/claires-magecart-attack.html
+
+claires-assets.com
+
+# Reference: https://twitter.com/felixaime/status/1263818626114740224
+# Reference: https://twitter.com/MBThreatIntel/status/1272679759126777857
+# Reference: https://www.virustotal.com/gui/ip-address/185.217.92.149/relations
+
+jquerystats.com
+salesstatistic.com
+scriptstatistic.com
+
+# Reference: https://twitter.com/benkow_/status/1273214642458853376
+
+reddotarms.com/js/infortis/jquery/jquery-1.7.2.min.js
+
+# Reference: https://twitter.com/benkow_/status/1273219665582579713
+
+visaandpassportagency. com/js/prototype/prototype.js
+
+# Reference: https://twitter.com/felixaime/status/1273221200886587392
+
+magento-api.icu
+magentolink.icu
+bootstrap-fronts.icu
+bootstrap-jquery.icu
+cloud-fronts.icu
+bootstrap-jquery.host
+magento-api.host
+cloud-fronts.host
+magentolink.host
+jqueryjs.host
+
+# Reference: https://twitter.com/MBThreatIntel/status/1273733879526903808
+# Reference: https://www.virustotal.com/gui/ip-address/185.92.148.128/relations
+
+cddn.site
+lebs.site
+
+# Reference: https://securelist.com/web-skimming-with-google-analytics/97414/
+
+google-anatytics.com
+google-analytics-js.com
+
+# Reference: https://www.virustotal.com/gui/ip-address/84.38.182.177/relations
+
+mstracking.link
+paypalapiobjects.com
+
+# Reference: https://www.virustotal.com/gui/ip-address/5.101.50.50/relations
+
+googleapimanager.com
+
+# Reference: https://blog.malwarebytes.com/threat-analysis/2020/06/web-skimmer-hides-within-exif-metadata-exfiltrates-credit-cards-via-image-files/
+
+ads-fbstatistic.com
+apilivechat.com
+bestcdnforbusiness.com
+bizrateservices.com
+cddn.site
+cxizi.net
+j-queries.com
+jquery-analitycs.com
+jqueryanalise.xyz
+koinweb.site
+lebs.site
+magentorates.com
+pixasbay.com
+sonol.site
+teamsystems.info
+towbarchat.com
+undecoveria.com
+webtrans.site
+wosus.site
+xciy.net
+xoet.site
+yxxi.net
+yzxi.net

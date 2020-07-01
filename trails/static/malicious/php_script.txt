@@ -150,12 +150,6 @@ statconuter.com/c.php
 
 /class-walker-page-up.php
 
-# Reference: http://marketplace.1c-bitrix.ru/blog/remove-virus-miner-from-the-site-to-1cbitrix/ (RU-lang)
-# Generic detection for compromised Bitrix CMS
-
-/bitrix/tools/check_files.php
-/bitrix/gadgets/bitrix/weather/lang/ru/exec/include.php
-
 # Reference: https://twitter.com/VK_Intel/status/1080919080616439808
 
 /spr_updates.php
@@ -494,12 +488,6 @@ westflies.com/api/api.php
 # Reference: https://twitter.com/MalwarePatrol/status/1159617579469742082
 
 /835pnjmr1w4p5ypvgcymfkkx.php
-
-# Reference: https://forums.modx.com/thread/102644/evo-1-2-1-hacked-again-and-again
-# Generic trails for compromised MODX CMS-es
-
-/assets/images/accesson.php
-/assets/images/customizer.php
 
 # Reference: https://twitter.com/MalwarePatrol/status/1161731505065988102
 
@@ -1119,6 +1107,14 @@ zctrack.com
 
 /5r9z334kjramxzfizndwlq98.php
 
+# Reference: https://twitter.com/MalwarePatrol/status/1233484287393046533
+
+/ioor2y6d10o6knz0pj1tweua.php
+
+# Reference: https://twitter.com/IpNigh/status/1233182231964856320
+
+/s7d5b2g45htrj028xo0y00gu.php
+
 # Reference: https://twitter.com/MalwarePatrol/status/1231370355291414529
 
 /67u7is2tdmnp9bj0pr4511f8.php
@@ -1165,15 +1161,14 @@ zctrack.com
 
 /85b4aa12e220f7.php
 
+# Reference: https://twitter.com/wwp96/status/1232396705028616197
+
+/7b96d23b4371b5.php
+
 # Reference: https://twitter.com/tkanalyst/status/1229794466816389120
 
 /usexosell.php
 /usflexexosell.php
-
-# Reference: https://securityaffairs.co/wordpress/98124/cyber-crime/uncovering-new-magecart-implant.html
-
-/ar906.php
-/ar2497.php
 
 # Reference: https://blog.prevailion.com/2020/02/phps-labyrinth-weaponized-wordpress.html
 # Reference: https://otx.alienvault.com/pulse/5e4d6c5790faacd62f7afed6
@@ -1197,6 +1192,489 @@ trilns.com
 vosmas.icu
 vtoras.top
 
+# Reference: https://twitter.com/ANeilan/status/1232283590114840576
+# Reference: https://twitter.com/JayTHL/status/1253459585731563522
+# Reference: https://pastebin.com/8LL4Hg9e
+# Reference: https://pastebin.com/trRiwBKQ
+# Reference: https://paste.ee/r/v9aRR/0
+
+bankss-71.cf
+bankss-71.ga
+bankss-71.gq
+bankss-71.ml
+bankss-71.tk
+bantoom-71.ga
+bantoom-71.gq
+blessed-812.ga
+blessed-812.gq
+blessed-812.ml
+blessed-812.tk
+braums-74.cf
+braums-74.ga
+braums-74.gq
+braums-74.ml
+braums-74.tk
+bucks-812.cf
+bucks-812.ga
+bucks-812.gq
+bucks-812.ml
+bucks-812.tk
+cahult-71.cf
+canjerry-812.gq
+canjerry-812.ml
+canjerry-812.tk
+cost-812.ml
+cost-812.tk
+cynth-812.cf
+cynth-812.gq
+cynth-812.ml
+cynth-812.tk
+cynthia-812.cf
+cynthia-812.ga
+cynthia-812.gq
+cynthia-812.ml
+cynthia-812.tk
+darklight-812.cf
+darklight-812.ga
+darklight-812.tk
+empbomb-812.cf
+empbomb-812.ga
+empbomb-812.gq
+empbomb-812.ml
+empbomb-812.tk
+enter-812.cf
+enter-812.ga
+enter-812.gq
+enter-812.ml
+enter-812.tk
+fight-812.gq
+fight-812.ml
+grrrls-812.ga
+grrrls-812.gq
+grrrls-812.ml
+grrrls-812.tk
+haloest-71.tk
+karthus-71.cf
+karthus-71.ga
+karthus-71.gq
+karthus-71.ml
+karthus-71.tk
+knife-812.cf
+knife-812.ga
+knife-812.gq
+lighter-812.ga
+lighter-812.gq
+lighter-812.ml
+neekos-74.cf
+neekos-74.ga
+neekos-74.gq
+neekos-74.ml
+noirs-812.cf
+noirs-812.ga
+noirs-812.gq
+noirs-812.tk
+nukes-812.cf
+nukes-812.ga
+nukes-812.gq
+nukes-812.ml
+nukes-812.tk
+outlak-71.cf
+outlak-71.ga
+outlak-71.gq
+outlak-71.ml
+pain-812.cf
+pain-812.ga
+pain-812.tk
+ramen-812.ga
+ramen-812.gq
+ramen-812.tk
+redmi-812.ga
+redmi-812.gq
+redmi-812.ml
+redmi-812.tk
+sense-812.cf
+sense-812.ga
+sense-812.gq
+sense-812.ml
+sense-812.tk
+senses-812.ga
+senses-812.gq
+senses-812.ml
+senses-812.tk
+shift-812.cf
+shift-812.gq
+shift-812.ml
+soliare-71.cf
+soliare-71.ga
+soliare-71.gq
+soliare-71.ml
+soliare-71.tk
+soutma-71.cf
+soutma-71.ga
+soutma-71.gq
+soutma-71.ml
+soutma-71.tk
+starsbucks-812.cf
+starsbucks-812.ga
+starsbucks-812.gq
+starsbucks-812.ml
+starsbucks-812.tk
+suit-812.cf
+suit-812.ga
+suit-812.gq
+suit-812.ml
+tanta-71.cf
+tanta-71.ml
+tanta-71.tk
+tratot-71.tk
+trosl-71.cf
+trosl-71.ga
+trosl-71.gq
+trosl-71.ml
+trosl-71.tk
+tunacan-812.ga
+tunacan-812.ml
+tunacan-812.tk
+
+# Reference: https://www.virustotal.com/gui/domain/cureprm.com/relations
+# Reference: https://blacklist.cyberthreatcoalition.org/vetted/url.txt
+
+/IlOysTgNjFrGtHtEAwVo/index.php
+/IlOysTgNjFrGtHtEAwVo/indexx.php
+
+# Reference: https://twitter.com/IpNigh/status/1233838562241589253
+
+/akjajkajdjhdjh395984988487f87f87f87ddjdjdjhjhdjdj49858.php
+
+# Reference: https://www.virustotal.com/gui/domain/suportedigital30hr.ddns.net/relations
+
+/home3e6e.php
+
+# Reference: https://twitter.com/Bitterman59/status/1233487861082677249
+
+/rivkasej325jdew.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1235220728787750912
+
+/z2xtc6md0ucgi8pmwb86hezq.php
+
+# Reference: https://twitter.com/James_inthe_box/status/1236318055203889158
+
+/kraus6.php
+
+# Reference: https://www.virustotal.com/gui/ip-address/37.72.171.98/relations
+
+/package-delivery/snd_conti-data.php
+
+# Reference: https://twitter.com/VK_Intel/status/983729623367270401
+
+/vitamindisapproval.php
+
+# Reference: https://twitter.com/James_inthe_box/status/1238606200154886144
+
+/upload10.php
+
+# Reference: https://twitter.com/nao_sec/status/1240261158113689601/photo/1
+
+/8WFhndlp4soxNOGim5D2J0cYC9EBLtVyrU6R7ePuwjkMAqagKTv1.php
+
+# Reference: https://www.virustotal.com/gui/domain/tokai-lm.jp/relations
+
+/344sx.php
+/98989776.php
+
+# Reference: https://twitter.com/Rmy_Reserve/status/1241301496571953152
+
+/eweerew.php
+
+# Reference: https://www.virustotal.com/gui/file/d920f89a4d8ae2f2cc597779c57e515c0f9451a66ecdaeef35169f6d0a43a35d/detection
+
+/us1jdskjdshfkjehr.php
+
+# Reference: https://www.virustotal.com/gui/domain/ultraspeed.info/relations
+
+/momomoomomom.php
+/usksdjqjwjoweidjcslkm.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1241592719576829952
+
+/9epq78sao4h2v1jpywaj2tai.php
+
+# Reference: https://twitter.com/shiftybitshiftr/status/1242559823100559361
+
+/53dd0276af1963ba832464402a418d85.php
+
+# Reference: https://www.virustotal.com/gui/ip-address/216.170.114.99/relations
+
+/b7eb90271b3f54.php
+
+# Reference: https://twitter.com/DynamicAnalysis/status/1245437394473582593
+# Reference: https://twitter.com/DynamicAnalysis/status/1247570159939747846
+# Reference: https://twitter.com/DynamicAnalysis/status/1247916030183247872
+
+/in2d2d.php
+/wp-cran.php
+/wp-crun.php
+/wp-cryn.php
+
+# Reference: https://www.virustotal.com/gui/domain/webcindario0.dvrdns.org/relations
+
+/tcvh0suizgqonzsegw2p71b1.php
+
+# Reference: https://www.virustotal.com/gui/ip-address/184.168.221.42/relations
+
+/g0t6q3hsierdb43h9rp0gpcf.php
+/jog06tlwitnzupwsz7m429hdb8fefdb9c8e9aba0f526dc8176725f94.php
+
+# Reference: https://www.virustotal.com/gui/url/d7a8b43a2ef3439fa640b10dce6da642996535efe01d2c71321748fd803e6e46/detection
+
+/l91opka52wljumjc5spkbhnc.php
+
+# Reference: https://twitter.com/James_inthe_box/status/1248669623848853504
+
+/cachetfmbUXkGerOtP.php
+/_cachetfmbUXkGerOtP.php
+
+# Refefrence: https://www.virustotal.com/gui/ip-address/141.8.194.74/relations
+
+/9ldfcvv539grtjr1krbwrbsf.php
+
+# Reference: https://twitter.com/elgofo/status/1251051263757815808
+
+/ys9kbpsz873wam1qijuofe9e.php
+
+# Reference: https://twitter.com/elgofo/status/1251059765452693506
+
+/twnexzoamsfmi9k3jyi60dg8.php
+
+# Reference: https://blog.talosintelligence.com/2020/04/poetrat-covid-19-lures.html
+
+/azGovaz.php
+
+# Reference: https://twitter.com/IpNigh/status/1252124774177943555
+
+/11644210b.php
+
+# Reference: https://www.virustotal.com/gui/file/17425e66428e284c2da73f3a7173e4291fb0b2bc76fd6d618921a9f0eb543340/detection
+
+/upload/get.php?UID=
+/upload/get-functions.php?UID=
+/upload/message.php?UID=
+
+# Reference: https://twitter.com/MalwarePatrol/status/1254714230265319426
+
+/uphdird3igc2q2jhsgm9cez0.php
+
+# Reference: https://twitter.com/IpNigh/status/1255422445047119872
+
+/6ogyock6bqt55br29xz41y4ozt.php
+
+# Reference: https://twitter.com/IpNigh/status/1255370965510479872
+
+/c9t4x6ypwut14ouvps6kszaf.php
+
+# Reference: https://twitter.com/dewan202/status/1255582744110862345
+# Reference: https://www.virustotal.com/gui/file/7edacdf35900e722b798dbc891159cf1ede9f6d671a86b0f01f9ef802202aa73/detection
+# Reference: https://www.virustotal.com/gui/ip-address/185.77.129.152/relations
+# Reference: https://www.virustotal.com/gui/ip-address/93.115.38.132/relations
+
+/jRizyPxmRnO.php
+/mskzrpufe.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1255801447318532096
+
+/0lnzqew8fz6gzds536vlirop27524e5d5582cfb0ee5b91de81c038c5.php
+
+# Reference: https://pastebin.com/raw/0BrjR63Q
+
+/bxhhylagbbbw.php
+/n2t00y42r6.php
+
+# Reference: https://twitter.com/malwrhunterteam/status/1255903574023983108
+
+/trackattachment.php
+
+# Reference: https://twitter.com/malwarefr0gg0z/status/1255573957844983808
+
+/ThreatProvider/bot.php
+
+# Reference: https://twitter.com/JayTHL/status/1256103956717109249
+
+/logiinnnnn.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1256888609074024448
+
+/cjp06ozeq4j00p66uek5qokp27524e5d5582cfb0ee5b91de81c038c5.php
+
+# Reference: https://app.any.run/tasks/6a77f6f2-50fb-4a3e-ad20-e0bdd2ba7031/
+
+/9o0.php
+/firstga990.php
+
+# Reference: https://twitter.com/malwrhunterteam/status/1257660701428142080
+
+/4ij6qw.php
+/FC5pz8.php
+/fnojg.php
+/jikPcQ.php
+
+# Reference: https://twitter.com/IpNigh/status/1257797957686112257
+
+/rbcgi3m01.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1258051238924517376
+
+/c65f9sbx5g0nhf74mxfbtort.php
+
+# Reference: https://twitter.com/James_inthe_box/status/1258763270690713600
+
+/0x5xmta6bazciio7llfg0l9e.php
+
+# Reference: https://www.virustotal.com/gui/ip-address/5.9.226.4/relations
+
+/server/das/dastoor.php
+
+# Reference: https://twitter.com/PhishFindR/status/1259381536396369920
+
+/rbcgi3m01.php
+
+# Reference: https://twitter.com/PhishFindR/status/1259381536396369920
+
+/confirmnewboa/login.php
+
+# Reference: https://app.any.run/tasks/17b516fd-2351-4330-8cee-90caac222963/
+
+/xuraca.php
+
+# Reference: https://www.virustotal.com/gui/domain/vanillabean.bounceme.net/relations
+
+/chase.com/fullz/billing.php
+/chase.com/fullz/home.php
+/chase.com/fullz/homepage.php
+/chase.com/fullz/index.php
+/chase.com/fullz/index2.php
+/chase.com/fullz/index3.php
+/chase.com/fullz/login.php
+/chase.com/fullz/main.php
+/chase.com/fullz/thanks.php
+/chase.com/fullz/verify.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1259636683781308416
+
+/ncceg0dxw8nx6tnf0kdf1r9e.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1259999082849976320
+
+/6dp6zted83lurftrrxh1b2m5.php
+
+# Reference: https://www.virustotal.com/gui/ip-address/46.21.147.111/relations
+
+/11dniosilnj5b6y6ktrrlfhr.php
+/4h925v7vfpulgdhjobci09bk.php
+/dda0nwei0akmgjrbhdg7henb.php
+/fiyycp4s6ye310a8r6q2zdie.php
+/mr7xuen7osh0gjkeuam56bgw.php
+/p8g7uxk09yytz1on4g8brq7p.php
+/upnqi0usn8ej565w8msy1ui3.php
+/vkdw36ry81rtlyq5yq49p5d1.php
+/zjcya375wuoz6m9jk7mfim6s.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1261312724627161088
+
+/ykhao930gaptbm11s0duni86.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1264060822327832576
+
+/2a79hohpsm1vxuo1d0xuqoer.php
+
+# Reference: https://www.virustotal.com/gui/file/3d3351726f3b5cd848ad58cabcc33c9dcd1c601cc1664f197f10b8b1adf7038b/detection
+
+/qwegweherjhntrj.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1264211826616786947
+
+/dtsf394vt015wph23m7vxw4m.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1264287322192871436
+
+/xwlb5u9cbldxslwlfcxsp58k.php
+
+# Reference: https://twitter.com/em1rerdogan/status/1264692980633436166
+
+/xx1.php?user=
+
+# Reference: https://twitter.com/romonlyht/status/1265444577319645184
+
+/5ecdb4896b9f0.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1266099238364209152
+
+/k5imi5k4pngob7t9gf9phgrk.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1266673024880836608
+
+/qtc2l6i1lih17a2gfsu9qlpz.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1266824062136918021
+
+/ygc9ksbfjfy78fzq462kvyti.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1269723128076386307
+
+/uyg4by5obdovgilq4w9labte.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1270221471135252480
+
+/x65qn21ms238tz3enpyx1uum.php
+
+# Reference: https://twitter.com/romonlyht/status/1270205743967301632
+
+/5edf094170e13.php
+
+# Reference: https://twitter.com/romonlyht/status/1273407575858442240
+
+/5eeaae813aa67.php
+
+# Reference: https://twitter.com/James_inthe_box/status/1273983069435789316
+
+/9646f89fe77fb3.php
+
+# Reference: https://twitter.com/JAMESWT_MHT/status/1270997007180730368
+# Reference: https://app.any.run/tasks/4dede486-355d-4e84-874c-d9318532db23/
+
+/3e454986f0a072.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1272471337903087616
+
+/jh1evx1mbeeq2scfw051bo5p.php
+
+# Reference: https://twitter.com/OttoScav/status/1272937840301813763
+
+/omuscreativos.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1273347106015674368
+
+/em7fic0xazghxn8pg88lf9p1.php
+
+# Reference: https://twitter.com/reecdeep/status/1273576796735377408
+
+/ppos8.php
+
+# Reference: https://twitter.com/abuse_ch/status/1275526243404972034
+# Reference: https://bazaar.abuse.ch/sample/921138bc2b28d01a51e6673c6e61ba3237592d08875180e0b3749d8e47fdfd6d/
+
+/tds.php?omz=
+
+# Reference: http://benkow.cc/export.php
+
+/admin---------.php
+
+# Reference: https://blacklist.cyberthreatcoalition.org/vetted/url.txt
+
+/desjardinsin.php
+/nerr34.php
+/ondetverifier.php
+
 # Generic
 
 /7328-dating-verification-card.php
@@ -1206,6 +1684,7 @@ vtoras.top
 /evreigate.php
 /gate.php
 /gate1.php
+/gate16.php
 /gate2.php
 /gate.get
 /online-dating-verification-card.php

@@ -177,7 +177,7 @@
 
 /hit.hta
 
-# Reference: # Reference: https://twitter.com/KorbenD_Intel/status/1146463851526938625
+# Reference: https://twitter.com/KorbenD_Intel/status/1146463851526938625
 
 /9000.hta
 
@@ -344,6 +344,68 @@
 
 /out-337443407.hta
 /out-510267147.hta
+
+# Reference: https://twitter.com/casual_malware/status/1239760321021128706
+
+/out-44955964.hta
+/out-1376540361.hta
+/out-1897288366.hta
+
+# Reference: https://twitter.com/FewAtoms/status/1239938872341139456
+
+/out-8815323.hta
+
+# Reference: https://twitter.com/malwrhunterteam/status/1240996072425652224
+
+/out-1429065212.hta
+/out-1770163823.hta
+/out-1890736898.hta
+/out-531451995.hta
+
+# Reference: https://twitter.com/Rmy_Reserve/status/1241301496571953152
+
+/cfhkjkk.hta
+
+# Reference: https://twitter.com/FewAtoms/status/1241813291460067329
+
+/out-756898907.hta
+/out-1019569980.hta
+/out-1388663052.hta
+
+# Reference: https://twitter.com/malwrhunterteam/status/1241318536280227844
+
+/sol.hta
+
+# Reference: https://twitter.com/malwrhunterteam/status/1242812814668038151
+
+/out-1068156992.hta
+
+# Reference: https://twitter.com/FewAtoms/status/1243579932590161930
+
+/out-571924757.hta
+/out-756898907.hta
+
+# Refecerence: https://twitter.com/bit_dam/status/1256311982992633862
+
+/new%201.hta
+
+# Reference: https://pastebin.com/uwPeU4CL
+
+/Cqsl.hta
+
+# Reference: https://twitter.com/malwrhunterteam/status/1258844055682912259
+
+/out-2010667608.hta
+
+# Reference: https://blog.alyac.co.kr/3033 (Korean)
+# Reference: https://otx.alienvault.com/pulse/5ed7c80f673c40df00c52fa6
+
+/pre.hta
+/suf.hta
+
+# Reference: https://urlhaus.abuse.ch/downloads/text_recent/
+
+/Hmoye0.hta
 
 # Generic
 

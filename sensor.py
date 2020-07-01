@@ -11,8 +11,6 @@ import sys
 
 sys.dont_write_bytecode = True
 
-import core.versioncheck
-
 import cProfile
 import inspect
 import math
@@ -24,12 +22,12 @@ import re
 import socket
 import subprocess
 import struct
-import sys
 import threading
 import time
 import traceback
 
 from core.addr import inet_ntoa6
+from core.addr import addr_port
 from core.attribdict import AttribDict
 from core.common import check_connection
 from core.common import check_sudo
@@ -45,6 +43,7 @@ from core.enums import CACHE_TYPE
 from core.enums import PROTO
 from core.enums import TRAIL
 from core.log import create_log_directory
+from core.log import flush_condensed_events
 from core.log import get_error_log_handle
 from core.log import log_error
 from core.log import log_event
@@ -65,17 +64,21 @@ from core.settings import IGNORE_DNS_QUERY_SUFFIXES
 from core.settings import IPPROTO_LUT
 from core.settings import IS_WIN
 from core.settings import LOCALHOST_IP
+from core.settings import LOCAL_SUBDOMAIN_LOOKUPS
 from core.settings import MMAP_ZFILL_CHUNK_LENGTH
 from core.settings import MAX_RESULT_CACHE_ENTRIES
 from core.settings import NAME
 from core.settings import NO_SUCH_NAME_COUNTERS
 from core.settings import NO_SUCH_NAME_PER_HOUR_THRESHOLD
+from core.settings import INFECTION_SCANNING_THRESHOLD
 from core.settings import PORT_SCANNING_THRESHOLD
+from core.settings import POTENTIAL_INFECTION_PORTS
 from core.settings import read_config
 from core.settings import REGULAR_SENSOR_SLEEP_TIME
 from core.settings import SNAP_LEN
 from core.settings import SUSPICIOUS_CONTENT_TYPES
 from core.settings import SUSPICIOUS_DIRECT_DOWNLOAD_EXTENSIONS
+from core.settings import SUSPICIOUS_DIRECT_IP_URL_REGEX
 from core.settings import SUSPICIOUS_DOMAIN_CONSONANT_THRESHOLD
 from core.settings import SUSPICIOUS_DOMAIN_ENTROPY_THRESHOLD
 from core.settings import SUSPICIOUS_DOMAIN_LENGTH_THRESHOLD
@@ -109,6 +112,7 @@ _locks = AttribDict()
 _multiprocessing = None
 _n = None
 _result_cache = LRUDict(MAX_RESULT_CACHE_ENTRIES)
+_local_cache = {}
 _last_syn = None
 _last_logged_syn = None
 _last_udp = None
@@ -192,6 +196,13 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
                 result = True
                 log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[_][0], trails[_][1]), packet)
 
+        elif query.endswith(".ip-adress.com"):  # Reference: https://www.virustotal.com/gui/domain/ip-adress.com/relations
+            _ = '.'.join(parts[:-2])
+            trail = "%s(.ip-adress.com)" % _
+            if _ in trails:
+                result = True
+                log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[_][0], trails[_][1]), packet)
+
         if not result:
             for i in xrange(0, len(parts)):
                 domain = '.'.join(parts[i:])
@@ -226,6 +237,19 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
     if result == False:
         _result_cache[(CACHE_TYPE.DOMAIN, query)] = False
 
+def _get_local_prefix():
+    _sources = set(_.split('~')[0] for _ in _connect_src_dst.keys())
+    _candidates = [re.sub(r"\d+\.\d+\Z", "", _) for _ in _sources]
+    _ = sorted(((_candidates.count(_), _) for _ in set(_candidates)), reverse=True)
+    result = _[0][1] if _ else ""
+
+    if result:
+        _result_cache[(CACHE_TYPE.LOCAL_PREFIX, "")] = result
+    else:
+        result = _result_cache.get((CACHE_TYPE.LOCAL_PREFIX, ""))
+
+    return result or '_'
+
 def _process_packet(packet, sec, usec, ip_offset):
     """
     Processes single (raw) IP layer data
@@ -252,11 +276,20 @@ def _process_packet(packet, sec, usec, ip_offset):
 
             if sec > connect_sec:
                 for key in _connect_src_dst:
-                    if len(_connect_src_dst[key]) > PORT_SCANNING_THRESHOLD:
-                        _src_ip, _dst_ip = key.split('~')
+                    _src_ip, _dst = key.split('~')
+                    if not _dst.isdigit() and len(_connect_src_dst[key]) > PORT_SCANNING_THRESHOLD:
                         if not check_whitelisted(_src_ip):
+                            _dst_ip = _dst
                             for _ in _connect_src_details[key]:
                                 log_event((sec, usec, _src_ip, _[2], _dst_ip, _[3], PROTO.TCP, TRAIL.IP, _src_ip, "potential port scanning", "(heuristic)"), packet)
+                    elif len(_connect_src_dst[key]) > INFECTION_SCANNING_THRESHOLD:
+                        _dst_port = _dst
+                        _dst_ip = [_[-1] for _ in _connect_src_details[key]]
+                        _src_port = [_[-2] for _ in _connect_src_details[key]]
+
+                        if len(_dst_ip) == len(set(_dst_ip)):
+                            if _src_ip.startswith(_get_local_prefix()):
+                                log_event((sec, usec, _src_ip, _src_port[0], _dst_ip[0], _dst_port, PROTO.TCP, TRAIL.PORT, _dst_port, "potential infection", "(heuristic)"), packet)
 
                 _connect_src_dst.clear()
                 _connect_src_details.clear()
@@ -299,19 +332,23 @@ def _process_packet(packet, sec, usec, ip_offset):
                 if _ == _last_syn:  # skip bursts
                     return
 
-                if dst_ip in trails or "%s:%s" % (dst_ip, dst_port) in trails:
+                if dst_ip in trails or addr_port(dst_ip, dst_port) in trails:
                     _ = _last_logged_syn
                     _last_logged_syn = _last_syn
                     if _ != _last_logged_syn:
-                        trail = dst_ip if dst_ip in trails else "%s:%s" % (dst_ip, dst_port)
+                        trail = addr_port(dst_ip, dst_port)
+                        if trail not in trails:
+                            trail = dst_ip
                         if not any(_ in trails[trail][0] for _ in ("attacker",)) and not ("parking site" in trails[trail][0] and dst_port not in (80, 443)):
                             log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP if ':' not in trail else TRAIL.IPORT, trail, trails[trail][0], trails[trail][1]), packet)
 
-                elif (src_ip in trails or "%s:%s" % (src_ip, src_port) in trails) and dst_ip != localhost_ip:
+                elif (src_ip in trails or addr_port(src_ip, src_port) in trails) and dst_ip != localhost_ip:
                     _ = _last_logged_syn
                     _last_logged_syn = _last_syn
                     if _ != _last_logged_syn:
-                        trail = src_ip if src_ip in trails else "%s:%s" % (src_ip, src_port)
+                        trail = addr_port(src_ip, src_port)
+                        if trail not in trails:
+                            trail = src_ip
                         if not any(_ in trails[trail][0] for _ in ("malware",)):
                             log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP if ':' not in trail else TRAIL.IPORT, trail, trails[trail][0], trails[trail][1]), packet)
 
@@ -324,6 +361,13 @@ def _process_packet(packet, sec, usec, ip_offset):
                         _connect_src_dst[key].add(dst_port)
                         _connect_src_details[key].add((sec, usec, src_port, dst_port))
 
+                        if dst_port in POTENTIAL_INFECTION_PORTS:
+                            key = "%s~%s" % (src_ip, dst_port)
+                            if key not in _connect_src_dst:
+                                _connect_src_dst[key] = set()
+                                _connect_src_details[key] = set()
+                            _connect_src_dst[key].add(dst_ip)
+                            _connect_src_details[key].add((sec, usec, src_port, dst_ip))
             else:
                 tcph_length = doff_reserved >> 4
                 h_size = iph_length + (tcph_length << 2)
@@ -377,6 +421,11 @@ def _process_packet(packet, sec, usec, ip_offset):
                                 host = host[:-3]
                             if host and host[0].isalpha() and dst_ip in trails:
                                 log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.IP, "%s (%s)" % (dst_ip, host.split(':')[0]), trails[dst_ip][0], trails[dst_ip][1]), packet)
+                            elif re.search(r"\A\d+\.[0-9.]+\Z", host or "") and re.search(SUSPICIOUS_DIRECT_IP_URL_REGEX, "%s%s" % (host, path)):
+                                if not _dst_ip.startswith(_get_local_prefix()):
+                                    trail = "(%s)%s" % (host, path)
+                                    log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.HTTP, trail, "potential iot-malware download (suspicious)", "(heuristic)"), packet)
+                                    return
                             elif config.CHECK_HOST_DOMAINS:
                                 _check_domain(host, sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, packet)
                     elif config.USE_HEURISTICS and config.CHECK_MISSING_HOST:
@@ -392,17 +441,24 @@ def _process_packet(packet, sec, usec, ip_offset):
                         log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.HTTP, trail, "potential proxy probe (suspicious)", "(heuristic)"), packet)
                         return
                     elif "://" in path:
-                        url = path.split("://", 1)[1]
+                        unquoted_path = _urllib.parse.unquote(path)
 
-                        if '/' not in url:
-                            url = "%s/" % url
+                        key = "code execution"
+                        if key not in _local_cache:
+                            _local_cache[key] = next(_[1] for _ in SUSPICIOUS_HTTP_REQUEST_REGEXES if "code execution" in _[0])
 
-                        host, path = url.split('/', 1)
-                        if host.endswith(":80"):
-                            host = host[:-3]
-                        path = "/%s" % path
-                        proxy_domain = host.split(':')[0]
-                        _check_domain(proxy_domain, sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, packet)
+                        if re.search(_local_cache[key], unquoted_path, re.I) is None:    # NOTE: to prevent malware domain FPs in case of outside scanners
+                            url = path.split("://", 1)[1]
+
+                            if '/' not in url:
+                                url = "%s/" % url
+
+                            host, path = url.split('/', 1)
+                            if host.endswith(":80"):
+                                host = host[:-3]
+                            path = "/%s" % path
+                            proxy_domain = host.split(':')[0]
+                            _check_domain(proxy_domain, sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, packet)
                     elif method == "CONNECT":
                         if '/' in path:
                             host, path = path.split('/', 1)
@@ -450,16 +506,21 @@ def _process_packet(packet, sec, usec, ip_offset):
                                 log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.UA, result, "user agent (suspicious)", "(heuristic)"), packet)
 
                     if not _check_domain_whitelisted(host):
+                        unquoted_path = _urllib.parse.unquote(path)
+                        unquoted_post_data = _urllib.parse.unquote(post_data or "")
+
                         checks = [path.rstrip('/')]
                         if '?' in path:
                             checks.append(path.split('?')[0].rstrip('/'))
 
                             if '=' in path:
                                 checks.append(path[:path.index('=') + 1])
+                        elif post_data:
+                            checks.append("%s?%s" % (path, unquoted_post_data.lower()))
 
-                        _ = os.path.splitext(checks[-1])
-                        if _[1]:
-                            checks.append(_[0])
+                        #_ = os.path.splitext(checks[-1])       # causing FPs in cases like elf_mirai - /juno if legit /juno.php is accessed
+                        #if _[1]:
+                            #checks.append(_[0])
 
                         if checks[-1].count('/') > 1:
                             checks.append(checks[-1][:checks[-1].rfind('/')])
@@ -469,10 +530,15 @@ def _process_packet(packet, sec, usec, ip_offset):
                             for _ in ("", host):
                                 check = "%s%s" % (_, check)
                                 if check in trails:
-                                    parts = url.split(check)
-                                    other = ("(%s)" % _ if _ else _ for _ in parts)
-                                    trail = check.join(other)
-                                    log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.URL, trail, trails[check][0], trails[check][1]))
+                                    if '?' not in path and '?' in check and post_data:
+                                        trail = "%s(%s \\(%s %s\\))" % (host, path, method, post_data.strip())
+                                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.HTTP, trail, trails[check][0], trails[check][1]))
+                                    else:
+                                        parts = url.split(check)
+                                        other = ("(%s)" % _ if _ else _ for _ in parts)
+                                        trail = check.join(other)
+                                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.TCP, TRAIL.URL, trail, trails[check][0], trails[check][1]))
+
                                     return
 
                         if "%s/" % host in trails:
@@ -481,11 +547,10 @@ def _process_packet(packet, sec, usec, ip_offset):
                             return
 
                         if config.USE_HEURISTICS:
-                            match = re.search(r"\bX-Forwarded-For:\s*([0-9.]+)", packet, re.I)
+                            match = re.search(r"\bX-Forwarded-For:\s*([0-9.]+)".encode(), packet, re.I)
                             if match:
                                 src_ip = "%s,%s" % (src_ip, match.group(1))
-                            unquoted_path = _urllib.parse.unquote(path)
-                            unquoted_post_data = _urllib.parse.unquote(post_data or "")
+
                             for char in SUSPICIOUS_HTTP_REQUEST_FORCE_ENCODE_CHARS:
                                 replacement = SUSPICIOUS_HTTP_REQUEST_FORCE_ENCODE_CHARS[char]
                                 path = path.replace(char, replacement)
@@ -559,7 +624,8 @@ def _process_packet(packet, sec, usec, ip_offset):
                     _ = _last_logged_udp
                     _last_logged_udp = _last_udp
                     if _ != _last_logged_udp:
-                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.IP, trail, trails[trail][0], trails[trail][1]), packet)
+                        if not any(_ in trails[trail][0] for _ in ("malware",)):
+                            log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.IP, trail, trails[trail][0], trails[trail][1]), packet)
 
             else:
                 dns_data = ip_data[iph_length + 8:]
@@ -612,17 +678,18 @@ def _process_packet(packet, sec, usec, ip_offset):
                                         else:
                                             if (sec - (_last_dns_exhaustion or 0)) > 60:
                                                 trail = "(%s).%s" % ('.'.join(parts[:-2]), '.'.join(parts[-2:]))
-                                                if re.search(r"bl\b", trail) is None:  # generic check for DNSBLs (Note: alternative is to check whitelist)
-                                                    log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.DNS, trail, "potential dns exhaustion (suspicious)", "(heuristic)"), packet)
-                                                    _dns_exhausted_domains.add(domain)
-                                                    _last_dns_exhaustion = sec
+                                                if re.search(r"bl\b", trail) is None:                                               # generic check for DNSBLs
+                                                    if not any(_ in subdomains for _ in LOCAL_SUBDOMAIN_LOOKUPS):                   # generic check for local DNS resolutions
+                                                        log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.DNS, trail, "potential dns exhaustion (suspicious)", "(heuristic)"), packet)
+                                                        _dns_exhausted_domains.add(domain)
+                                                        _last_dns_exhaustion = sec
 
                                             return
 
                             # Reference: http://en.wikipedia.org/wiki/List_of_DNS_record_types
                             if type_ not in (12, 28) and class_ == 1:  # Type not in (PTR, AAAA), Class IN
-                                if "%s:%s" % (dst_ip, dst_port) in trails:
-                                    trail = "%s:%s" % (dst_ip, dst_port)
+                                if addr_port(dst_ip, dst_port) in trails:
+                                    trail = addr_port(dst_ip, dst_port)
                                     log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.IPORT, "%s (%s)" % (dst_ip, query), trails[trail][0], trails[trail][1]), packet)
                                 elif dst_ip in trails:
                                     log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.IP, "%s (%s)" % (dst_ip, query), trails[dst_ip][0], trails[dst_ip][1]), packet)
@@ -645,7 +712,7 @@ def _process_packet(packet, sec, usec, ip_offset):
                                         _ = dns_data[_ + 12:_ + 16]
                                         if _:
                                             answer = socket.inet_ntoa(_)
-                                            if answer in trails:
+                                            if answer in trails and not _check_domain_whitelisted(query):
                                                 _ = trails[answer]
                                                 if "sinkhole" in _[0]:
                                                     trail = "(%s).%s" % ('.'.join(parts[:-1]), '.'.join(parts[-1:]))
@@ -672,7 +739,9 @@ def _process_packet(packet, sec, usec, ip_offset):
 
                                                         if NO_SUCH_NAME_COUNTERS[_][1] > NO_SUCH_NAME_PER_HOUR_THRESHOLD:
                                                             if _.startswith("*."):
-                                                                log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.DNS, "%s%s" % ("(%s)" % ','.join(item.replace(_[1:], "") for item in NO_SUCH_NAME_COUNTERS[_][2]), _[1:]), "excessive no such domain (suspicious)", "(heuristic)"), packet)
+                                                                trail = "%s%s" % ("(%s)" % ','.join(item.replace(_[1:], "") for item in NO_SUCH_NAME_COUNTERS[_][2]), _[1:])
+                                                                if not any(subdomain in trail for subdomain in LOCAL_SUBDOMAIN_LOOKUPS):  # generic check for local DNS resolutions
+                                                                    log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, PROTO.UDP, TRAIL.DNS, trail, "excessive no such domain (suspicious)", "(heuristic)"), packet)
                                                                 for item in NO_SUCH_NAME_COUNTERS[_][2]:
                                                                     try:
                                                                         del NO_SUCH_NAME_COUNTERS[item]
@@ -1065,6 +1134,7 @@ def monitor():
         print("\r[x] stopping (Ctrl-C pressed)")
     finally:
         print("\r[i] please wait...")
+
         if _multiprocessing:
             try:
                 for _ in xrange(config.PROCESS_COUNT - 1):
@@ -1074,6 +1144,9 @@ def monitor():
                     time.sleep(REGULAR_SENSOR_SLEEP_TIME)
             except KeyboardInterrupt:
                 pass
+
+        if config.pcap_file:
+            flush_condensed_events(True)
 
 def main():
     for i in xrange(1, len(sys.argv)):

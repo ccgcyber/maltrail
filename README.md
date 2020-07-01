@@ -1,6 +1,6 @@
 ![Maltrail](https://i.imgur.com/3xjInOD.png)
 
-[![Python 2.6|2.7|3.x](https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://github.com/stamparm/maltrail#license) [![Malware families](https://img.shields.io/badge/malware_families-1097-orange.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Twitter](https://img.shields.io/badge/twitter-@maltrail-blue.svg)](https://twitter.com/maltrail)
+[![Python 2.6|2.7|3.x](https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://github.com/stamparm/maltrail#license) [![Malware families](https://img.shields.io/badge/malware_families-1212-orange.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Malware sinkholes](https://img.shields.io/badge/malware_sinkholes-1331-green.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Twitter](https://img.shields.io/badge/twitter-@maltrail-blue.svg)](https://twitter.com/maltrail)
 
 ## Content
 
@@ -29,6 +29,8 @@
 - [Best practice(s)](#best-practices)
 - [License](#license)
 - [Developers](#developers)
+- [Presentations](#presentations)
+- [Blacklist](#blacklist)
 - [Thank you](#thank-you)
 - [Third-party integrations](#third-party-integrations)
 
@@ -262,8 +264,20 @@ Note: **Server** component can be skipped altogether, and just use the standalon
 
 The following set of commands should get your Maltrail **Sensor** up and running (out of the box with default settings and monitoring interface "any"):
 
+- For **Debian/Ubuntu**
+
 ```
 sudo apt-get install git python-pcapy
+git clone https://github.com/stamparm/maltrail.git
+cd maltrail
+sudo python sensor.py
+```
+
+- For **SUSE/openSUSE**
+
+```
+sudo zypper install gcc gcc-c++ git libpcap-devel python-devel python2-pip
+sudo pip2 install pcapy
 git clone https://github.com/stamparm/maltrail.git
 cd maltrail
 sudo python sensor.py
@@ -342,6 +356,18 @@ Subsection `USERS` contains user's configuration settings. Each user entry consi
 ![Configuration users](https://i.imgur.com/PYwsZkn.png)
 
 Option `UDP_ADDRESS` contains the server's log collecting listening address (Note: use `0.0.0.0` to listen on all interfaces), while option `UDP_PORT` contains listening port value. If turned on, when used in combination with option `LOG_SERVER`, it can be used for distinct (multiple) **Sensor** <-> **Server** architecture.
+
+Option `FAIL2BAN_REGEX` contains the regular expression (e.g. `attacker|reputation|potential[^"]*(web scan|directory traversal|injection|remote code)`) to be used in `/fail2ban` web calls for extraction of today's attacker source IPs. This allows the usage of IP blocking mechanisms (e.g. `fail2ban`, `iptables` or `ipset`) by periodic pulling of blacklisted IP addresses from remote location. Example usage would be the following script (e.g. run as a `root` cronjob on a minute basis):
+
+```
+#!/bin/bash
+ipset -q flush maltrail
+ipset -q create maltrail hash:net
+for ip in $(curl http://127.0.0.1:8338/fail2ban 2>/dev/null | grep -P '^[0-9.]+$'); do ipset add maltrail $ip; done
+iptables -I INPUT -m set --match-set maltrail src -j DROP
+```
+
+
 
 Same as for **Sensor**, when running the **Server** (e.g. `python server.py`) for the first time and/or after a longer period of non-running, if option `USE_SERVER_UPDATE_TRAILS` is set to `true`, it will automatically update the trails from trail definitions (Note: stored inside the `trails` directory). Its basic function is to store the log entries inside the logging directory (i.e. option `LOG_DIR` inside the `maltrail.conf` file's section `[All]`) and provide the web reporting interface for presenting those same entries to the end-user (Note: there is no need install the 3rd party web server packages like Apache):
 
@@ -508,7 +534,7 @@ By using filter `ipinfo` all potentially infected computers in our organization'
 
 #### Suspicious direct file downloads
 
-Maltrail tracks all suspicious direct file download attempts (e.g. `.apk`, `.chm`, `.egg`, `.exe`, `.hta`, `.hwp`, `.ps1`, `.scr` and `.sct` file extensions). This can trigger lots of false positives, but eventually could help in reconstruction of the chain of infection (Note: legitimate service providers, like Google, usually use encrypted HTTPS to perform this kind of downloads):
+Maltrail tracks all suspicious direct file download attempts (e.g. `.apk`, `.bin`, .`chm`, `.dll`, `.egg`, `.exe`, `.hta`, `.hwp`, `.ps1`, `.scr`, `.sct` and `.xpi` file extensions). This can trigger lots of false positives, but eventually could help in reconstruction of the chain of infection (Note: legitimate service providers, like Google, usually use encrypted HTTPS to perform this kind of downloads):
 
 ![Direct .exe download](https://i.imgur.com/jr5BS1h.png)
 
@@ -572,7 +598,9 @@ To properly run the Maltrail, [Python](http://www.python.org/download/) **2.6**,
 
 ## Best practice(s)
 
-1. Install Maltrail (preferably on Debian/Ubuntu Linux OS):
+1. Install Maltrail:
+
+- On **Debian/Ubuntu** Linux OS
 
     ```
     sudo apt-get install git python-pcapy
@@ -581,6 +609,17 @@ To properly run the Maltrail, [Python](http://www.python.org/download/) **2.6**,
     sudo mv /tmp/maltrail /opt
     sudo chown -R $USER:$USER /opt/maltrail
     ```
+    
+- On **SUSE/openSUSE** Linux OS
+
+   ```
+   sudo zypper install gcc gcc-c++ git libpcap-devel python-devel python2-pip
+   sudo pip2 install pcapy
+   cd /tmp
+   git clone https://github.com/stamparm/maltrail.git
+   sudo mv /tmp/maltrail /opt
+   sudo chown -R $USER:$USER /opt/maltrail
+   ```
 
 2. Set working environment:
 
@@ -616,6 +655,14 @@ This software is provided under a MIT License. See the accompanying [LICENSE](ht
 * Miroslav Stampar ([@stamparm](https://github.com/stamparm))
 * Mikhail Kasimov ([@MikhailKasimov](https://github.com/MikhailKasimov))
 
+## Presentations
+
+* 47th TF-CSIRT Meeting, Prague (Czech Republic), 2016 ([slides](https://www.terena.org/activities/tf-csirt/meeting47/M.Stampar-Maltrail.pdf))
+
+## Blacklist
+
+* Maltrail's daily updated blacklist of malware-related domains can be found [here](https://raw.githubusercontent.com/stamparm/aux/master/maltrail-malware-domains.txt). It is based on trails found at [trails/static/malware](trails/static/malware) and can be used for DNS traffic blocking purposes.
+
 ## Thank you
 
 * Thomas Kristner
@@ -630,8 +677,8 @@ This software is provided under a MIT License. See the accompanying [LICENSE](ht
 ## Third-party integrations
 
 * [FreeBSD Port](https://www.freshports.org/security/maltrail)
-* [OPNSense Gateway Plugin](https://github.com/opnsense/plugins/pull/1241)
+* [OPNSense Gateway Plugin](https://github.com/opnsense/plugins/pull/1257)
 * [D4 Project](https://www.d4-project.org/2019/09/25/maltrail-integration.html)
-* [Jigsaw Security EMM Solution](https://www.jigsawsecurityenterprise.com/single-post/2017/10/30/Elasticsearch-MISP-and-Maltrail-Integration)
 * [GScan](https://github.com/grayddq/GScan)
 * [BlackArch Linux](https://github.com/BlackArch/blackarch/blob/master/packages/maltrail/PKGBUILD)
+* [MalwareWorld](https://www.malwareworld.com/)

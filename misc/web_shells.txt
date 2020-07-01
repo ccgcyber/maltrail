@@ -260,3 +260,27 @@ pouya.asp
 # Reference: https://twitter.com/killamjr/status/1191923979549921280
 
 cxxz.php
+
+# Reference: https://twitter.com/ANeilan/status/1232283590114840576
+# Reference: https://pastebin.com/8LL4Hg9e
+# Reference: https://pastebin.com/trRiwBKQ
+
+sh.php
+
+# Reference: https://twitter.com/malwrhunterteam/status/1241318536280227844
+
+shellcode.php
+shellcode.txt
+
+# Reference: https://securelist.com/energetic-bear-crouching-yeti/85345/
+
+code29.php
+proxy87.php
+
+# Reference: https://paste.ee/r/v9aRR/0
+
+shell.php
+
+# Reference: https://twitter.com/jstrosch/status/1255898007377231873
+
+cxz.php

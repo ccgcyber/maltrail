@@ -11,12 +11,6 @@ examhome.net
 mp3menu.org
 uustoughtonma.org
 
-# Generic detection for compromised Bitrix CMS
-
-/lib/crypta.js
-/bitrix/js/main/core/core_loader.js
-/bitrix/js/main/core/core_tasker.js
-
 # Reference: https://twitter.com/bad_packets/status/1038967603048243200
 # Reference: https://www.virustotal.com/#/file/d527ea936ab99a2e3a25cf8786c66c0e07fc509b9465d48dd26065f034795f19/relations
 
@@ -389,11 +383,6 @@ d20iczrsxk7wft.cloudfront.net/botwverified/badge.js
 cdn.ryviu.com/js/reviews.js
 ww1-filecloud.com
 
-# Reference: https://twitter.com/jeromesegura/status/1133160126561394688
-# Reference: https://blog.malwarebytes.com/cybercrime/2019/05/skimmer-acts-as-payment-service-provider-via-rogue-iframe/
-
-modest4ever.com/assets/newbalance.js
-
 # Reference: https://twitter.com/KorbenD_Intel/status/1133469852579106816
 
 /thecry.js
@@ -465,10 +454,6 @@ click.clickanalytics208.com
 # Reference: https://www.zscaler.com/blogs/research/magecart-activity-and-campaign-enhancements
 
 /js/decor.js
-
-# Reference: https://twitter.com/killamjr/status/1149301815529398272
-
-google.ssl.lnfo.cc
 
 # Reference: https://www.proofpoint.com/us/threat-insight/post/home-routers-under-attack-malvertising-windows-android-devices
 
@@ -760,10 +745,6 @@ zirve100.com
 
 /js/mirasvit/
 
-# Reference: https://twitter.com/AffableKraut/status/1159677725994622976
-
-jquery.in.ua
-
 # Reference: https://twitter.com/Placebo52510486/status/1141619924512792583
 
 12js.org
@@ -950,10 +931,6 @@ adsformarket.com
 /jqueryprivatesecurity.js
 /onloadsecurityvalidate.js
 
-# Reference: https://www.virustotal.com/gui/domain/js.users.51.la/relations
-
-js.users.51.la
-
 # Reference: https://twitter.com/unmaskparasites/status/1206662128213594117
 
 whoisloookup.com
@@ -990,3 +967,136 @@ decentsite.xyz
 archivepoisk.info
 sympleplace.info
 adsmeneger.club
+
+# Reference: https://twitter.com/felixaime/status/1236196571928236037
+
+scriptcdn.info
+
+# Reference: https://twitter.com/unmaskparasites/status/1235190676838633477
+
+collectfasttracks.com
+
+# Reference: https://twitter.com/unmaskparasites/status/1241068775157510144
+# Reference: https://publicwww.com/websites/%22scriptalicious.info%22/
+
+scriptalicious.info
+
+# Reference: https://twitter.com/blackorbird/status/1245597745403969544
+
+/t0uch/tou64.js
+/t0uch/tou86.js
+
+# Reference: https://twitter.com/d09r_/status/1245306272175419392
+
+/o93jak2nm1k2.js
+
+# Reference: https://twitter.com/unmaskparasites/status/1250469460617637891
+# Reference: https://www.virustotal.com/gui/domain/stivenfernando.com/relations
+
+stivenfernando.com
+
+# Reference: https://twitter.com/fahadsoror/status/1251638383245475840
+
+underthebreach.com/breach-protection
+
+# Reference: https://www.kitploit.com/2020/04/flux-keylogger-modern-javascript.html
+
+/42963187845881.js
+
+# Reference: https://unit42.paloaltonetworks.com/how-cybercriminals-prey-on-the-covid-19-pandemic/
+
+coronamasksupply.com
+coronavirusinrealtime.com
+coronashirts.store
+
+# Reference: https://sansec.io/labs/2018/08/30/magentocore.net_skimmer_most_aggressive_to_date/
+
+/19303817.js
+
+# Reference: https://twitter.com/unmaskparasites/status/1254766052296122368
+# Reference: https://www.virustotal.com/gui/domain/trackstatisticsss.com/relations
+# Reference: https://www.wordfence.com/blog/2020/05/nearly-a-million-wp-sites-targeted-in-large-scale-attacks/
+
+adsforbusines.com
+stivenfernando.com
+ps.stivenfernando.com
+ws.stivenfernando.com
+trackstatisticsss.com
+stat.trackstatisticsss.com
+
+# Reference: https://www.virustotal.com/gui/domain/crisgrey.com/relations
+
+crisgrey.com
+
+# Reference: https://www.virustotal.com/gui/domain/cdn-js.net/detection
+
+cdn-js.net
+
+# Reference: https://twitter.com/unmaskparasites/status/1260542044747059200
+
+digestcolect.com
+css.digestcolect.com
+js.digestcolect.com
+
+# Reference: https://www.virustotal.com/gui/ip-address/51.15.20.78/relations
+
+go1news.biz
+lodder.info
+lodders.club
+news98.biz
+newtext.club
+noorotin.biz
+report3.biz
+retoore.biz
+solo8.biz
+vinuser6.biz
+w1sercher.biz
+wwserch41.biz
+
+# Reference: https://twitter.com/CERT_Polska_en/status/1270623116931317760
+# Reference: https://pastebin.com/raw/Ap38Fr7e
+# Reference: https://pastebin.com/raw/YyYs8Her
+
+/myjs28_frr_b7.js
+/myjs28_frr_c1.js
+/myjs28_frr_j2.js
+/myjs28_frr_n01.js
+/myjs28_frr_n02.js
+/myjs28_frr_s17.js
+/myjs28_frr_s20.js
+/myjs28_frr_s21.js
+/myjs28_frr_s22.js
+/myjs28_frr_s23.js
+/myjs28_frr_s29.js
+/myjs28_frr_s30.js
+/myjs28_frr_s31.js
+/myjs28_frr_s33.js
+/myjs28_frr_s35.js
+/myjs28_frr_s36.js
+/myjs28_frr_s37.js
+/myjs28_frr_s38.js
+/myjs28_frr_s39.js
+/myjs28_frr_s4.js
+/myjs28_frr_s45.js
+/myjs28_frr_s47.js
+/myjs28_frr_s48.js
+/myjs28_frr_s49.js
+/myjs28_frr_s50.js
+/myjs28_frr_s51.js
+/myjs28_frr_s52.js
+/myjs28_frr_s55.js
+/myjs28_frr_s7.js
+/myjs28_frr_w1.js
+
+# Reference: https://twitter.com/ScumBots/status/1271482475546660864
+
+141.255.154.194:1666
+fivemmods222.ddns.net
+
+# Reference: https://twitter.com/xuy1202/status/1272842659183255553
+
+hellokity.in
+
+# Reference: https://twitter.com/ScumBots/status/1274497302628098048
+
+91.153.0.57:1556

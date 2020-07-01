@@ -2081,3 +2081,207 @@ finalocean.info
 # Reference: https://www.virustotal.com/gui/domain/qihuweb.com/relations
 
 qihuweb.com
+
+# Reference: https://www.virustotal.com/gui/domain/appsflyer.tk/relations
+
+appsflyer.tk
+
+# Reference: http://tracker.viriback.com/dump.php (# 2020-02-29, CrownAdsPro)
+
+1410.165-227-83-163.site
+
+# Reference: https://www.virustotal.com/gui/file/f5690282a935eb4a3f1c09d07abbe1c07f4da5f2ae776d4bb903f9bd1927e558/behavior/VirusTotal%20Cuckoofork
+
+fsl.sytes.net
+
+# Reference: https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?name=win32%2Fghokswa
+
+qbitka.com
+chromlum.org
+firefox1.com
+brobgser.com
+
+# Reference: https://app.any.run/tasks/939750d4-9ec4-4abc-b13d-0152de016a56/
+
+wisecleaner.net
+
+# Reference: https://blog.malwarebytes.com/detections/adware-searchenginehijack/
+
+searchprivacyplus.com
+elastisearch.com
+securedsearch.xyz
+bettersearch.co
+searchdimension.com
+
+# Reference: https://www.virustotal.com/gui/file/1ffe8993ba53ddbfcf3994270b51432db5b9bf4e9e625daed42ed016e75cee20/behavior/Tencent%20HABO
+
+getyoutubedownloader.com
+rp.ytdcdn.com
+os.ytdcdn.com
+os2.ytdcdn.com
+
+# Reference: https://www.virustotal.com/gui/domain/pcfixertools.net/detection
+
+pcfixertools.biz
+pcfixertools.info
+pcfixertools.net
+
+# Reference: https://www.virustotal.com/gui/domain/thegetbooks.tk/relations
+# Reference: https://www.virustotal.com/gui/file/02a3bd5c67c6c168df1226ba471f1a057e3ecdd408502aecb08902dbaeb1f516/detection
+# Reference: https://www.virustotal.com/gui/file/45ed1baee046475f88f037702ceb1d7cec1a099f39b9248bbe4bf23622683afe/detection
+
+express-book.net
+thegetbooks.tk
+
+# Reference: https://blog.trendmicro.com/trendlabs-security-intelligence/exposing-modular-adware-how-dealply-iserik-and-managex-persist-in-systems/
+# Reference: https://documents.trendmicro.com/assets/Appendix-Exposing-Modular-Adware-How-DealPly-IsErIk-ManageX-Persist-in-Systems.pdf
+
+adofd.com
+boqudo.com
+bujot.com
+buluw.com
+busucak.com
+butapujo.com
+bxvdc.com
+cabarula.com
+cunakod.com
+daqah.com
+ddukmql.com
+eakqz.com
+focuquc.com
+fotuwuk.com
+gahuwa.com
+gapoloha.com
+gasasot.com
+gujujoh.com
+gukacado.com
+hahofaba.com
+hajanac.com
+hoduqoq.com
+hufunuk.com
+jafuq.com
+juronu.com
+kanrq.com
+katunaq.com
+kugocu.com
+lomokonu.com
+mogaf.com
+norugu.com
+nusojog.com
+nutojo.com
+pacudoh.com
+pajuwu.com
+pawotapu.com
+pocxc.com
+pofufaco.com
+pudacasa.com
+pugugu.com
+puloja.com
+qajolos.com
+qaloqum.com
+qamopo.com
+qukusut.com
+rokuq.com
+rududulu.com
+ruqut.com
+sanupu.com
+sastts.com
+suhacuc.com
+tawuhoju.com
+tdfpa.com
+tocopada.com
+toluhuku.com
+tomupaj.com
+tuwoqol.com
+uyvsa.com
+wagng.com
+wavbsly.com
+wugulaf.com
+yxhpa.com
+zahirq.com
+d1etigj2h443kd.cloudfront.net
+d1hpofzsaxmzog.cloudfront.net
+d274eq41c39r2n.cloudfront.net
+d2b46e7ax2atfi.cloudfront.net
+d2vut1jfnnygcg.cloudfront.net
+d2wv7denc1jx9z.cloudfront.net
+d2zyvlskj53q65.cloudfront.net
+d33wv995bk7lag.cloudfront.net
+d36lv9781gxp5z.cloudfront.net
+d3s1tkg9f4254q.cloudfront.net
+d3tq9gtc0bxu1s.cloudfront.net
+dlrabaly59cp3.cloudfront.net
+dnodjoiz0vcnz.cloudfront.net
+
+# Reference: https://www.virustotal.com/gui/domain/pc.publicnewsetup.com/relations
+
+publicnewsetup.com
+pc.publicnewsetup.com
+
+# Reference: https://www.virustotal.com/gui/domain/diskfixer.net/relations
+
+diskfixer.net
+
+# Reference: https://www.virustotal.com/gui/domain/hfuie32.2ihsfa.com/relations
+
+hfuie32.2ihsfa.com
+
+# Reference: https://www.virustotal.com/gui/domain/back.visitorpower.website/relations
+
+back.visitorpower.website
+
+# Reference: https://www.virustotal.com/gui/domain/toupdate15.com/relations
+
+toupdate15.com
+
+# Reference: https://www.virustotal.com/gui/domain/mainbook.xyz/relations
+
+mainbook.fun
+mainbook.xyz
+
+# Reference: https://www.virustotal.com/gui/domain/dreamtrips.cheap/relations
+
+dreamtrips.cheap
+
+# Reference: https://www.virustotal.com/gui/domain/madmax.utyuytjn.com/relations
+
+utyuytjn.com
+madmax.utyuytjn.com
+stats.utyuytjn.com
+updates.utyuytjn.com
+
+# Reference: https://www.virustotal.com/gui/domain/cdn.piytrwd.com/relations
+
+piytrwd.com
+cdn.piytrwd.com
+
+# Reference: https://www.virustotal.com/gui/domain/thebestoffersintheweb.com/relations
+
+thebestoffersintheweb.com
+
+# Reference: https://www.virustotal.com/gui/domain/search.tube-bar.com/relations
+
+tube-bar.com
+search.tube-bar.com
+
+# Reference: https://app.any.run/tasks/769e4025-809e-46f7-b7f6-e12f153192ce/
+
+rp.downloadagentcdn.com
+
+# Reference: https://www.virustotal.com/gui/domain/youtube4kdowloader.club/detection
+
+youtube4kdowloader.club
+
+# Reference: https://www.virustotal.com/gui/domain/freekzvideo.cloud/relations
+
+freekzvideo.cloud
+
+# Reference: https://www.virustotal.com/gui/file/7e5065352271d66bd2a28613971b45c0fb9f7bcfb499b1aebecc49167ec9d7a2/detection
+# Reference: https://www.virustotal.com/gui/file/2509244e823a1f6308438b44e9bb6fa808fec72a9a48d5f730dfbf6c3aca5d85/detection
+
+atbc0003.top
+mediadownloader25.tk
+
+# Reference: https://www.virustotal.com/gui/file/6248a41a5e4230433e2a0e33f26dbed558e9bc21b51302124ee931921da3e657/detection
+
+hostas5.ml
