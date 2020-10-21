@@ -5846,9 +5846,11 @@
 
 # Reference: https://twitter.com/malwrhunterteam/status/1248226241527844865
 # Reference: https://www.virustotal.com/gui/ip-address/213.176.32.0/details
+# Reference: https://www.virustotal.com/gui/ip-address/62.60.135.22/detection
 
 # AS22769
 213.176.32.0/19,ddosing network
+62.60.128.0/21,ddosing network
 
 # AS35278 (Sprinthost.ru LLC)
 141.8.192.0/21,sprinthost
@@ -5858,8 +5860,8 @@
 # Reference: https://twitter.com/urlscanio/status/1271542666304552962
 # Reference: https://twitter.com/search?q=AS393960%20&src=typed_query&f=live
 # Reference: https://db-ip.com/as393960-host4geeks-llc
-# AS393960 (Host4Geeks LLC)
 
+# AS393960 (Host4Geeks LLC)
 103.83.193.0/24,host4geeks
 139.60.232.0/22,host4geeks
 139.60.236.0/22,host4geeks
@@ -5875,3 +5877,6 @@
 66.85.44.0/24,host4geeks
 66.85.46.0/24,host4geeks
 66.85.47.0/24,host4geeks
+
+# HR-MAXKO
+45.95.168.0/22,maxko

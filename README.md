@@ -1,6 +1,6 @@
 ![Maltrail](https://i.imgur.com/3xjInOD.png)
 
-[![Python 2.6|2.7|3.x](https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://github.com/stamparm/maltrail#license) [![Malware families](https://img.shields.io/badge/malware_families-1212-orange.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Malware sinkholes](https://img.shields.io/badge/malware_sinkholes-1331-green.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Twitter](https://img.shields.io/badge/twitter-@maltrail-blue.svg)](https://twitter.com/maltrail)
+[![Python 2.6|2.7|3.x](https://img.shields.io/badge/python-2.6|2.7|3.x-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://github.com/stamparm/maltrail#license) [![Malware families](https://img.shields.io/badge/malware_families-1287-orange.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Malware sinkholes](https://img.shields.io/badge/malware_sinkholes-1331-green.svg)](https://github.com/stamparm/maltrail/tree/master/trails/static/malware) [![Twitter](https://img.shields.io/badge/twitter-@maltrail-blue.svg)](https://twitter.com/maltrail)
 
 ## Content
 
@@ -268,7 +268,7 @@ The following set of commands should get your Maltrail **Sensor** up and running
 
 ```
 sudo apt-get install git python-pcapy
-git clone https://github.com/stamparm/maltrail.git
+git clone --depth 1 https://github.com/stamparm/maltrail.git
 cd maltrail
 sudo python sensor.py
 ```
@@ -278,7 +278,7 @@ sudo python sensor.py
 ```
 sudo zypper install gcc gcc-c++ git libpcap-devel python-devel python2-pip
 sudo pip2 install pcapy
-git clone https://github.com/stamparm/maltrail.git
+git clone --depth 1 https://github.com/stamparm/maltrail.git
 cd maltrail
 sudo python sensor.py
 ```
@@ -288,7 +288,7 @@ sudo python sensor.py
 To start the (optional) **Server** on same machine, open a new terminal and execute the following:
 
 ```
-[[ -d maltrail ]] || git clone https://github.com/stamparm/maltrail.git
+[[ -d maltrail ]] || git clone --depth 1 https://github.com/stamparm/maltrail.git
 cd maltrail
 python server.py
 ```
@@ -605,7 +605,7 @@ To properly run the Maltrail, [Python](http://www.python.org/download/) **2.6**,
     ```
     sudo apt-get install git python-pcapy
     cd /tmp
-    git clone https://github.com/stamparm/maltrail.git
+    git clone --depth 1 https://github.com/stamparm/maltrail.git
     sudo mv /tmp/maltrail /opt
     sudo chown -R $USER:$USER /opt/maltrail
     ```
@@ -616,7 +616,7 @@ To properly run the Maltrail, [Python](http://www.python.org/download/) **2.6**,
    sudo zypper install gcc gcc-c++ git libpcap-devel python-devel python2-pip
    sudo pip2 install pcapy
    cd /tmp
-   git clone https://github.com/stamparm/maltrail.git
+   git clone --depth 1 https://github.com/stamparm/maltrail.git
    sudo mv /tmp/maltrail /opt
    sudo chown -R $USER:$USER /opt/maltrail
    ```
@@ -679,6 +679,10 @@ This software is provided under a MIT License. See the accompanying [LICENSE](ht
 * [FreeBSD Port](https://www.freshports.org/security/maltrail)
 * [OPNSense Gateway Plugin](https://github.com/opnsense/plugins/pull/1257)
 * [D4 Project](https://www.d4-project.org/2019/09/25/maltrail-integration.html)
-* [GScan](https://github.com/grayddq/GScan)
 * [BlackArch Linux](https://github.com/BlackArch/blackarch/blob/master/packages/maltrail/PKGBUILD)
-* [MalwareWorld](https://www.malwareworld.com/)
+* [GScan](https://github.com/grayddq/GScan) <sup>1</sup>
+* [MalwareWorld](https://www.malwareworld.com/) <sup>1</sup>
+* [oisd | domain blocklist](https://oisd.nl/?p=inc) <sup>1</sup>
+* [NextDNS](https://github.com/nextdns/metadata/blob/e0c9c7e908f5d10823b517ad230df214a7251b13/security/threat-intelligence-feeds.json) <sup>1</sup>
+
+ <sup>1</sup> Using (only) trails

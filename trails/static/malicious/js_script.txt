@@ -281,16 +281,6 @@ zenartfree.com/.advicedetails/1Z2-510491-details
 /js/vladofootwear.js
 /js/wallerbmx.js
 
-# Reference: https://www.symantec.com/security-center/writeup/2018-092007-1208-99 (JSCoffe domains)
-
-beachyripe.com
-coffetea.org
-energycoffe.org
-energytea.org
-lightbulbs-direct.org
-teacoffe.net
-ukcoffe.com
-
 # Reference: https://twitter.com/unmaskparasites/status/1049723562746146816
 
 /wp-load.js
@@ -310,12 +300,6 @@ ukcoffe.com
 # Reference: https://twitter.com/securitydoggo/status/856526428933943296
 
 /Consulta FGTS.js
-
-# Reference: https://blog.sucuri.net/2018/12/localization-and-customization-of-credit-card-stealing-malware.html
-
-kinfirighbetted.host
-sales4reason.com
-greatwebstat.com
 
 # Reference: https://twitter.com/bad_packets/status/1106430758179110912
 
@@ -339,10 +323,6 @@ host.moresecurity.kz/host/info
 
 simpleoneline.online
 
-# Reference: https://twitter.com/p5yb34m/status/1111707577685991424
-
-givemejs.cc/jquery_ui.js
-
 # Reference: https://twitter.com/natmchugh/status/1118851237351497734
 
 so.youneverfind.com/statistics.js
@@ -350,11 +330,6 @@ so.youneverfind.com/statistics.js
 # Reference: https://twitter.com/bad_packets/status/976677742862200832
 
 /5992203285ab3219.3.n.2.1.l60.js
-
-# Reference: https://twitter.com/jeromesegura/status/1121811483195633670
-# Reference: https://blog.malwarebytes.com/cybercrime/2019/04/github-hosted-magecart-skimmer-used-against-hundreds-of-e-commerce-sites/
-
-/mage/master/mage.js
 
 # Reference: https://securelist.com/muddywaters-arsenal/90659/
 
@@ -415,15 +390,6 @@ ww1-filecloud.com
 # Reference: https://twitter.com/Racco42/status/1136621446053150720
 
 /0001.js
-
-# Reference: https://twitter.com/rootsrv1/status/1136763516285702146
-
-jqueryextd.at
-
-# Reference: https://twitter.com/jeromesegura/status/1137087208630833152
-
-jquers.com
-jqueres.com
 
 # Reference: https://twitter.com/luc4m/status/1138430833533104128
 
@@ -610,9 +576,13 @@ allyouwant.online
 /GDSRScripts.js
 
 # Reference: https://twitter.com/0xFrost/status/1181153730382716928
+# Reference: https://twitter.com/James_inthe_box/status/1316079441034919936
+# Reference: https://twitter.com/James_inthe_box/status/1316091614113087488
 
-s04.hostcontent.live
+hostcontent.live
+hostingcloud.cloud
 hostingcloud.racing
+/ab20.js
 /Iit5.js
 
 # Reference: https://otx.alienvault.com/pulse/5d9cadcab8eefffbac23367a
@@ -1038,21 +1008,6 @@ digestcolect.com
 css.digestcolect.com
 js.digestcolect.com
 
-# Reference: https://www.virustotal.com/gui/ip-address/51.15.20.78/relations
-
-go1news.biz
-lodder.info
-lodders.club
-news98.biz
-newtext.club
-noorotin.biz
-report3.biz
-retoore.biz
-solo8.biz
-vinuser6.biz
-w1sercher.biz
-wwserch41.biz
-
 # Reference: https://twitter.com/CERT_Polska_en/status/1270623116931317760
 # Reference: https://pastebin.com/raw/Ap38Fr7e
 # Reference: https://pastebin.com/raw/YyYs8Her
@@ -1100,3 +1055,62 @@ hellokity.in
 # Reference: https://twitter.com/ScumBots/status/1274497302628098048
 
 91.153.0.57:1556
+
+# Reference: https://twitter.com/felixaime/status/1278600095538262017 (# WPScriptInjection)
+# Reference: https://twitter.com/felixaime/status/1278602674401955846
+# Reference: https://twitter.com/unmaskparasites/status/1280581176747601920
+# Reference: https://www.virustotal.com/gui/ip-address/185.244.172.39/relations
+# Reference: https://www.virustotal.com/gui/ip-address/45.9.148.49/relations
+
+letsmakeparty3.ga
+lobbydesires.com
+tlcweb.ml
+wpctrl.ga
+wpctrl.gq
+wpctrl.ml
+
+# Reference: https://twitter.com/unmaskparasites/status/1289272342837895171
+# Reference: https://twitter.com/unmaskparasites/status/1303792031693778947
+# Reference: https://twitter.com/unmaskparasites/status/1303792922140254215
+# Reference: https://twitter.com/unmaskparasites/status/1293570769545580545
+# Reference: https://www.virustotal.com/gui/ip-address/45.9.148.126/relations
+
+declarebusinessgroup.ga
+developerstatss.ga
+donatelloflowfirstly.ga
+lowerbeforwarden.ml
+trendopportunityfollow.ga
+
+# Reference: https://twitter.com/unmaskparasites/status/1291406328129298434
+# Reference: https://blog.sucuri.net/2020/07/reverse-string-woocommerce-wordpress-credit-card-swiper.html
+
+localhostnametable.com
+
+# Reference: https://unit42.paloaltonetworks.com/script-based-malware/
+
+assurancetemporaireenligne.com/c.js
+
+# Reference: https://twitter.com/yazilimci_adam/status/1297785340581883904 (Turkish)
+
+176.235.38.79:8080
+bilgilendirme.turkcell.com.tr
+
+# Reference: https://www.virustotal.com/gui/domain/party-nwvqdtumtz.now.sh/relations
+
+party-nwvqdtumtz.now.sh
+
+# Reference: https://twitter.com/unmaskparasites/status/1308145960682426368
+
+celolum.com
+
+# Reference: https://twitter.com/david_jursa/status/1310659997324410880
+
+vahjgkjhfkjdhkjdfhjdfj26a.s3-accelerate.amazonaws.com
+
+# Reference: https://twitter.com/unmaskparasites/status/1311670839276974081
+
+magichottrade.su
+
+# Reference: https://cujo.com/dns-hijacking-attacks-on-home-routers-in-brazil/
+
+googleads.store

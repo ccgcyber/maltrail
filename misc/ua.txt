@@ -1402,10 +1402,6 @@ Absent
 
 WindowsNT
 
-# Reference: https://twitter.com/catnap707/status/1266991396189175811
-
-UptimeRobot
-
 # Reference: http://www.devttys0.com/2013/10/reverse-engineering-a-d-link-backdoor/
 # Reference: https://twitter.com/netresec/status/389449084064391168
 # Reference: https://twitter.com/avandeursen/status/393279075873075200
@@ -1498,6 +1494,85 @@ Mobile/BADDA
 # Reference: https://twitter.com/Vishnyak0v/status/1273976038113017856
 
 nvidafix
+
+# Reference: https://business.xunison.com/analysis-of-samorat/
+# Reference: https://github.com/stamparm/maltrail/pull/9762
+
+\AnoisreV\Z
+\AotserP\Z
+\AiniM\Z
+\AarepO\Z
+
+# Reference: https://www.fortinet.com/blog/threat-research/vipersoftx-new-javascript-threat
+
+viperSoftx
+
+# Reference: https://twitter.com/James_inthe_box/status/1288889075831672833
+# Reference: https://twitter.com/James_inthe_box/status/1288933468357840896
+# Reference: https://gist.github.com/silence-is-best/c79e30feebe197d999a9da0aef80db29
+# Reference: https://github.com/stamparm/maltrail/pull/10138
+
+\ASoftware License Checker\Z
+
+# Reference: https://twitter.com/Bc10ver/status/1291733556838965248
+
+<script src=[^\>]*>
+
+# Reference: https://twitter.com/bad_packets/status/1292193947574362114
+
+Powerjacobb1
+
+# Reference: https://twitter.com/bad_packets/status/1293402050277986304
+
+fasthttp
+
+# Reference: https://twitter.com/reecdeep/status/1293601730618437632
+# Reference: https://app.any.run/tasks/ef5bd545-7404-440e-a86a-f00e2e89bc42/
+
+klmems
+
+# Reference: https://twitter.com/ViriBack/status/1293672393563676675
+
+F02DAB86BCA47979D007EB507D3D1F1E
+
+# Reference: https://unit42.paloaltonetworks.com/unit-42-technical-analysis-seaduke/
+
+SiteBar
+
+# Reference: https://twitter.com/malwrhunterteam/status/1296068530874519553
+
+WinWord64
+
+# Reference: https://twitter.com/malwrhunterteam/status/1096363455769202688
+
+Trololo
+
+# Reference: http://blog.nsfocus.net/darkhotel-3-0908/
+
+\Auser\Z
+
+# Reference: https://twitter.com/_re_fox/status/1306971519822725121
+
+Windows-Update-Agent/10.0.10011.16384 Client-Protocol/1.40
+
+# Reference: https://twitter.com/StopMalvertisin/status/1310611311194038273
+# Reference: https://pastebin.com/LkcFW9y7
+
+crackim
+
+# Reference: https://prod-blog.avira.com/new-mirai-variant-exploits-unauthenticated-remote-code-execution-in-the-web-interface-of-tea-latex-1-0
+# Reference: https://github.com/stamparm/maltrail/pull/11463/commits/62e5f05b2680b4c30e479cfc11ffc9f0d3594459
+
+Jarry-requests
+
+# Reference: https://twitter.com/c3rb3ru5d3d53c/status/1315382704045727746
+# Reference: https://app.any.run/tasks/351011f3-b4c1-4d9c-ac5e-f5c2cc29ef60/
+
+SecureLine.Security.ESS.Update
+
+# Reference: https://www.malware-traffic-analysis.net/2020/10/12/index.html
+
+PPPPPX
 
 # Misc
 

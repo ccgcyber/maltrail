@@ -141,20 +141,21 @@ exrpesso.org
 foodandcot.com
 freshdepor.com
 greatfurnituretradingco.org
+hqassets.com
 jewsondirect.com
 kik-vape.org
 labbe.biz
 lamoodbighats.net
 mage-checkout.org
 misshaus.org
-monocula1caillouet.slickjs.org
 nililotan.org
 oakandfort.org
 ottocap.org
-p114343.slickjs.org
 pmtonline.su
 replacemyremote.org
+safeprocessor.com
 sagecdn.org
+scriptdesire.com
 security-payment.su
 shop-rnib.org
 slickjs.org
@@ -1111,8 +1112,15 @@ googletegmanager.com
 wappallyzer.com
 
 # Reference: https://twitter.com/dubstard/status/1230895567947149314
+# Reference: https://usa.visa.com/content/dam/VCOM/global/support-legal/documents/visa-security-alert-baka-javascript-skimmer.pdf
 
+apienclave.com
+apisquere.com
+b-metric.com
 jquery-cycle.com
+ordercheck.online
+pridecdn.com
+quicdn.com
 
 # Reference: https://raw.githubusercontent.com/gwillem/magento-malware-scanner/master/rules/burner-domains.txt
 
@@ -1650,6 +1658,7 @@ marketplace-magento.net
 
 jsvault.net
 linkedtop.com
+scriptopia.net
 
 # Reference: https://twitter.com/ydklijnsma/status/1232727444962107392
 
@@ -1840,27 +1849,149 @@ intljs.rmtag.net
 pollyfill.com
 
 # Reference: https://twitter.com/d09r_/status/1247951999305302016
+# Reference: https://www.virustotal.com/gui/ip-address/34.227.50.166/relations
+# Reference: https://www.virustotal.com/gui/ip-address/54.89.179.241/relations
+# Reference: https://www.virustotal.com/gui/ip-address/3.83.72.214/relations
+# Reference: https://www.virustotal.com/gui/ip-address/52.1.206.175/relations
+# Reference: https://www.virustotal.com/gui/ip-address/3.84.27.209/relations
 
+3alesforce.com
+4esla.services
+4eslamotors.com
+7indowsupdate.com
+7ootric.com
+adn-apple.com
+akalai.net
+ap0see.com
+app3ee.com
+appqee.com
+appsae.com
+appsue.com
+aprsee.com
+apxsee.com
+arpsee.com
+atpsee.com
+bdn-apple.com
+calesforce.com
+cdf-apple.com
+cdj-apple.com
+cdl-apple.com
+cdn-a0ple.com
+cdn-ap0le.com
+cdn-appde.com
+cdn-apphe.com
+cdn-appla.com
+cdn-appld.com
+cdn-applg.com
+cdn-applm.com
+cdn-applu.com
+cdn-appme.com
+cdn-appne.com
+cdn-apqle.com
+cdn-aprle.com
+cdn-aptle.com
+cdn-apxle.com
+cdn-aqple.com
+cdn-arple.com
+cdn-atple.com
+cdn-axple.com
+cdn-cpple.com
+cdn-epple.com
+cdn-ipple.com
+cdn-qpple.com
+cdnmapple.com
+cdo-apple.com
+cen-apple.com
+cfn-apple.com
+clack-msgs.com
+cln-apple.com
+coogleanalytics.com
+coogleusercontent.com
+cppsee.com
+ctn-apple.com
+deslamotors.com
+eicrosoftonline.com
+eixpanel.com
+eoogleanalytics.com
+eoogleusercontent.com
+eropbox.com
+fgxnews.com
+fo8news.com
+fohnews.com
+foogleanalytics.com
+fopnews.com
+foxlews.com
+foxne7s.com
+foxneus.com
+foxnew3.com
+foxoews.com
+foynews.com
+fpnjs.com
+gdn-apple.com
+ggogleanalytics.com
+ggogletagmanager.com
+ggogleusercontent.com
+gindowsupdate.com
+gkogleanalytics.com
+gkogleusercontent.com
+gmogleanalytics.com
+gmogletagmanager.com
+gmogleusercontent.com
+gnogleanalytics.com
+gnogletagmanager.com
+gnogleusercontent.com
+goggletagmanager.com
+goggleusercontent.com
+gokgleanalytics.com
+gokgletagmanager.com
+gokgleusercontent.com
+gomgleanalytics.com
+gongleanalytics.com
+gongletagmanager.com
+gongleusercontent.com
+goocleanalytics.com
+goocletagmanager.com
+goocleusercontent.com
+gooeleanalytics.com
+gooeleusercontent.com
+goofleanalytics.com
+goofletagmanager.com
+googdeanalytics.com
+googdetagmanager.com
+googheanalytics.com
+googhetagmanager.com
 googheusercontent.com
+googlaanalytics.com
 googlatagmanager.com
 googlausercontent.com
+googldanalytics.com
+googldtagmanager.com
+googldusercontent.com
+google4agmanager.com
 google5sercontent.com
 googleafalytics.com
+googleajalytics.com
+googlealalytics.com
 googleanadytics.com
 googleanahytics.com
 googleanal9tics.com
+googleanalqtics.com
 googleanalxtics.com
 googleanaly4ics.com
 googleanalydics.com
 googleanalypics.com
 googleanalytacs.com
+googleanalythcs.com
 googleanalytias.com
 googleanalytibs.com
+googleanalytic3.com
 googleanalyticc.com
+googleanalyticq.com
 googleanalyticr.com
 googleanalyticw.com
 googleanalytigs.com
 googleanalytiks.com
+googleanalytiss.com
 googleanalytkcs.com
 googleanalytmcs.com
 googleanalytycs.com
@@ -1944,9 +2075,209 @@ googleusercnntent.com
 googleusercoftent.com
 googleusercojtent.com
 googleusercoltent.com
+googleusercon4ent.com
+googleusercondent.com
+googleuserconpent.com
+googleusercontant.com
+googleusercontdnt.com
+googleuserconteft.com
+googleusercontejt.com
+googleusercontelt.com
+googleuserconten4.com
+googleusercontend.com
+googleusercontenp.com
+googleusercontenu.com
+googleusercontenv.com
+googleuserconteot.com
+googleusercontgnt.com
+googleusercontmnt.com
+googleusercontunt.com
+googleuserconuent.com
+googleuserconvent.com
+googleusercootent.com
+googleusergontent.com
+googleusersontent.com
+googleusescontent.com
+googleusevcontent.com
+googleusgrcontent.com
+googleusmrcontent.com
+googleusurcontent.com
+googlevagmanager.com
+googlewsercontent.com
 googlganalytics.com
+googlgtagmanager.com
+googlgusercontent.com
+googlmanalytics.com
+googlmtagmanager.com
 googluanalytics.com
+googlutagmanager.com
+googluusercontent.com
 googmeanalytics.com
+googmetagmanager.com
+googmeusercontent.com
+googneanalytics.com
+goognetagmanager.com
+googneusercontent.com
+goooleanalytics.com
+goooletagmanager.com
+gootric.com
+goowleanalytics.com
+goowletagmanager.com
+goowleusercontent.com
+hocalytics.com
+iicrosoftonline.com
+iixpanel.com
+ippsee.com
+jpnjs.com
+ka3persky.com
+kaqpersky.com
+kaspepsky.com
+kasperqky.com
+kaspersk9.com
+kasperskq.com
+kaspessky.com
+kaspezsky.com
+kaspgrsky.com
+kaspmrsky.com
+kaspursky.com
+kastersky.com
+kasxersky.com
+kcspersky.com
+kdn-apple.com
+lgcalytics.com
+licrosoftonline.com
+lmcalytics.com
+lncalytics.com
+loaalytics.com
+locadytics.com
+locahytics.com
+localqtics.com
+localy4ics.com
+localydics.com
+localytacs.com
+localythcs.com
+localytias.com
+localytibs.com
+localytic3.com
+localyticc.com
+localyticw.com
+localytigs.com
+localytiks.com
+localytiss.com
+localytkcs.com
+localytmcs.com
+localytycs.com
+localyuics.com
+localyvics.com
+locamytics.com
+locanytics.com
+locclytics.com
+locelytics.com
+locqlytics.com
+lokalytics.com
+lpnjs.com
+mhxpanel.com
+mi8panel.com
+mibrosoftonline.com
+micposoftonline.com
+micrgsoftonline.com
+micrksoftonline.com
+microqoftonline.com
+microskftonline.com
+microsmftonline.com
+microsnftonline.com
+microsobtonline.com
+microsof4online.com
+microsofdonline.com
+microsoftgnline.com
+microsoftknline.com
+microsoftnnline.com
+microsoftofline.com
+microsoftojline.com
+microsoftolline.com
+microsoftonhine.com
+microsoftonlane.com
+microsoftonlhne.com
+microsoftonlife.com
+microsoftonlije.com
+microsoftonlile.com
+microsoftonlina.com
+microsoftonlind.com
+microsoftonling.com
+microsoftonlinu.com
+microsoftonlioe.com
+microsoftonlkne.com
+microsoftonlmne.com
+microsoftonmine.com
+microsoftonnine.com
+microsoftooline.com
+microsofuonline.com
+microsofvonline.com
+microsovtonline.com
+micsosoftonline.com
+micvosoftonline.com
+miczosoftonline.com
+mihpanel.com
+mippanel.com
+mix0anel.com
+mixpalel.com
+mixpanal.com
+mixpandl.com
+mixpaned.com
+mixpanem.com
+mixpanml.com
+mixpanul.com
+mixpcnel.com
+mixpenel.com
+mixpinel.com
+mixranel.com
+mixtanel.com
+mixxanel.com
+mkcrosoftonline.com
+mkxpanel.com
+mmxpanel.com
+mocalytics.com
+myxpanel.com
+n0njs.com
+npjjs.com
+npljs.com
+npnhs.com
+npnj3.com
+npnks.com
+npnns.com
+npnzs.com
+npojs.com
+nqnjs.com
+nrnjs.com
+ntnjs.com
+nxnjs.com
+oicrosoftonline.com
+oixpanel.com
+ooogleanalytics.com
+ooogleusercontent.com
+opnjs.com
+peslamotors.com
+qalesforce.com
+qlack-msgs.com
+qppsee.com
+qymantec.com
+ralesforce.com
+regment.io
+rlack-msgs.com
+rymantec.com
+s9mantec.com
+sadesforce.com
+sahesforce.com
+saldsforce.com
+sale3force.com
+saleqforce.com
+salesborce.com
+salesfgrce.com
+salesfmrce.com
+salesfnrce.com
+salesfo2ce.com
+salesfobce.com
+salesfopce.com
 
 # Reference: https://twitter.com/felixaime/status/1248154035053637632
 
@@ -1989,6 +2320,7 @@ sunrisepromos.com/js/lib/ccard.js
 # Reference: https://marcoramilli.com/2020/02/19/uncovering-new-magecart-implant-attacking-ecommerce/
 # Reference: https://labs.sucuri.net/web-skimmer-with-a-domain-name-generator-follow-up/
 # Reference: https://twitter.com/AffableKraut/status/1257937430709186560
+# Reference: https://www.virustotal.com/gui/ip-address/83.166.244.76/relations
 
 ql201000.pw
 ql201041.pw
@@ -2000,6 +2332,16 @@ ql202141.pw
 ql202412.pw
 ql202657.pw
 ql202989.pw
+qr201010.pw
+qr201089.pw
+qr201161.pw
+qr201346.pw
+qr201854.pw
+qr202004.pw
+qr202284.pw
+qr202754.pw
+qr202844.pw
+qr202960.pw
 q(l|r)[0-9]{5,6}\.pw
 /js/ar/ar906.php
 /js/ar/ar2497.php
@@ -2013,7 +2355,7 @@ gooogletagmanager.online
 # Reference: https://blog.malwarebytes.com/threat-analysis/2020/05/credit-card-skimmer-masquerades-as-favicon/
 # Reference: https://www.virustotal.com/gui/ip-address/83.166.242.105/relations
 
-myicons.net/d/favicon.png
+myicons.net
 psas.pw
 
 # Reference: https://twitter.com/felixaime/status/1258800483524804608
@@ -2191,12 +2533,23 @@ locol.site
 t.obet.us/gagal/log.php
 
 # Reference: https://twitter.com/MBThreatIntel/status/1270861231776137218
+# Reference: https://twitter.com/MBThreatIntel/status/1279128778543783936
 # Reference: https://twitter.com/500mk500/status/1270945615812460544
 # Reference: https://www.virustotal.com/gui/ip-address/176.121.14.189/relations
 
+bootstrapmag.com
 chatajax.com
+google-adware.com
+jquery-apl.com
 jqueryalert.com
 jqueryapiscript.com
+magento-info.com
+magento-stores.com
+magento-updater.com
+security-magento.com
+securityscr.com
+w3schooli.com
+wordpress-scripts.com
 
 # Reference: https://twitter.com/felixaime/status/1271061780849209344
 # Reference: https://www.virustotal.com/gui/ip-address/193.32.161.74/relations
@@ -2226,7 +2579,7 @@ reddotarms.com/js/infortis/jquery/jquery-1.7.2.min.js
 
 # Reference: https://twitter.com/benkow_/status/1273219665582579713
 
-visaandpassportagency. com/js/prototype/prototype.js
+visaandpassportagency.com/js/prototype/prototype.js
 
 # Reference: https://twitter.com/felixaime/status/1273221200886587392
 
@@ -2286,3 +2639,555 @@ xciy.net
 xoet.site
 yxxi.net
 yzxi.net
+
+# Reference: https://twitter.com/MBThreatIntel/status/1279651033883439105
+
+kttape.com/pub/static/frontend/Plumtree/kttapeb2b/en_US/mage/mail.js
+
+# Reference: https://twitter.com/MBThreatIntel/status/1279523525192081408
+
+cloud-flares.host
+
+# Reference: https://twitter.com/wwp96/status/1279551267698888704
+
+jquerycloud.host
+
+# Reference: https://blog.malwarebytes.com/threat-analysis/2020/07/credit-card-skimmer-targets-asp-net-sites/
+# Reference: https://twitter.com/MBThreatIntel/status/1280180299112919041
+# Reference: https://www.virustotal.com/gui/ip-address/31.220.60.108/relations
+
+cdn-xhr.com
+hivnd.net
+hixrq.net
+idpcdn-cloud.com
+joblly.com
+rackxhr.com
+thxrq.com
+
+# Reference: https://twitter.com/unmaskparasites/status/1280569151833223168
+
+cdn-google-analytics.com
+
+# Reference: https://twitter.com/p5yb34m/status/1111707577685991424
+
+givemejs.cc
+
+# Reference: https://twitter.com/jeromesegura/status/1121811483195633670
+# Reference: https://blog.malwarebytes.com/cybercrime/2019/04/github-hosted-magecart-skimmer-used-against-hundreds-of-e-commerce-sites/
+
+/mage/master/mage.js
+
+# Reference: https://www.symantec.com/security-center/writeup/2018-092007-1208-99 (JSCoffe domains)
+
+beachyripe.com
+energycoffe.org
+energytea.org
+lightbulbs-direct.org
+teacoffe.net
+ukcoffe.com
+
+# Reference: https://blog.sucuri.net/2018/12/localization-and-customization-of-credit-card-stealing-malware.html
+
+kinfirighbetted.host
+sales4reason.com
+greatwebstat.com
+
+# Reference: https://www.helpnetsecurity.com/2020/07/08/magecart-group-8/
+# Reference: https://geminiadvisory.io/wp-content/uploads/2020/07/Appendix-A-3.pdf
+# Reference: https://geminiadvisory.io/wp-content/uploads/2020/07/Appendix-B-1.pdf
+
+adaptivecss.org
+adorebeauty.org
+anduansury.com
+ankese.com
+assethomify.com
+assetstorage.net
+blackriverimaging.org
+braincdn.org
+citywlnery.org
+closetlondon.org
+coffemokko.com
+coffetea.org
+dahlie.org
+davidsfootwear.org
+dobell.su
+elegrina.com
+energycoffe.org
+etradesupply.org
+exrpesso.org
+fileskeeper.org
+foodandcot.com
+freshchat.info
+freshdepor.com
+frocklay.com
+hqassets.com
+info-js.link
+jewsondirect.com
+js-storage.click
+jsvault.net
+labbe.biz
+link-js.link
+londontea.net
+mage-checkout.org
+majsurplus.com
+map-js.link
+mechat.info
+misshaus.org
+oakandfort.org
+ottocap.org
+parks.su
+paypaypay.org
+pmtonline.su
+replacemyremote.org
+safeprocessor.com
+sagecdn.org
+sainester.com
+scriptdesire.com
+scriptsparadise.com
+scriptvault.org
+security-payment.su
+shourve.com
+slickjs.org
+smart-js.link
+stairany.com
+swappastore.com
+teacoffe.net
+theresevit.com
+top5value.com
+track-js.link
+ukcoffe.com
+uthorizecdn.com
+verywellfitnesse.com
+walletgear.org
+weblibscdn.com
+
+# Reference: https://twitter.com/unmaskparasites/status/1283084460519456771
+
+cdnlistrakbi.com
+
+# Reference: https://blog.sucuri.net/2020/07/skimmers-in-images-github-repos.html
+# Reference: https://www.virustotal.com/gui/ip-address/8.208.19.101/relations
+# Reference: https://www.virustotal.com/gui/ip-address/8.208.77.10/relations
+# Reference: https://www.virustotal.com/gui/ip-address/8.209.99.41/relations
+
+analytics-core.com
+analytics-ssl.com
+fonts-googlemaps.com
+fonts-gstatic.com
+fontsgoogle-apis.com
+fontsgoogleapis.com
+google-conf.com
+google-console.com
+google-core.com
+google-sert.com
+/app/design/frontend/Magento/luma/media/mage.png
+/pub/media/downloadable/mage.png
+
+# Reference: https://twitter.com/felixaime/status/1287408636164284419
+
+cdn-filestorm.com
+cloud-sources.com
+
+# Reference: https://twitter.com/500mk500/status/1288482532774891521
+# Reference: https://www.virustotal.com/gui/ip-address/8.211.36.239/relations
+# Reference: https://www.virustotal.com/gui/domain/rooplancdn.com/detection
+
+rooplancdn.com
+
+# Reference: https://twitter.com/felixaime/status/1288604510802325509
+
+shopify-sales.com
+
+# Reference: https://twitter.com/felixaime/status/1288601153400446976
+# Reference: https://www.virustotal.com/gui/ip-address/47.88.14.111/relations
+# Reference: https://www.virustotal.com/gui/ip-address/5.101.50.134/relations
+# Reference: https://www.virustotal.com/gui/ip-address/8.208.84.18/relations
+# Reference: https://twitter.com/felixaime/status/1301090258671542272
+
+adw-gooqle.com
+blog-mage.com
+cailpercovers.com
+cheeseceke.com
+cioubfiare.com
+claristokp.top
+clickstrackings.com
+cloubfiare.com
+cloudflaea.com
+cloudfliare.com
+googie-seo.com
+google-ahatytics.com
+google-anatytics.com
+google-ssm.com
+gooqieapis.com
+jquery-doc.com
+jquery-magento.com
+jqueryupdate.com
+magenlo.com
+magento-update.com
+marketing-yahoo.com
+optimized-js.com
+path-magento.com
+script-magento.com
+sucuil.net
+tag-managers.com
+up-tracking.com
+
+# Reference: https://twitter.com/unmaskparasites/status/1288922935240077313
+
+http://31.214.157.134/in.php
+/setup/performance-toolkit/files/search_terms.php
+
+# Reference: https://twitter.com/AffableKraut/status/1290031871670104066
+# Reference: https://twitter.com/AffableKraut/status/1290031876892057600
+# Reference: https://www.virustotal.com/gui/ip-address/37.252.5.111/relations
+# Reference: https://gist.github.com/krautface/b65cb1e717038f000d4d9dfd860830ea
+
+cdn-adsense.com
+
+# Reference: https://blog.malwarebytes.com/threat-analysis/2020/08/inter-skimming-kit-used-in-homoglyph-attacks/
+# Reference: https://otx.alienvault.com/pulse/5f2c453b5b063dda49dd855f
+# Reference: https://www.virustotal.com/gui/ip-address/51.83.209.11/relations
+
+cigarpaqe.com
+fleldsupply.com
+pushcrew.pw
+winqsupply.com
+zoplm.com
+
+# Reference: https://twitter.com/felixaime/status/1292567951762231299
+
+cdncom.site
+
+# Reference: https://twitter.com/AffableKraut/status/1293104085835689984
+# Reference: https://www.virustotal.com/gui/domain/googapi.com/detection
+
+googapi.com
+
+# Reference: https://twitter.com/felixaime/status/1295796245588512768
+
+payprocessor.net
+
+# Reference: https://twitter.com/felixaime/status/1295800211416190976
+# Reference: https://www.virustotal.com/gui/ip-address/188.209.49.71/relations
+
+clipboardplugin.com
+devtoolsforweb.com
+variousscripts.com
+topcc.biz
+topcc.pw
+topcc.store
+topcc.su
+
+# Reference: https://twitter.com/unmaskparasites/status/1295816804133199878
+# Reference: https://twitter.com/AffableKraut/status/1295817245017493507
+
+amastybootstrap.host
+amastybootstrap.online
+amastybootstrap.store
+bootstrapcd.host
+bootstrapcd.online
+bootstrapcss.host
+bootstrapcss.online
+cdnbootstrap.host
+cdnbootstrap.store
+dbbootstrap.online
+
+# Reference: https://www.virustotal.com/gui/ip-address/103.73.67.169/relations
+
+cdn-jquerystatic.ddns.net
+static-jquery.sytes.net
+
+# Reference: https://www.virustotal.com/gui/ip-address/91.211.247.69/relations
+
+cvv2.name
+
+# Reference: https://www.virustotal.com/gui/ip-address/47.241.7.41/relations
+
+acloudsapi.com
+securebnp-server.com
+securebnp1-update.com
+secureing-update.com
+
+# Reference: https://twitter.com/JCyberSec_/status/1298929497354448901
+
+gaminpit.com
+
+# Reference: https://twitter.com/MBThreatIntel/status/1299380573966802944
+# Reference: https://www.virustotal.com/gui/ip-address/108.62.12.46/detection
+
+content-analytics-server.com
+
+# Reference: https://twitter.com/felixaime/status/1300335046029606912
+
+lighting-spot.com/pub/media/js/jscol.min.js
+lighting-spot.com/pub/media/js/lighting.js
+
+# Reference: https://twitter.com/sansecio/status/1304043546970927104
+# Reference: https://www.virustotal.com/gui/ip-address/80.78.254.128/relations
+
+sansec.biz
+csp.sansec.biz
+
+# Reference: https://twitter.com/sansecio/status/1305041618744086528
+# Reference: https://twitter.com/sansecio/status/1305461119314690048
+# Reference: https://sansec.io/research/largest-magento-hack-to-date
+# Reference: https://otx.alienvault.com/pulse/5f5f9a8ba62718db52b64700
+# Reference: https://www.virustotal.com/gui/ip-address/83.166.244.152/relations
+# Reference: https://www.virustotal.com/gui/ip-address/83.166.244.76/relations
+# Reference: https://www.virustotal.com/gui/ip-address/83.166.245.32/relations
+# Reference: https://www.virustotal.com/gui/ip-address/83.166.245.93/relations
+
+ajaxcloudflare.com
+imags.pw
+mcdnn.me
+mcdnn.net
+myicons.net
+data-id-click.ru
+divamoda-tds.ru
+justwe-track.ru
+
+# Reference: https://twitter.com/sansecio/status/1306190540963282946
+
+facelook.no/en_US/pixel.js
+
+# Reference: https://twitter.com/unmaskparasites/status/1308419144048668672
+
+http://94.158.244.55
+
+# Reference: https://twitter.com/MBThreatIntel/status/1310703704396279808
+
+static-trustpilot.com
+
+# Reference: https://twitter.com/felixaime/status/1310835184917458944
+# Reference: https://www.virustotal.com/gui/ip-address/161.117.237.217/relations
+# Reference: https://www.virustotal.com/gui/ip-address/45.14.12.199/relations
+
+acdn.space
+ancdn.site
+ancdnto.site
+arcdn.site
+bcdn.space
+cacdn.site
+ccdn.space
+cdna.site
+cdna.space
+cdnc.space
+cdncom.site
+cdnd.site
+cdnd.space
+cdne.space
+cdnf.site
+cdnf.space
+cdng.site
+cdnh.site
+cdni.site
+cdnj.site
+cdnm.site
+cdno.site
+cdnp.site
+cdnq.site
+cdnq.space
+cdnr.space
+cdns.space
+cdnv.site
+cdnv.space
+cdnw.space
+cdnx.space
+cdnz.site
+cdnz.space
+dcdn.space
+fcdn.space
+frcdn.site
+gcdn.space
+gtacdn.site
+gtag.site
+gtage.site
+gtamanag.site
+gtcdn.site
+gtgcdn.site
+gtmcdn.site
+hcdn.space
+icdn.space
+jcdn.space
+kcdn.space
+ocdn.space
+qcdn.space
+tcdn.space
+usacdn.site
+uscdn.site
+wcdn.space
+xcdn.space
+zcdn.space
+
+# Reference: https://twitter.com/felixaime/status/1310840704801951744
+
+jquerycss.online
+jquerycss.space
+jquerycss.store
+jquerycss.tech
+jquerycss.website
+
+# Reference: https://twitter.com/JWilsonSecurity/status/1311140720498147334
+# Reference: https://www.virustotal.com/gui/domain/ride4speed.com/relations
+
+ride4speed.com
+
+# Reference: https://twitter.com/AffableKraut/status/1311330609546104832
+
+googleanalytics.monster
+googleanalytics.buzz
+google-analytics.monster
+google-analytics.buzz
+googletagmanager.cyou
+google-analytics.icu
+google-analytics.club
+googletagmanager.top
+google-analytics.cyou
+googleanalytics.top
+googleanalytics.cyou
+statanalytic.cyou
+googleshopanalytic.icu
+gstatic.cyou
+gstatic.club
+
+# Reference: https://twitter.com/MBThreatIntel/status/1311423125582540802
+
+adsojs.com
+cdndeskpro.com
+cdnprog.com
+faceapiget.com
+facecdnget.com
+fbpixelget.com
+gstaticapi.com
+keywestcdn.com
+klaviyo.host
+lightgetjs.com
+listrakjs.com
+mediabtracker.com
+meidiaplus.com
+section.ws
+sectionget.com
+sumome.net
+swiftypecdn.org
+uniquegetapi.com
+findericons.com/favicon.ico
+
+# Reference: https://unit42.paloaltonetworks.com/malicious-coinminers-web-skimmer/
+
+metahtmlhead.com
+
+# Reference: https://twitter.com/rootprivilege/status/1311731116345237509
+# Reference: https://www.virustotal.com/gui/ip-address/5.135.247.140/relations
+
+underscorefw.com
+
+# Reference: https://www.virustotal.com/gui/ip-address/8.208.90.81/relations
+
+fontsgoogle-api.com
+googleapis-fonts.com
+
+# Reference: https://twitter.com/MBThreatIntel/status/1313137479512276995
+# Reference: https://www.virustotal.com/gui/ip-address/188.68.220.49/relations
+# Reference: https://www.virustotal.com/gui/ip-address/31.184.253.166/relations
+# Reference: https://www.virustotal.com/gui/ip-address/47.245.128.231/relations
+# Reference: https://www.virustotal.com/gui/ip-address/47.89.184.107/relations
+# Reference: https://www.virustotal.com/gui/ip-address/47.254.84.162/relations
+# Reference: https://www.virustotal.com/gui/ip-address/5.53.125.202/relations
+# Reference: https://www.virustotal.com/gui/ip-address/8.208.14.9/relations
+# Reference: https://www.virustotal.com/gui/ip-address/8.208.20.61/relations
+# Reference: https://www.virustotal.com/gui/ip-address/8.208.27.102/relations
+# Reference: https://www.virustotal.com/gui/ip-address/8.209.72.188/relations
+# Reference: https://www.virustotal.com/gui/ip-address/8.208.79.49/relations
+# Reference: https://www.virustotal.com/gui/ip-address/8.209.65.45/relations
+# Reference: https://www.virustotal.com/gui/ip-address/8.210.68.59/relations
+# Reference: https://www.virustotal.com/gui/ip-address/79.143.29.164/relations
+# Reference: https://www.virustotal.com/gui/ip-address/80.249.144.26/relations
+# Reference: https://www.virustotal.com/gui/ip-address/80.249.145.190/relations
+# Reference: https://www.virustotal.com/gui/ip-address/80.249.147.241/relations
+# Reference: https://www.virustotal.com/gui/ip-address/80.249.148.133/relations
+# Reference: https://www.virustotal.com/gui/ip-address/82.148.30.191/relations
+# Reference: https://www.virustotal.com/gui/ip-address/82.148.31.102/relations
+# Reference: https://www.virustotal.com/gui/ip-address/84.38.180.233/relations
+# Reference: https://www.virustotal.com/gui/ip-address/84.38.180.84/relations
+# Reference: https://www.virustotal.com/gui/ip-address/84.38.183.160/relations
+
+admin-autorization.com
+bing-analytics.com
+bootstrap-java.com
+cdn-jquery.com
+checkout-sagepay.com
+connect-facebook.com
+google-analytics.top
+google-anylysis.com
+google-apic.com
+google-assistant.com
+google-checkout.com
+google-connect.com
+google-modile.com
+google-money.com
+google-payment.com
+google-query.com
+google-sale.com
+google-smart.com
+google-standard.com
+google-taq.com
+google-tasks.com
+google-worldpay.com
+jquery-assets.com
+jquery-assist.com
+jquery-insert.com
+jquery-migrate.com
+live-sagepayment.com
+pay-sagepay.com
+pay-u-biz.com
+payment-sagepay.com
+payment-worldpay.com
+paypal-assist.com
+paypal-debit.com
+paypal-vendor.com
+paypal-worldpay.com
+paypalapiobjects.com
+payu-biz.com
+sagepay-live.com
+sagepay-world.com
+
+# Reference: https://www.virustotal.com/gui/ip-address/47.245.128.230/relations
+
+cdnanalyticss.top
+promakerboi.top
+
+# Reference: https://twitter.com/AffableKraut/status/1313600312045907973
+
+shopifyst.com
+
+# Reference: https://twitter.com/unmaskparasites/status/1313913253035159553
+# Reference: https://www.virustotal.com/gui/ip-address/176.123.3.85/relations
+
+googleanalytics.icu
+idssl.site
+shopstatanalytics.store
+statanalytic.site
+
+# Reference: https://www.virustotal.com/gui/ip-address/8.208.102.232/relations
+
+facebookapimanager.com
+tags-manager.com
+
+# Reference: https://blog.malwarebytes.com/malwarebytes-news/2020/10/credit-card-skimmer-targets-virtual-conference-platform/
+# Reference: https://www.virustotal.com/gui/ip-address/198.187.31.243/relations
+# Reference: https://twitter.com/MBThreatIntel/status/1314298615204995072
+
+playbacknows.com
+
+# Reference: https://twitter.com/jeromesegura/status/1137087208630833152
+
+jquers.com
+jqueres.com
+
+# Reference: https://twitter.com/Jacob_Pimental/status/1316173250850942977
+# Reference: https://twitter.com/Jacob_Pimental/status/1316174498073399296
+# Reference: https://www.virustotal.com/gui/ip-address/176.121.14.154/relations
+
+dataprocessor.net
+luhnvalidator.com
+stairany.com

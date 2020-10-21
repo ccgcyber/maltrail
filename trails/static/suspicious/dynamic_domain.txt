@@ -1653,10 +1653,6 @@ myq-see.com
 
 thddns.net
 
-# Reference: https://twitter.com/ScumBots/status/1105050120855449600
-
-kro.kr
-
 # Reference: https://twitter.com/ScumBots/status/1056727832037150727
 
 portmap.io
@@ -1665,9 +1661,19 @@ portmap.io
 
 ze.am
 
+# Reference: https://twitter.com/ScumBots/status/1105050120855449600
 # Reference: https://twitter.com/ScumBots/status/1105461451580420096
+# Reference: https://www.virustotal.com/gui/domain/n-e.kr/relations
+# Reference: https://www.virustotal.com/gui/domain/mcv.kr/relations
+# Reference: https://www.virustotal.com/gui/file/828ed2a9805c6b100ffc5317bb3b3de97e49fd20589ab0335da29d042d705b08/detection
+# Reference: https://xn--220b31d95hq8o.xn--3e0b707e/
 
+kro.kr
+mcv.kr
+o-r.kr
+n-e.kr
 p-e.kr
+r-e.kr
 
 # Reference: https://info.publicintelligence.net/FBI-BlackshadesDomains.xls
 
@@ -2099,6 +2105,9 @@ stuns.org
 # Reference: https://www.virustotal.com/gui/domain/dns-cloud.net/relations
 # Reference: https://www.cloudns.net/dynamic-dns/
 
+cloudns.eu
+cloudns.info
+cloudns.org
 dns-cloud.net
 
 # Reference: https://www.virustotal.com/gui/domain/2dons.com/relations
@@ -2212,6 +2221,7 @@ wicp.vip
 
 001www.com
 16-b.it
+2mydns.net
 32-b.it
 64-b.it
 crafting.xyz
@@ -2604,6 +2614,13 @@ yao.cl
 ax.lt
 my.to
 ftp.sh
+inc.gs
+bum.ms
+cf.gs
+jpe.gs
+na.tl
+sux.ms
+uni.cx
 mil.nf
 now.im
 undo.it
@@ -3021,3 +3038,44 @@ entrydns.org
 # Reference: https://www.virustotal.com/gui/domain/noip.pl/relations
 
 noip.pl
+
+# Reference: https://www.virustotal.com/gui/domain/jomodns.com/relations
+
+jomodns.com
+
+# Reference: https://www.virustotal.com/gui/domain/misdns.org/relations
+
+misdns.org
+
+# Reference: https://www.virustotal.com/gui/domain/home-webserver.de/relations
+
+home-webserver.de
+
+# Reference: https://www.virustotal.com/gui/file/849d5cb874304ad34c83c0e773b3317d62244aaa72eeb855e6a6d90a56927de6/detection
+# Reference: https://www.virustotal.com/gui/domain/3bbddns.com/relations
+
+3bbddns.com
+
+# Reference: https://www.virustotal.com/gui/domain/myonlineportal.org/relations
+
+myonlineportal.org
+
+# Reference: https://www.virustotal.com/gui/domain/myonlineportal.net/relations
+
+myonlineportal.net
+
+# Reference: https://www.virustotal.com/gui/domain/my-homeip.com/relations
+
+my-homeip.com
+
+# Reference: https://www.virustotal.com/gui/domain/my-homeip.net/relations
+
+my-homeip.net
+
+# Reference: https://www.virustotal.com/gui/domain/system-ns.org/relations
+
+system-ns.org
+
+# Reference: https://www.virustotal.com/gui/domain/system-ns.net/relations
+
+system-ns.net

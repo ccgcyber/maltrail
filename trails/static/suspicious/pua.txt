@@ -2285,3 +2285,180 @@ mediadownloader25.tk
 # Reference: https://www.virustotal.com/gui/file/6248a41a5e4230433e2a0e33f26dbed558e9bc21b51302124ee931921da3e657/detection
 
 hostas5.ml
+
+# Reference: https://www.virustotal.com/gui/file/c507fa7630f7a24b9f2b1dca969a15b253d73b81b520fedc6de0df2116f2fa0f/detection
+
+159.89.214.31:1081
+
+# Reference: https://twitter.com/Lokesh42651261/status/1281601993816117250
+
+getgoodvideo.com
+memishooee.pw
+
+# Reference: https://twitter.com/ebotpoloskun/status/1281659298850975747
+
+sys-optimize.com
+
+# Reference: https://www.virustotal.com/gui/file/fa06ba9b45a5babc68f6ffc5de448ec908a28fc2a59ea977b13c687c5265dcea/detection
+
+multinstaller.com
+
+# Reference: https://twitter.com/malware_traffic/status/1291123970138345474
+
+ec2-35-166-136-23.us-west-2.compute.amazonaws.com
+
+# Reference: https://www.virustotal.com/gui/file/22527477a0a4edbea690de10ef82d201f379502661178c19f9d6ae7628c6552a/detection
+# Reference: https://www.virustotal.com/gui/file/10cca6904c98f6ce94e9a21c0490fc5e507985a0d363baab3a31856f02653dde/detection
+# Reference: https://www.virustotal.com/gui/file/1cee6c397376c0f8363085d86cbd82cbe635ace6ba4bfb2a732a8e2c657a2fe2/detection
+# Reference: https://www.virustotal.com/gui/file/04873ec6fa6d05edc4557ce7b14115dce3325d2d551812035fed8c1e574af802/detection
+# Reference: https://www.virustotal.com/gui/file/ad3edea038dcb17af1e16e997e58d589eceef3b0a0e8e25d2c3907e4abcb506f/detection
+
+adcash.cf
+ayurew.pw
+filedistrserver.pw
+hostas.ml
+hostpp.gq
+hostpp2.tk
+lighteningplayer.com
+ngnbinfo.com
+o-browser.ru
+technologieberri.com
+trumpmoney.world
+
+# Reference: https://www.virustotal.com/gui/file/65a3cf860cd4202c15508db6d8b8bcb7352671fdd49d50b0504817bb78099331/detection
+
+adasf.pw
+
+# Reference: https://www.virustotal.com/gui/file/0231fea50ab5ea4e6d28f75b3d459b8995d1e960ec3acbef2525ffd1ef25d2bd/detection
+
+astra2yedek.xyz
+
+# Reference: https://www.virustotal.com/gui/file/b4d7152c04dac5636ed49806ef24f407008e8c0b35beacb25b5a3030d3b5f2dc/detection
+
+68.10.46.234:63274
+install-apps.com
+/gcache.php?get=
+
+# Reference: https://www.virustotal.com/gui/file/e9a81285534c5a8903f43d2372ea805a2229fc02cda52f73acf7c9bbf1f647d4/detection
+
+http://213.152.46.35
+gnutella-cache.no-ip.com
+
+# Reference: https://www.virustotal.com/gui/file/757475e379dcdcb988f99c49071f89d442e42185671bfd8099e58abce96aa118/detection
+
+techdudez.com
+vernweb.homeip.net
+
+# Reference: https://www.virustotal.com/gui/file/a7c2e176ffe6e436474710b251feb0cf3130abff45cd9db35610fb9564250ba1/detection
+
+bazooka1.servehttp.com
+
+# Reference: https://www.virustotal.com/gui/domain/rainwater.dyndns.org/relations
+
+rainwater.dyndns.org
+
+# Reference: https://www.virustotal.com/gui/domain/gridcoin.ddns.net/relations
+
+gridcoin.ddns.net
+
+# Reference: https://www.virustotal.com/gui/file/c37610626f34ae52d04777a188012cf2212b0cebd6920af46b72808234e223bd/detection
+
+fb38099g.bget.ru
+
+# Reference: https://www.virustotal.com/gui/domain/lekkit.hopto.org/relations
+# Reference: https://www.virustotal.com/gui/file/345499b5161a6d57b633cad88d83e321b82776d84ceea8661901ae4f115dd0b5/detection
+# Reference: https://www.virustotal.com/gui/file/aa0e351ada009aef1453a2aa3a761d7a5a10165dfaa4bc71bd0a70a866ad790e/detection
+
+46.219.3.46:6121
+80.229.219.2:6121
+lekkit.hopto.org
+
+# Reference: https://www.virustotal.com/gui/file/d5416dd14fa8c3f7ce2d74b911ce58d1cbea20a134df0c70d2629c7eb17d2b83/detection
+
+tlcgame.000webhostapp.com
+
+# Reference: https://www.virustotal.com/gui/file/15bfc9228e363adc4defd04e5b7de623e5cfa4dc3fe17ce3af8aafbb40891054/detection
+
+kapulainen.ru
+
+# Reference: https://www.virustotal.com/gui/file/6c08d13df99935ff66413bc7d7bd29105b6e1fe94956ec31ebcc5fe154eaf6e4/detection
+
+magazin-molk.ru
+
+# Reference: https://www.virustotal.com/gui/file/3debbdd17414b4d5669b16d14c2ef1640b336a2391669b054f46f195bd0db235/detection
+
+netgoldcold.ru
+
+# Reference: https://www.virustotal.com/gui/file/8e0aa3908d88a4f7ba87b2d79528fde38dd35de60add227c64aa2cd4df87f8a7/detection
+
+protubemarket.ru
+
+# Reference: https://www.virustotal.com/gui/file/ca545d08e3e0e84306d593b776e716bd3ef8d6bb88d52c567aab1f17f16e4b66/detection
+
+jj8o12.ru
+
+# Reference: https://www.virustotal.com/gui/file/f477e8a1a465b8c4c985b44abf48d35f049d7d45ccee732f70c0a3ac57675f2c/detection
+
+midget-interrupt.ru
+
+# Reference: https://www.virustotal.com/gui/file/57bba4e3ea155ff39b21b094bd032df4850c3d4858a263fb2e2053fa011f88c0/detection
+
+friendly-whether.ru
+
+# Reference: https://www.virustotal.com/gui/file/cf647d208d28e1cea6ec5b656c8b78cec1b210296620d7b51dd9ba39de80f93b/detection
+
+far-seems-so.ru
+
+# Reference: https://www.virustotal.com/gui/file/1fd371c42965c9b78b2a045aab6c00e6ce72848926acec529b1f19f03e12815f/detection
+
+h-url.ru
+
+# Reference: https://www.virustotal.com/gui/file/9e6691f721894587aee06708ea5ef7a20f9d498d113b5a7a8ef2b5bd86a30330/detection
+# Reference: https://www.virustotal.com/gui/file/cdfb901be160865b5f630fd2fee3d1b6d8be8a99baf38508ba5a86f343eaca76/detection
+# Reference: https://www.virustotal.com/gui/file/b83345ca1cd3d915323898b9a965f4950ea3ac8796ea853f1a8f0ea7ddfab600/detection
+# Reference: https://www.virustotal.com/gui/file/de0ce3fbc63b86b4b0aecf14b4f6ff5ceb9b49e44055d52282b67940eaec22c8/detection
+# Note: LeopardRemote
+
+170.231.122.20:50519
+170.231.122.20:50524
+170.231.122.20:50539
+170.231.122.20:50591
+170.231.122.20:58738
+170.231.122.20:58753
+170.231.122.20:5992
+170.231.122.20:5993
+170.231.122.20:8081
+67.15.100.252:8081 
+67.228.235.91:8081
+69.171.224.85:8081
+88.191.253.157:8081
+tecnox.serveftp.com
+
+# Reference: https://www.virustotal.com/gui/file/2c2f8822781e4c0bf3aacf5a56bf48e69f2082b8d2a70b443ea6596f09712736/detection
+
+dlsft.com
+
+# Reference: https://blog.talosintelligence.com/2020/08/threat-roundup-0821-0827.html (# Win.Adware.Dealply-9476483-0)
+
+opensubcdn.com
+
+# Reference: https://www.virustotal.com/gui/file/80c337a33fc8d05cdc36a00309e612b8cef3aab238387ccfe90a42086299b965/detection
+
+gamelauncherzx.000webhostapp.com
+zxpwd.net
+
+# Reference: https://www.virustotal.com/gui/file/3bd83025885889f9bc9667122229381baa0755fb4263498436665198a0c4e2ba/detection
+
+bepy.mercice.ru
+download123.igg.biz
+
+# Reference: https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=PUA:Win32/ProtectionLive
+# Reference: https://www.sophos.com/en-us/threat-center/threat-analyses/adware-and-puas/Malware%20Protection%20Live/detailed-analysis.aspx
+
+malwareprotectionlive.com
+
+# Reference: https://twitter.com/krabsonsecurity/status/1313539398407872514
+# Reference: https://app.any.run/tasks/7087ef7b-fb26-4559-bc77-ad5d5cdff01b/
+# Reference: https://www.virustotal.com/gui/file/d29380831b7a5b62c0d56e0d2a7a196863ff1c3199434172ee199a36cb929312/detection
+
+silkysmoothtechnologies.com

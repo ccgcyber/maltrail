@@ -4976,10 +4976,6 @@ banquealtantique.net
 
 hitlers.best
 
-# Reference: https://www.virustotal.com/gui/domain/n-e.kr/relations
-
-n-e.kr
-
 # Reference: https://www.virustotal.com/gui/domain/cfxcheats.com/relations
 
 cfxcheats.com
@@ -5036,3 +5032,38 @@ pphost.net
 # Reference: https://www.virustotal.com/gui/domain/wcomhost.com/detection
 
 wcomhost.com
+
+# Reference: https://twitter.com/midnight_comms/status/1278330576525602816
+
+.cyou
+
+# Reference: https://www.virustotal.com/gui/domain/kingx.info/relations
+# Reference: https://www.virustotal.com/gui/file/3f2c17bfa5c453a9fe4a8ab56c9d9ce24020e7489204f506d92668986b965826/detection
+
+kingx.info
+
+# Reference: https://www.virustotal.com/gui/domain/kingspy.ml/relations
+# Reference: https://www.virustotal.com/gui/file/01f513ae8de5bb41180a25f095a1bb432f122a808950cd317bbc3b9c6b6cb48e/detection
+
+kingspy.ml
+
+# Reference: https://twitter.com/ScumBots/status/1299191823106215937
+# Reference: https://www.virustotal.com/gui/file/189a21b97949a56e32797c3ce37db2624551190073e61194d98736e843e6977f/detection
+
+sitestill.fun
+sitestill.space
+
+# Reference: https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/palmerworm-blacktech-espionage-apt
+# Reference: https://otx.alienvault.com/pulse/5f737e47bff198ee39b34aa8
+# Reference: https://www.virustotal.com/gui/domain/hpcloudnews.com/relations
+
+hpcloudnews.com
+
+# Reference: https://twitter.com/Marco_Ramilli/status/1317562830066012160
+# Reference: https://www.virustotal.com/gui/domain/fastestcdn.net/relations
+
+fastestcdn.net
+
+# Reference: https://webhook.site/
+
+webhook.site

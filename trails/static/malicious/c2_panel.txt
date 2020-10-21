@@ -200,6 +200,26 @@ http://213.128.93.199
 /webpanel/8/inc/
 /webpanel/9/inc/
 
+# Reference: https://pastebin.com/XdZhSj7j
+
+/covid_tmp/login.php
+/covid/login.php
+/covid2/login.php
+
+# Reference: https://twitter.com/0bfusCat/status/1250825370854711301
+
+/covid_tmp/gate.php
+/covid/gate.php
+/covid2/gate.php
+
+# Reference: https://twitter.com/ViriBack/status/1295874240298786818
+
+/admin_panel_x/
+
+# Reference: https://twitter.com/ViriBack/status/1299807425457983488
+
+kitesgcc.com/stater/login.php
+
 # Generic
 
 /admin_123/auth.php
@@ -207,6 +227,12 @@ http://213.128.93.199
 /admin_123/gate.php
 /admin_123/login.php
 /admin_123/page.php
+/administrator/he1p/
+/botpanel/
+/bot/Panel/
+/cgi%20bin/Panel/
+/FuckYouMother/panel/
+/jujubiadmin/
 /logz/auth.php
 /logz/login.php
 /Panel/callback.php
@@ -220,6 +246,8 @@ http://213.128.93.199
 /panel632541/admin.php
 /pnl/auth.php
 /pnl/login.php
+/PowerPanel/
+/slim/panel/
 /webpanel/auth.php
 /webpanel/api.php
 /webpanel/login.php

@@ -25,6 +25,7 @@ import struct
 import threading
 import time
 import traceback
+import warnings
 
 from core.addr import inet_ntoa6
 from core.addr import addr_port
@@ -102,6 +103,8 @@ from core.update import update_trails
 from thirdparty import six
 from thirdparty.six.moves import urllib as _urllib
 
+warnings.filterwarnings(action="ignore", category=DeprecationWarning)       # NOTE: https://github.com/helpsystems/pcapy/pull/67/files
+
 _buffer = None
 _caps = []
 _connect_sec = 0
@@ -169,26 +172,6 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
     if re.search(VALID_DNS_NAME_REGEX, query) is not None and not _check_domain_whitelisted(query):
         parts = query.split('.')
 
-        if trails._regex:
-            match = re.search(trails._regex, query)
-            if match:
-                group, trail = [_ for _ in match.groupdict().items() if _[1] is not None][0]
-                candidate = trails._regex.split("(?P<")[int(group[1:]) + 1]
-                candidate = candidate.split('>', 1)[-1].rstrip('|')[:-1]
-                if candidate in trails:
-                    result = True
-                    trail = match.group(0)
-
-                    prefix, suffix = query[:match.start()], query[match.end():]
-                    if prefix:
-                        trail = "(%s)%s" % (prefix, trail)
-                    if suffix:
-                        trail = "%s(%s)" % (trail, suffix)
-
-                    trail = trail.replace(".)", ").")
-
-                    log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[candidate][0], trails[candidate][1]), packet)
-
         if ".onion." in query:
             trail = re.sub(r"(\.onion)(\..*)", r"\1(\2)", query)
             _ = trail.split('(')[0]
@@ -233,6 +216,26 @@ def _check_domain(query, sec, usec, src_ip, src_port, dst_ip, dst_port, proto, p
                 if trail and not any(_ in trail for _ in WHITELIST_LONG_DOMAIN_NAME_KEYWORDS):
                     result = True
                     log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, "long domain (suspicious)", "(heuristic)"), packet)
+
+        if not result and trails._regex:
+            match = re.search(trails._regex, query)
+            if match:
+                group, trail = [_ for _ in match.groupdict().items() if _[1] is not None][0]
+                candidate = trails._regex.split("(?P<")[int(group[1:]) + 1]
+                candidate = candidate.split('>', 1)[-1].rstrip('|')[:-1]
+                if candidate in trails:
+                    result = True
+                    trail = match.group(0)
+
+                    prefix, suffix = query[:match.start()], query[match.end():]
+                    if prefix:
+                        trail = "(%s)%s" % (prefix, trail)
+                    if suffix:
+                        trail = "%s(%s)" % (trail, suffix)
+
+                    trail = trail.replace(".)", ").")
+
+                    log_event((sec, usec, src_ip, src_port, dst_ip, dst_port, proto, TRAIL.DNS, trail, trails[candidate][0], trails[candidate][1]), packet)
 
     if result == False:
         _result_cache[(CACHE_TYPE.DOMAIN, query)] = False
@@ -491,7 +494,7 @@ def _process_packet(packet, sec, usec, ip_offset):
                                     match = re.search(SUSPICIOUS_UA_REGEX, user_agent)
                                     if match:
                                         def _(value):
-                                            return value.replace('(', "\\(").replace(')', "\\)")
+                                            return value.rstrip('\\').replace('(', "\\(").replace(')', "\\)")
 
                                         parts = user_agent.split(match.group(0), 1)
 
@@ -515,6 +518,12 @@ def _process_packet(packet, sec, usec, ip_offset):
 
                             if '=' in path:
                                 checks.append(path[:path.index('=') + 1])
+
+                            _ = re.sub(r"(\w+=)[^&=]+", r"\g<1>", path)
+                            if _ not in checks:
+                                checks.append(_)
+                                if _.count('/') > 1:
+                                    checks.append("/%s" % _.split('/')[-1])
                         elif post_data:
                             checks.append("%s?%s" % (path, unquoted_post_data.lower()))
 
@@ -1086,7 +1095,7 @@ def monitor():
 
             datalink = _cap.datalink()
 
-            if six.PY3:  # https://github.com/helpsystems/pcapy/issues/37#issuecomment-530795813
+            if six.PY3 and not config.pcap_file:  # https://github.com/helpsystems/pcapy/issues/37#issuecomment-530795813
                 def _loop_handler(header, packet):
                     packet_handler(datalink, header, packet)
 

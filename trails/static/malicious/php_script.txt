@@ -180,8 +180,12 @@ statconuter.com/c.php
 /g4f9sokfo2ecegn2twq4u3t7.php
 
 # Reference: https://app.any.run/tasks/3068b154-d6f2-4483-ae72-60fbd5f3467f
+# Reference: https://www.virustotal.com/gui/file/0cbf6190e0a381a0ec20a2b54156f06615453bb80ae2e1256242cb8af96b065d/detection
+# Reference: https://www.virustotal.com/gui/file/cd5eeddb8eb8074b97583b653cbcf627da475debbb3070284fd6c6446f9eec97/detection
 
 /cmd.php?hwid=
+/cmd.php1?hwid=
+/cmd.php?timeout=
 
 # Reference: https://twitter.com/JAMESWT_MHT/status/1126020627075403776
 
@@ -1005,14 +1009,6 @@ zctrack.com
 
 /yo0io9tpd5y85cjgsivluoif.php
 
-# Reference: https://www.virustotal.com/gui/domain/megagemes.info/relations
-
-/eueueuueueue.php
-/momomoomomom.php
-/ozozozozoz.php
-/usksdjqjwjoweidjcslkm.php
-/usuususususuusus.php
-
 # Reference: https://www.virustotal.com/gui/domain/newbook-t.info/relations
 
 /downloadcdneu98680113.php
@@ -1506,11 +1502,6 @@ tunacan-812.tk
 
 /cjp06ozeq4j00p66uek5qokp27524e5d5582cfb0ee5b91de81c038c5.php
 
-# Reference: https://app.any.run/tasks/6a77f6f2-50fb-4a3e-ad20-e0bdd2ba7031/
-
-/9o0.php
-/firstga990.php
-
 # Reference: https://twitter.com/malwrhunterteam/status/1257660701428142080
 
 /4ij6qw.php
@@ -1675,6 +1666,261 @@ tunacan-812.tk
 /nerr34.php
 /ondetverifier.php
 
+# Reference: https://twitter.com/killamjr/status/1280564058739990528
+
+/ecnxg8w7d5suuciz4w1jv057.php
+
+# Reference: https://www.virusradar.com/en/Win32_TrojanClicker.Clidak.A/description
+# Reference: https://www.virustotal.com/gui/file/980ef75a800eba45c7cb64b4c1bcc61a3b0cdf92854c24dbf1ea0f3fe4cad944/detection
+# Reference: https://www.virustotal.com/gui/ip-address/65.254.51.42/relations
+
+/~pete19c/r.php
+
+# Reference: https://twitter.com/Bl4ng3l/status/1283853966795780097
+
+/niM4t1A9c4q.php
+
+# Reference: https://twitter.com/jcarndt/status/1283799735065862144
+
+/KFm63QEU7ArF.php
+
+# Reference: https://www.virustotal.com/gui/file/d72133df3fee1d91fcab0adb532459b6c0044e7f8b4ca542fa3f6ae470b42be1/detection
+
+/5c2eab368ebd00202fc7b56bb4a46f1ee67acd8e.php
+
+# Reference: https://www.virustotal.com/gui/file/dacce09fd5829213606cef3f45d5bc43d4522183e54422eb4a5c7a404c69a6c2/detection
+
+/bdeefbc5c36a0b584fa7c5330e493a7d22b741af.php
+
+# Reference: https://www.virustotal.com/gui/file/44f3eb01406921d5605933abce49e5fe04cfe6a73f3fcb7380dc99765043ea2a/detection
+
+/1dc5e926948fd82a85e7c085e0bf0c6db31969f3.php
+
+# Reference: https://www.virustotal.com/gui/file/4bf6ec0d9ab95d7d7d4e1e7453a83ed731c9188fbe6d007834025f00791cdcb9/detection
+
+/64d631e36c839e2964fcdc671f84e96bc9dcd7ca.php
+
+# Reference: https://www.virustotal.com/gui/file/9fabd7b98f8972850549231d2ac2762ec1cad3ef8fdf3cb994d14c9c3ad17ba5/detection
+
+/156b2b990971b28b12393cd82884a7d3.php
+
+# Reference: https://www.virustotal.com/gui/file/0130797c1baa9ac6709693d7e357cd37cf4bfb48fe9bfaede723674bec4cde85/detection
+
+/84a7d5fcbbe9a0cdcf1357c70cf326bed852c7ee.php
+
+# Reference: https://www.virustotal.com/gui/file/41dcb2cb400c656826db00e368c5ddc4d254d69d5d9ab0cd6a63fd68bba2fb5f/detection
+
+/901212b6cc3a718fd6012ed1ff31c04663ffeb8b.php
+
+# Reference: https://www.virustotal.com/gui/file/b9024622a0e5c982db8b533e6c3a736d65d5c02bf01b4ff15d3fd770f4632443/detection
+
+/86872acabed89173a9b729bb81eca3ab802559ca.php
+
+# Reference: https://twitter.com/ANeilan/status/1291891899872301058
+
+/animauxpinterest.xyz.php
+/christmascookie.club.php
+/christmascookie.xyz.php
+/crochetscarf.xyz.php
+/fkcement.xyz.php
+/fkveternikviskol.xyz.php
+/francepinterest.xyz.php
+/frauenfrisuren.xyz.php
+/gwangsanfc.xyz.php
+/happytiere.xyz.php
+/hausschuhestricken.club.php
+/hausschuhestricken.xyz.php
+/lksnadwislangora.xyz.php
+/pinlab.xyz.php
+/pinterest-yonlendirme.php
+/pinterestdessert.club.php
+/pinterestdeutschland.com.php
+/pinterestdressing.club.php
+/pinterestfashion.club.php
+/pinterestfrance.xyz.php
+/pinteresthairstyle.club.php
+/pinteresttoptrends.club.php
+/pinteresttrendstyle.online.php
+/pinterestworld.xyz.php
+/pinterestworldstyle.club.php
+/pinterestworldtrend.club.php
+/pinzoom.xyz.php
+/strickenmodellen.xyz.php
+/strickenschal.xyz.php
+/tejer.xyz.php
+/womanclub.xyz.php
+/womanstyle.xyz.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1293927664651317248
+
+/buhib3i0r6dss6ar46e115s8.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1294863800932487171
+
+/wdpi76b16t6sl74ihdvkhlmx.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1297038049134739456
+
+/pjxgz4xbrlkw03ke7s91s4kx.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1298125211934621703
+
+/sxwrgoja78tufkckzfa3crgb.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1300526033804894210
+
+/wwyu1has496nieeoza8rhs22.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1300812922835230720
+
+/47kh3qv7uwl2qqwjew5hpbge.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1300888418449268741
+
+/jhj2bp54nql29m5rsrwsh4rb.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1301613194415427584
+
+/6lmwtif3htomluuo6wt3lrp2.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1301975584252334080
+
+/7n9zahad80idagj19vqtpurq.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1302337970284965889
+
+/p8omduqtiw8wojo4kimlp7p8.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1303787522485563392
+
+/4fnsez9i81l6mb42m2aw25jp.php
+
+# Reference: https://twitter.com/jstrosch/status/1301718677419700224
+
+/djqnonxwrv.php
+/ezkwdjrwog.php
+/smhcbhcdrm.php
+/tjzyawxylv.php
+
+# Reference: https://www.virustotal.com/gui/file/51060b4e21864f229b5945b24d66cb29c727641c36639de395ebc4c83b0860a9/relations
+
+/aoluouscutao.php
+/bapedoalrag.php
+/bowevuyfjx.php
+/budpugovuje.php
+/dimaetepunagaji.php
+/dkopezitecea.php
+/duiifyts.php
+/duwuypy.php
+/eleqikbagkyoxu.php
+/fujolnodes.php
+/govepuc.php
+/iodevbokyqki.php
+/jekizeleiso.php
+/khvopo.php
+/luboduj.php
+/mjojylefayh.php
+/mufydoutvotug.php
+/nyzapftutes.php
+/offatoisejub.php
+/omuzxby.php
+/otzyyduzhyvob.php
+/owusuedutipomib.php
+/oziiolohordor.php
+/pittiryc.php
+/puxuecmu.php
+/udjovezna.php
+/uearapus.php
+/uejoreyuip.php
+/uelytohufojuyr.php
+/ufipeqib.php
+/ugpug.php
+/uouhubeequsybyb.php
+/uruhu.php
+/uvzipaoluuu.php
+/vpobacuy.php
+/vyivelbv.php
+/wivpyouqemuv.php
+/xojabgovykou.php
+/yjozpegovyhaa.php
+/yufesoryzvepice.php
+/yxopkufu.php
+/zetamblareu.php
+/zomlevyzui.php
+/zoofavegup.php
+
+# Reference: https://twitter.com/illegalFawn/status/1309542440995614720
+# Reference: https://twitter.com/illegalFawn/status/1310518625573507072
+# Reference: https://twitter.com/illegalFawn/status/1310947357534687232
+# Reference: https://twitter.com/illegalFawn/status/1310972332404617216
+# Reference: https://twitter.com/illegalFawn/status/1310959162822725638
+
+/awagrncglvr.php
+/aywjtcan.php
+/beycdawf.php
+/btdzdz.php
+/bupvudvhjuo.php
+/ernbfpsawct.php
+/hqjdjnxn.php
+/ijuljytf.php
+/jgizmh.php
+/jkdxpgwv.php
+/kqqtedo.php
+/liyqfa.php
+/ljwvjup.php
+/lsrmrt.php
+/mmvvbg.php
+/msayqpkvkyq.php
+/mwmkajlpgg.php
+/nevnal.php
+/pursue.php
+/pxglcxop.php
+/rlcwhmlykz.php
+/sdhrhg.php
+/vopisiyx.php
+/yblhzstgysf.php
+/yymclv.php
+/zpsxxla.php
+/zxlbw.php
+
+# Reference: https://twitter.com/KorbenD_Intel/status/1314251628959076353
+
+/orMkdppaG1PQ0WgF.php
+
+# Reference: https://twitter.com/JCyberSec_/status/1314208821368115202
+
+/ixdxctmg5umaskdjtbnapfly.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1315383937389277184
+
+/v0k7mrdjuncsoof64kayjzal.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1315519829948891136
+
+/fhx2mavv4mmh750l4gv8kf9a.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1315670825744424960
+
+/j8kp4r7yuzfs5dzmnzhn10z1.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1315746322478247942
+
+/a9q4uvjm9qy5gdoafj26snhi.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1316320102728585217
+
+/457uizv6aeh7f2grvhxo8651.php
+
+# Reference: https://twitter.com/MalwarePatrol/status/1316682492259299328
+
+/7gtsw9a6qg5dqxkeibh8u8vf.php
+
+# Reference: https://cujo.com/dns-hijacking-attacks-on-home-routers-in-brazil/
+# Reference: https://twitter.com/david_jursa/status/1318209187667714048
+
+/mbl/2/ads.php
+/mbl/2/change.php
+
 # Generic
 
 /7328-dating-verification-card.php
@@ -1687,6 +1933,8 @@ tunacan-812.tk
 /gate16.php
 /gate2.php
 /gate.get
+/gatw.php
+/gate.phpgate.php
 /online-dating-verification-card.php
 /ravufgate.php
 /screenshot_gate.php
